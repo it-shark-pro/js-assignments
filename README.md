@@ -107,6 +107,8 @@ There is an easier way to debug for beginners with free Visual Studio Code:
 * Click in the gutter to the left of the line number to set the breakpoint. Press `F5` to run debug.
 * NOTE: The `launch.json` is stored in the `.vscode` project folder.
 
+### Submit your solution to us for review
+* https://goo.gl/X6GjMB
 
 ## Contribution
 Feel free to contribute into this project. New tasks and katas are welcome.
