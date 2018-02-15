@@ -1,5 +1,4 @@
 
-
 /** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -20,9 +19,10 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-function concatenateStrings(value1, value2) {
+const concatenateStrings = (value1, value2) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -36,9 +36,10 @@ function concatenateStrings(value1, value2) {
  *   'b'     => 1
  *   ''      => 0
  */
-function getStringLength(value) {
+const getStringLength = value => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Returns the result of string template and given parameters firstName and lastName.
@@ -53,9 +54,10 @@ function getStringLength(value) {
  *   'John','Doe'      => 'Hello, John Doe!'
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
-function getStringFromTemplate(firstName, lastName) {
+const getStringFromTemplate = (firstName, lastName) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
@@ -67,9 +69,10 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-function extractNameFromTemplate(value) {
+const extractNameFromTemplate = value => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -82,9 +85,10 @@ function extractNameFromTemplate(value) {
  *   'John Doe'  => 'J'
  *   'cat'       => 'c'
  */
-function getFirstChar(value) {
+const getFirstChar = value => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Removes a leading and trailing whitespace characters from string.
@@ -97,9 +101,10 @@ function getFirstChar(value) {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(value) {
+const removeLeadingAndTrailingWhitespaces = value => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Returns a string that repeated the specified number of times.
@@ -112,9 +117,10 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'A', 5  => 'AAAAA'
  *   'cat', 3 => 'catcatcat'
  */
-function repeatString(value, count) {
+const repeatString = (value, count) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Remove the first occurrence of string inside another string
@@ -128,9 +134,10 @@ function repeatString(value, count) {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-function removeFirstOccurrences(str, value) {
+const removeFirstOccurrences = (str, value) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Remove the first and last angle brackets from tag string
@@ -143,9 +150,10 @@ function removeFirstOccurrences(str, value) {
  *   '<span>' => 'span'
  *   '<a>' => 'a'
  */
-function unbracketTag(str) {
+const unbracketTag = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -158,9 +166,10 @@ function unbracketTag(str) {
  *   'Thunderstruck' => 'THUNDERSTRUCK'
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
-function convertToUpperCase(str) {
+const convertToUpperCase = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Extracts e-mails from single string with e-mails list delimeted by semicolons
@@ -172,9 +181,10 @@ function convertToUpperCase(str) {
  *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com' => ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com']
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(str) {
+const extractEmails = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Returns the string representation of rectangle with specified width and height
@@ -199,9 +209,10 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(width, height) {
+const getRectangleString = (width, height) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -219,9 +230,10 @@ function getRectangleString(width, height) {
  *   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(str) {
+const encodeToRot13 = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 /**
  * Returns true if the value is string; otherwise false.
@@ -236,9 +248,10 @@ function encodeToRot13(str) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(value) {
+const isString = value => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -265,10 +278,10 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(value) {
+const getCardId = value => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
-
+};
 
 export {
   concatenateStrings,

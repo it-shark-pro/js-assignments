@@ -12,6 +12,7 @@
     "no-new-wrappers": 1,
     "no-prototype-builtins": 1,
     "no-proto": 1,
+    "arrow-parens": [2, "as-needed"],
     "no-plusplus": [
       2,
       {"allowForLoopAfterthoughts": true}
