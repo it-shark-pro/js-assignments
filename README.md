@@ -1,7 +1,7 @@
 [![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
 # Brest IT Shark School
-## Javascript Assignments  [![Build Status](https://travis-ci.org/it-shark-pro/js-assignments.svg?branch=master)](https://travis-ci.org/it-shark-pro/js-assignments)
-
+## Javascript Assignments  [![Build Status](https://travis-ci.org/dimapanasiuk/js-assignments.svg?branch=master)](https://travis-ci.org/dimapanasiuk/js-assignments)
+  1
 Yet another javascript assignments. There are a lot of interactive javascript resources for beginners, but most of them are online and do not cover the modern programming workflow. There are some excellent training resources on github (https://github.com/rmurphey/js-assessment, https://github.com/mrdavidlaing/javascript-koans, https://github.com/vasanthk/js-bits etc) but they are not exactly simulate the everyday programming process. So the motivation of this project is to show TDD process in the wild to the beginners. Assingment tests are implemented in various ways to feel a difference and gain the experience what manner is good, what is bad and what is ugly.
 
 Another idea is to prepare assignment to cover all standard javascript functions, to drilling and mastering skills. Some tasks are practical, but some tasks are rather synthetic.
@@ -29,7 +29,7 @@ To start javascript assignments please follow the next steps:
   git commit -m "Update the links"
   git push origin master
 ```
-* Open https://github.com/it-shark-pro/js-assignments and test the build icon. Now it will run all tests and update status once you push changes to github. Keep this icon green!
+* Open https://github.com/dimapanasiuk/js-assignments and test the build icon. Now it will run all tests and update status once you push changes to github. Keep this icon green!
 
 
 ### How to setup work environment
@@ -73,7 +73,7 @@ and run the unit tests again. Find one test failed (red). Now it's time to fix i
 * Implement the function by any way and verify your solution by running tests until the failed test become passed (green).
 * Your solution work, but now time to refactor it. Try to make your code as pretty and simple as possible keeping up the test green.
 * Once you can't improve your code and tests are passed you can commit your solution.
-* Push your updates to github server and check if tests passed on [travis-ci](https://travis-ci.org/it-shark-pro/js-assignments/builds).
+* Push your updates to github server and check if tests passed on [travis-ci](https://travis-ci.org/dimapanasiuk/js-assignments/builds).
 * If everything is OK you can try to resolve the next task.
 
 ### How to debug tasks
