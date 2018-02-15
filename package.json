@@ -16,7 +16,7 @@
     "mocha": "^2.3.4"
   },
   "repository": {
-    "type": "git",
+    "type": "git+ssh",
     "url": "https://github.com/it-shark-pro/js-assignments.git"
   },
   "dependencies": {
