@@ -3,16 +3,33 @@
   "version": "0.9.1",
   "description": "JS training tasks",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "test-debug": "./node_modules/.bin/mocha --debug-brk"
+    "lint": "eslint ./**/*.js",
+    "precommit": "lint-staged",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register",
+    "test-debug": "./node_modules/.bin/mocha --debug-brk --compilers js:babel-core/register"
   },
   "author": "aorgish",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "mocha": "^2.3.4"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/it-shark-pro/js-assignments.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/it-shark-pro/js-assignments.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "git add"
+    ]
   }
 }

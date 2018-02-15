@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb-base"],
+  "rules": {
+    "max-len": 0,
+    "no-unused-vars": 0,
+    "no-console": [
+      "warn",
+      {
+        "allow": ["info", "error", "warn"]
+      }
+    ],
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
+
+  }
+}
