@@ -1,12 +1,12 @@
-'use strict';
 
-/********************************************************************************************
+
+/** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield        *
  *                                                                                          *
- ********************************************************************************************/
+ ******************************************************************************************* */
 
 
 /**
@@ -33,7 +33,7 @@
  *
  */
 function* get99BottlesOfBeer() {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -47,7 +47,7 @@ function* get99BottlesOfBeer() {
  *
  */
 function* getFibonacciSequence() {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -82,7 +82,7 @@ function* getFibonacciSequence() {
  *
  */
 function* depthTraversalTree(root) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -108,7 +108,7 @@ function* depthTraversalTree(root) {
  *
  */
 function* breadthTraversalTree(root) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -126,14 +126,14 @@ function* breadthTraversalTree(root) {
  *   [ 1, 3, 5, ... ], [ -1 ] => [ -1, 1, 3, 5, ...]
  */
 function* mergeSortedSequences(source1, source2) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
-module.exports = {
-    get99BottlesOfBeer: get99BottlesOfBeer,
-    getFibonacciSequence: getFibonacciSequence,
-    depthTraversalTree: depthTraversalTree,
-    breadthTraversalTree: breadthTraversalTree,
-    mergeSortedSequences: mergeSortedSequences
+export {
+  get99BottlesOfBeer,
+  getFibonacciSequence,
+  depthTraversalTree,
+  breadthTraversalTree,
+  mergeSortedSequences,
 };

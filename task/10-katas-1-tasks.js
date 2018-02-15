@@ -1,4 +1,4 @@
-'use strict';
+
 
 /**
  * Returns the array of 32 compass points and heading.
@@ -17,8 +17,8 @@
  *  ]
  */
 function createCompassPoints() {
-    throw new Error('Not implemented');
-    var sides = ['N','E','S','W'];  // use array of cardinal directions only!
+  throw new Error('Not implemented');
+  const sides = ['N', 'E', 'S', 'W']; // use array of cardinal directions only!
 }
 
 
@@ -56,7 +56,7 @@ function createCompassPoints() {
  *   'nothing to do' => 'nothing to do'
  */
 function* expandBraces(str) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -88,7 +88,7 @@ function* expandBraces(str) {
  *
  */
 function getZigZagMatrix(n) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -113,7 +113,7 @@ function getZigZagMatrix(n) {
  *
  */
 function canDominoesMakeRow(dominoes) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -137,13 +137,13 @@ function canDominoesMakeRow(dominoes) {
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
 function extractRanges(nums) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
-module.exports = {
-    createCompassPoints : createCompassPoints,
-    expandBraces : expandBraces,
-    getZigZagMatrix : getZigZagMatrix,
-    canDominoesMakeRow : canDominoesMakeRow,
-    extractRanges : extractRanges
+export {
+  createCompassPoints,
+  expandBraces,
+  getZigZagMatrix,
+  canDominoesMakeRow,
+  extractRanges,
 };

@@ -1,14 +1,23 @@
 {
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": ["airbnb-base"],
   "rules": {
     "max-len": 0,
-    "no-unused-vars": 0,
+    "no-unused-vars": 1,
+    "require-yield": 1,
+    "no-new-wrappers": 1,
+    "no-prototype-builtins": 1,
+    "no-proto": 1,
+    "no-plusplus": [
+      2,
+      {"allowForLoopAfterthoughts": true}
+    ],
     "no-console": [
-      "warn",
+      1,
       {
         "allow": ["info", "error", "warn"]
       }
@@ -21,6 +30,6 @@
         "allowTemplateLiterals": true
       }
     ]
-
-  }
+  },
+  "plugins": ["mocha"]
 }
