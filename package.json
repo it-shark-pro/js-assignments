@@ -5,13 +5,14 @@
   "scripts": {
     "lint": "eslint ./**/*.js",
     "precommit": "lint-staged",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register",
-    "test-debug": "./node_modules/.bin/mocha --debug-brk --compilers js:babel-core/register"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --require babel-polyfill",
+    "test-debug": "./node_modules/.bin/mocha --debug-brk --compilers js:babel-core/register --require babel-polyfill"
   },
   "author": "aorgish",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "mocha": "^2.3.4"
   },
   "repository": {
