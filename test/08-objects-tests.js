@@ -58,7 +58,7 @@ describe('08-objects-tasks', () => {
         obj: { height: 10, width: 20 },
         expected: '{"height":10,"width":20}',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.equal(
         tasks.getJSON(data.obj),
         data.expected,
@@ -84,7 +84,7 @@ describe('08-objects-tasks', () => {
         json: '{ "a":10, "b":20, "c":30 }',
         expected: new MockType(10, 20, 30),
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.fromJSON(data.proto, data.json);
       assert.deepEqual(
         actual,
@@ -226,7 +226,7 @@ describe('08-objects-tasks', () => {
       () => builder.element('table').element('div'),
       () => builder.id('id1').id('id2'),
       () => builder.pseudoElement('after').pseudoElement('before'),
-    ].forEach((fn) => {
+    ].forEach(fn => {
       assert.throws(
         fn,
         /Element, id and pseudo-element should not occur more then one time inside the selector/,
@@ -240,7 +240,7 @@ describe('08-objects-tasks', () => {
       () => builder.class('draggable').class('animated'),
       () => builder.attr('href').attr('title'),
       () => builder.pseudoClass('invalid').pseudoClass('focus'),
-    ].forEach((fn) => {
+    ].forEach(fn => {
       assert.doesNotThrow(
         fn,
         /Element, id and pseudo-element should not occur more then one time inside the selector/,
@@ -254,7 +254,7 @@ describe('08-objects-tasks', () => {
       () => builder.pseudoClass('hover').attr('title'),
       () => builder.pseudoElement('after').pseudoClass('valid'),
       () => builder.pseudoElement('after').id('id'),
-    ].forEach((fn) => {
+    ].forEach(fn => {
       assert.throws(
         fn,
         /Selector parts should be arranged in the following order: element, id, class, attribute, pseudo-class, pseudo-element/,

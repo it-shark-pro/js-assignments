@@ -16,7 +16,7 @@ describe('12-katas-3-tasks', () => {
     const puzzleToString = p => p.map(x => `       ${x}`).join('\n');
     [
       'ANGULAR', 'REACT', 'UNDEFINED', 'RED', 'STRING', 'CLASS', 'ARRAY',
-    ].forEach((word) => {
+    ].forEach(word => {
       assert(
         tasks.findStringInSnakingPuzzle(puzzle, word),
         `Word "${word}" occurrs in puzzle\n${puzzleToString(puzzle)}`,
@@ -25,7 +25,7 @@ describe('12-katas-3-tasks', () => {
 
     [
       'FUNCTION', 'NULL', 'EMBER', 'HOISTING', 'GIT', 'ARENA',
-    ].forEach((word) => {
+    ].forEach(word => {
       assert(
         !tasks.findStringInSnakingPuzzle(puzzle, word),
         `Word "${word}" does not occurr in puzzle\n${puzzleToString(puzzle)}`,
@@ -54,7 +54,7 @@ describe('12-katas-3-tasks', () => {
           'dabc', 'dacb', 'dbac', 'dbca', 'dcab', 'dcba',
         ],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.deepEqual(
         Array.from(tasks.getPermutations(data.chars)).sort(),
         data.expected,
@@ -87,7 +87,7 @@ describe('12-katas-3-tasks', () => {
         quotes: [1, 20, 1, 30, 1, 40, 1, 50, 1, 40, 1, 30, 1, 20, 1],
         expected: 343,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getMostProfitFromStockQuotes(data.quotes);
       assert.equal(
         actual,
@@ -103,7 +103,7 @@ describe('12-katas-3-tasks', () => {
       'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul',
       'https://en.wikipedia.org/wiki/Percent-encoding#Types_of_URI_characters',
       'https://en.wikipedia.org/wiki/Binary-to-text_encoding#Encoding_plain_text',
-    ].forEach((data) => {
+    ].forEach(data => {
       const urlShortener = new tasks.UrlShortener();
       const actual = urlShortener.encode(data);
       assert(
@@ -118,7 +118,7 @@ describe('12-katas-3-tasks', () => {
     [
       'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul',
       'https://www.example.com/catalog.html?search=mobile+phones&price=100-200&year=2016#top_links',
-    ].forEach((data) => {
+    ].forEach(data => {
       const urlShortener = new tasks.UrlShortener();
       const encoded = urlShortener.encode(data);
       const actual = urlShortener.decode(encoded);

@@ -20,7 +20,7 @@ describe('04-arrays-tasks', () => {
         value: 5,
         expected: 5,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.findElement(data.arr, data.value);
       assert.equal(
         data.expected,
@@ -46,7 +46,7 @@ describe('04-arrays-tasks', () => {
         len: 16,
         expected: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.deepEqual(
         data.expected,
         tasks.generateOdds(data.len),
@@ -67,7 +67,7 @@ describe('04-arrays-tasks', () => {
         arr: [],
         expected: [],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.doubleArray(data.arr);
       assert.deepEqual(
         data.expected,
@@ -90,7 +90,7 @@ describe('04-arrays-tasks', () => {
         arr: [],
         expected: [],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getArrayOfPositives(data.arr);
       assert.deepEqual(
         data.expected,
@@ -112,7 +112,7 @@ describe('04-arrays-tasks', () => {
         arr: ['cat', 'dog', 'raccon'],
         expected: ['cat', 'dog', 'raccon'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getArrayOfStrings(data.arr);
       assert.deepEqual(
         data.expected,
@@ -134,7 +134,7 @@ describe('04-arrays-tasks', () => {
         arr: [false, 0, NaN, '', undefined],
         expected: [],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.removeFalsyValues(data.arr);
       assert.deepEqual(
         data.expected,
@@ -167,7 +167,7 @@ describe('04-arrays-tasks', () => {
         item: true,
         expected: 1,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.findAllOccurences(data.arr, data.item);
       assert.equal(
         data.expected,
@@ -187,7 +187,7 @@ describe('04-arrays-tasks', () => {
         arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
         expected: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getUpperCaseStrings(data.arr);
       assert.deepEqual(
         data.expected,
@@ -206,7 +206,7 @@ describe('04-arrays-tasks', () => {
         arr: ['angular', 'react', 'ember'],
         expected: [7, 5, 5],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getStringsLength(data.arr);
       assert.deepEqual(
         data.expected,
@@ -229,7 +229,7 @@ describe('04-arrays-tasks', () => {
         index: 0,
         expected: ['x', 1, 'b', 'c'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       tasks.insertItem(data.arr, data.item, data.index);
       assert.deepEqual(
         data.expected,
@@ -250,7 +250,7 @@ describe('04-arrays-tasks', () => {
         n: 3,
         expected: ['a', 'b', 'c'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.deepEqual(
         data.expected,
         tasks.getHead(data.arr, data.n),
@@ -270,7 +270,7 @@ describe('04-arrays-tasks', () => {
         n: 3,
         expected: ['b', 'c', 'd'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.deepEqual(
         data.expected,
         tasks.getTail(data.arr, data.n),
@@ -297,7 +297,7 @@ describe('04-arrays-tasks', () => {
         arr: [[]],
         expected: '',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.toCsvText(data.arr);
       assert.equal(
         data.expected,
@@ -316,7 +316,7 @@ describe('04-arrays-tasks', () => {
         arr: [10, 100, -1],
         expected: [100, 10000, 1],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.toArrayOfSquares(data.arr);
       assert.deepEqual(
         data.expected,
@@ -341,7 +341,7 @@ describe('04-arrays-tasks', () => {
         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         expected: [1, 3, 6, 10, 15, 21, 28, 36, 45, 55],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getMovingSum(data.arr);
       assert.deepEqual(
         data.expected,
@@ -363,7 +363,7 @@ describe('04-arrays-tasks', () => {
         arr: ['a'],
         expected: [],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getSecondItems(data.arr);
       assert.deepEqual(
         data.expected,
@@ -391,7 +391,7 @@ describe('04-arrays-tasks', () => {
         arr: [1, 2, 3, 4, 5],
         expected: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.propagateItemsByPositionIndex(data.arr);
       assert.deepEqual(
         data.expected,
@@ -419,7 +419,7 @@ describe('04-arrays-tasks', () => {
         arr: [10, 10, 10, 10],
         expected: [10, 10, 10],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.get3TopItems(data.arr);
       assert.deepEqual(
         data.expected,
@@ -447,7 +447,7 @@ describe('04-arrays-tasks', () => {
         arr: [1, '2'],
         expected: 1,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getPositivesCount(data.arr);
       assert.equal(
         data.expected,
@@ -479,7 +479,7 @@ describe('04-arrays-tasks', () => {
         arr: ['nine', 'eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one', 'zero'],
         expected: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.sortDigitNamesByNumericOrder(data.arr);
       assert.deepEqual(
         data.expected,
@@ -501,7 +501,7 @@ describe('04-arrays-tasks', () => {
         arr: [1, 10, 100, 1000],
         expected: 1111,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getItemsSum(data.arr);
       assert.deepEqual(
         data.expected,
@@ -527,7 +527,7 @@ describe('04-arrays-tasks', () => {
         arr: [null, undefined, NaN, false, 0, ''],
         expected: 6,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getFalsyValuesCount(data.arr);
       assert.deepEqual(
         data.expected,
@@ -550,7 +550,7 @@ describe('04-arrays-tasks', () => {
         arr: ['rock', 'paper', 'scissors'],
         expected: 'rock,paper,scissors',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.toStringList(data.arr);
       assert.equal(
         data.expected,
@@ -626,7 +626,7 @@ describe('04-arrays-tasks', () => {
           { country: '5', city: '2' },
         ],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.sortCitiesArray(data.arr);
       assert.deepEqual(
         data.expected,
@@ -653,7 +653,7 @@ describe('04-arrays-tasks', () => {
           [0, 0, 0, 1, 0],
           [0, 0, 0, 0, 1]],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getIdentityMatrix(data.n);
       assert.deepEqual(
         data.expected,
@@ -689,7 +689,7 @@ describe('04-arrays-tasks', () => {
         end: 3,
         expected: [3],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getIntervalArray(data.start, data.end);
       assert.deepEqual(
         data.expected,
@@ -714,7 +714,7 @@ describe('04-arrays-tasks', () => {
         arr: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
         expected: [1, 2, 3, 4, 5, 6],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.distinct(data.arr);
       assert.deepEqual(
         data.expected,
@@ -760,7 +760,7 @@ describe('04-arrays-tasks', () => {
           ['Manowar', ['Kings of Metal']],
         ]),
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.group(data.arr, data.keySelector, data.valueSelector);
       assert.deepEqual(
         Array.from(data.expected),
@@ -785,7 +785,7 @@ describe('04-arrays-tasks', () => {
         childrenSelector: x => x.split(''),
         expected: ['o', 'n', 'e', 't', 'w', 'o', 't', 'h', 'r', 'e', 'e'],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.selectMany(data.arr, data.childrenSelector);
       assert.deepStrictEqual(
         data.expected,
@@ -810,7 +810,7 @@ describe('04-arrays-tasks', () => {
         indexes: [0, 0, 1],
         expected: 2,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getElementByIndexes(data.arr, data.indexes);
       assert.equal(
         data.expected,
@@ -839,7 +839,7 @@ describe('04-arrays-tasks', () => {
         arr: [1, 2, 3, 4, 5],
         expected: [4, 5, 3, 1, 2],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.swapHeadAndTail(Array.from(data.arr));
       assert.deepEqual(
         data.expected,
@@ -853,7 +853,7 @@ describe('04-arrays-tasks', () => {
   it.optional('Functions from 04-array-test.js should not use basic loops statements', () => {
     Object.getOwnPropertyNames(tasks)
       .filter(x => tasks[x] instanceof Function)
-      .forEach((f) => {
+      .forEach(f => {
         assert(
           !/([;{]\s*(for|while)\s*\()|(\.forEach\s*\()/.test(tasks[f].toString()),
           `Function "${f}" should not use basic loop statements (for, while or Array.forEach)! Please use specialized array methods (Array.map, Array.reduce etc).`,

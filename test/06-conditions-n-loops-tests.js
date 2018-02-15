@@ -10,7 +10,7 @@ describe('06-conditions-n-loops-tasks', () => {
       1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19, 22, 23, 26, 28, 29, 31, 32, 34,
       37, 38, 41, 43, 44, 47, 49, 52, 53, 56, 58, 59, 61, 62, 64, 67, 68, 71,
       73, 74, 76, 77, 79, 82, 83, 86, 88, 89, 91, 92, 94, 97, 98,
-    ].forEach((num) => {
+    ].forEach(num => {
       const actual = tasks.getFizzBuzz(num);
       assert.equal(
         actual,
@@ -24,7 +24,7 @@ describe('06-conditions-n-loops-tasks', () => {
       33, 36, 39, 42, 48, 51, 54, 57,
       63, 66, 69, 72, 78, 81, 84, 87,
       93, 96, 99,
-    ].forEach((num) => {
+    ].forEach(num => {
       const actual = tasks.getFizzBuzz(num);
       assert.equal(
         actual,
@@ -35,7 +35,7 @@ describe('06-conditions-n-loops-tasks', () => {
 
     [
       5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100,
-    ].forEach((num) => {
+    ].forEach(num => {
       const actual = tasks.getFizzBuzz(num);
       assert.equal(
         actual,
@@ -46,7 +46,7 @@ describe('06-conditions-n-loops-tasks', () => {
 
     [
       15, 30, 45, 60, 75, 90,
-    ].forEach((num) => {
+    ].forEach(num => {
       const actual = tasks.getFizzBuzz(num);
       assert.equal(
         actual,
@@ -62,7 +62,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { n: 1, expected: 1 },
       { n: 5, expected: 120 },
       { n: 10, expected: 3628800 },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getFactorial(data.n);
       assert.equal(
         actual,
@@ -78,7 +78,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { n1: 1, n2: 2, expected: 3 },
       { n1: 5, n2: 10, expected: 45 },
       { n1: -1, n2: 1, expected: 0 },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getSumBetweenNumbers(data.n1, data.n2);
       assert.equal(
         actual,
@@ -95,8 +95,8 @@ describe('06-conditions-n-loops-tasks', () => {
       { sides: [3, 4, 5], expected: true },
       { sides: [10, 1, 1], expected: false },
       { sides: [10, 10, 10], expected: true },
-    ].forEach((data) => {
-      [[0, 1, 2], [0, 2, 1], [1, 2, 0], [1, 0, 2], [2, 0, 1], [2, 1, 0]].forEach((idx) => {
+    ].forEach(data => {
+      [[0, 1, 2], [0, 2, 1], [1, 2, 0], [1, 0, 2], [2, 0, 1], [2, 1, 0]].forEach(idx => {
         const actual = tasks.isTriangle(
           data.sides[idx[0]],
           data.sides[idx[1]],
@@ -171,7 +171,7 @@ describe('06-conditions-n-loops-tasks', () => {
         },
         expected: false,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.equal(
         tasks.doRectanglesOverlap(data.rect1, data.rect2),
         data.expected,
@@ -212,7 +212,7 @@ describe('06-conditions-n-loops-tasks', () => {
         point: { x: 2, y: 6.1 },
         expected: false,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.equal(
         tasks.isInsideCircle(data.circle, data.point),
         data.expected,
@@ -227,7 +227,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { str: 'The quick brown fox jumps over the lazy dog', expected: 'T' },
       { str: 'abracadabra', expected: 'c' },
       { str: 'entente', expected: null },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.findFirstSingleChar(data.str);
       assert.equal(
         actual,
@@ -271,7 +271,7 @@ describe('06-conditions-n-loops-tasks', () => {
         isEndIncluded: true,
         expected: '[3, 5]',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getIntervalString(data.a, data.b, data.isStartIncluded, data.isEndIncluded);
       assert.equal(
         actual,
@@ -288,7 +288,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { str: 'abracadabra', expected: 'arbadacarba' },
       { str: 'rotator', expected: 'rotator' },
       { str: 'noon', expected: 'noon' },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.reverseString(data.str);
       assert.equal(
         actual,
@@ -305,7 +305,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { num: 1111, expected: 1111 },
       { num: 87354, expected: 45378 },
       { num: 34143, expected: 34143 },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.reverseInteger(data.num);
       assert.equal(
         actual,
@@ -339,7 +339,7 @@ describe('06-conditions-n-loops-tasks', () => {
       5019717010103742,
       6331101999990016,
       54891243456789010,
-    ].forEach((ccn) => {
+    ].forEach(ccn => {
       assert(
         tasks.isCreditCardNumber(ccn),
         `CCN ${ccn} is valid, but actually not`,
@@ -353,7 +353,7 @@ describe('06-conditions-n-loops-tasks', () => {
       4916123456789012,
       371449635398430,
       9112893456789010,
-    ].forEach((ccn) => {
+    ].forEach(ccn => {
       assert(
         tasks.isCreditCardNumber(ccn) == false,
         `CCN ${ccn} is not valid, but actually yes`,
@@ -368,7 +368,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { num: 23456, expected: 2 },
       { num: 10000, expected: 1 },
       { num: 165536, expected: 8 },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getDigitalRoot(data.num);
       assert.equal(
         actual,
@@ -383,7 +383,7 @@ describe('06-conditions-n-loops-tasks', () => {
     [
       '[]', '[[][][[]]]', '[[][]]', '', '<>', '{}', '()', '<()>', '{<>}', '[{}]',
       '[{(<()[]{}<>>)}]', '{}<>()[]', '{<>}{()}[[]](())',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         tasks.isBracketsBalanced(str),
         `'${str}' has balanced brackets, but actually not`,
@@ -394,7 +394,7 @@ describe('06-conditions-n-loops-tasks', () => {
     [
       '[[]', '][', '[][][][][[]', '{)', '<]', '(}', '[{]}', '{<}>', '{{[(])}}', '{}()[]<',
       '{', '(', '[', '({}[]<>(((())))', '{{[]}}>',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         tasks.isBracketsBalanced(str) == false,
         `'${str}' has unbalanced brackets, but actually yes`,
@@ -415,7 +415,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { num: 365, n: 7, expected: '1031' },
       { num: 365, n: 9, expected: '445' },
       { num: 365, n: 10, expected: '365' },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.toNaryString(data.num, data.n);
       assert.equal(
         actual,
@@ -441,7 +441,7 @@ describe('06-conditions-n-loops-tasks', () => {
         pathes: ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'],
         expected: '/',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getCommonDirectoryPath(data.pathes, data.n);
       assert.equal(
         actual,
@@ -481,7 +481,7 @@ describe('06-conditions-n-loops-tasks', () => {
         ],
         expected: [[32]],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getMatrixProduct(data.m1, data.m2);
       assert.deepEqual(
         actual,
@@ -623,7 +623,7 @@ describe('06-conditions-n-loops-tasks', () => {
         endDate: '2015-02-15 00:00:00.001',
         expected: '15 years ago',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.timespanToHumanString(new Date(data.startDate), new Date(data.endDate));
       assert.equal(
         actual,
@@ -684,7 +684,7 @@ describe('06-conditions-n-loops-tasks', () => {
       [X, X, O],
       [X, , O],
     ],
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.evaluateTicTacToePosition(data);
       assert.equal(
         actual,
@@ -726,7 +726,7 @@ describe('06-conditions-n-loops-tasks', () => {
       [X, O, X],
       [O, , X],
     ],
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.evaluateTicTacToePosition(data);
       assert.equal(
         actual,
@@ -756,7 +756,7 @@ describe('06-conditions-n-loops-tasks', () => {
       [O, , O],
       [X, O, X],
     ],
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.evaluateTicTacToePosition(data);
       assert.equal(
         actual,

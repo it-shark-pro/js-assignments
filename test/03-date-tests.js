@@ -40,7 +40,7 @@ describe('03-date-tasks', () => {
     [
       new Date(2000, 1, 1),
       new Date(2012, 1, 1),
-    ].forEach((date) => {
+    ].forEach(date => {
       assert(
         tasks.isLeapYear(date) == true,
         `${date} is a leap year`,
@@ -50,7 +50,7 @@ describe('03-date-tasks', () => {
     [
       new Date(1900, 1, 1),
       new Date(2001, 1, 1),
-    ].forEach((date) => {
+    ].forEach(date => {
       assert(
         tasks.isLeapYear(date) == false,
         `${date} is not a leap year`,
@@ -82,7 +82,7 @@ describe('03-date-tasks', () => {
         endDate: new Date(2000, 1, 1, 15, 20, 10, 453),
         expected: '05:20:10.453',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.equal(
         data.expected,
         tasks.timeSpanToString(data.startDate, data.endDate),
@@ -121,7 +121,7 @@ describe('03-date-tasks', () => {
         date: Date.UTC(2016, 3, 5, 23, 55),
         expected: 0.4799655442984406,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.equal(
         tasks.angleBetweenClockHands(new Date(data.date)),
         data.expected,

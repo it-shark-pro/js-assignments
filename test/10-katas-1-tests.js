@@ -91,7 +91,7 @@ describe('10-katas-1-tasks', () => {
           'nothing to do',
         ],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = Array.from(tasks.expandBraces(data.str));
       actual.sort();
       assert.deepEqual(
@@ -141,7 +141,7 @@ describe('10-katas-1-tasks', () => {
         [20, 22, 32, 35, 41, 44, 46],
         [21, 33, 34, 42, 43, 47, 48],
       ],
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getZigZagMatrix(data.length);
       assert.deepEqual(
         actual,
@@ -161,7 +161,7 @@ describe('10-katas-1-tasks', () => {
       ], [
         [1, 1], [1, 2], [2, 3], [2, 5], [2, 6], [3, 6], [5, 6], [6, 6],
       ],
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.canDominoesMakeRow(data);
       assert.equal(
         actual,
@@ -179,7 +179,7 @@ describe('10-katas-1-tasks', () => {
       ], [
         [0, 0], [0, 1], [0, 2], [0, 3], [1, 1], [1, 2], [1, 3], [2, 2], [2, 3], [3, 3],
       ],
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.canDominoesMakeRow(data);
       assert.equal(
         actual,
@@ -209,7 +209,7 @@ describe('10-katas-1-tasks', () => {
           25, 27, 28, 29, 30, 31, 32, 33, 35, 36, 37, 38, 39],
         result: '0-2,4,6-8,11,12,14-25,27-33,35-39',
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.extractRanges(data.nums);
       assert.equal(
         actual,

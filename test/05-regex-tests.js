@@ -12,7 +12,7 @@ describe('05-regex-tasks', () => {
       '{3F2504E0-4F89-41D3-9A0C-0305E82C3301}',
       '{21EC2020-3AEA-4069-A2DD-08002B30309D}',
       '{0c74f13f-fa83-4c48-9b33-68921dd72463}',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str),
         `regex does not match '${str}'`,
@@ -26,7 +26,7 @@ describe('05-regex-tasks', () => {
       '677E2553DD4D43B09DA77414DB1EB8EA',
       '0c74f13f-fa83-4c48-9b33-68921dd72463',
       'The roof, the roof, the roof is on fire',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str) == false,
         `regex matches '${str}'`,
@@ -38,14 +38,14 @@ describe('05-regex-tasks', () => {
   it.optional('getRegexForPitSpot should be implemeted according to task', () => {
     const result = tasks.getRegexForPitSpot();
 
-    ['pit', 'spot', 'spate', 'slap two', 'respite'].forEach((str) => {
+    ['pit', 'spot', 'spate', 'slap two', 'respite'].forEach(str => {
       assert(
         result.test(str),
         `regex does not match '${str}'`,
       );
     });
 
-    [' pt', 'Pot', 'peat', 'part'].forEach((str) => {
+    [' pt', 'Pot', 'peat', 'part'].forEach(str => {
       assert(
         result.test(str) == false,
         `regex matches '${str}'`,
@@ -68,7 +68,7 @@ describe('05-regex-tasks', () => {
       '10.10.1.1',
       '46.61.155.237',
       '010.234.015.001',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str),
         `regex does not match '${str}'`,
@@ -80,7 +80,7 @@ describe('05-regex-tasks', () => {
       '127.0.0.-1',
       '23.24.25.26.27',
       'Set dns to 8.8.8.8',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str) == false,
         `regex matches '${str}'`,
@@ -97,7 +97,7 @@ describe('05-regex-tasks', () => {
       '234-56-2349',
       '875-43-0298',
       '034-01-0008',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str),
         `regex does not match '${str}'`,
@@ -110,7 +110,7 @@ describe('05-regex-tasks', () => {
       '875-00-0298',
       '034-01-0000',
       '0S4-H1-HACK',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str) == false,
         `regex matches '${str}'`,
@@ -130,7 +130,7 @@ describe('05-regex-tasks', () => {
       'Pa55',
       'Pa__W0rd',
       '   PassW0rd    ',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         !result.test(str),
         `Regex matches '${str}'`,
@@ -143,7 +143,7 @@ describe('05-regex-tasks', () => {
       'pa55W0rd',
       'pa55wordPASSW0RD',
       'a1A2b3B4',
-    ].forEach((str) => {
+    ].forEach(str => {
       assert(
         result.test(str),
         `Regex does not match '${str}'`,

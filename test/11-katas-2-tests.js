@@ -74,7 +74,7 @@ describe('11-katas-2-tasks', () => {
               '|_||_  _||_| _||_| _||_| _|\n',
         result: 823856989,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.equal(
         tasks.parseBankAccount(data.text),
         data.result,
@@ -111,7 +111,7 @@ describe('11-katas-2-tasks', () => {
         cols: Number.MAX_SAFE_INTEGER,
         expected: [text],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       assert.deepEqual(
         Array.from(tasks.wrapText(text, data.cols)),
         data.expected,
@@ -226,7 +226,7 @@ describe('11-katas-2-tasks', () => {
         hand: ['A♥', 'K♥', 'Q♥', '2♦', '3♠'],
         expected: PokerRank.HighCard,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getPokerHandRank(data.hand);
       assert(
         actual >= PokerRank.HighCard,
@@ -328,7 +328,7 @@ describe('11-katas-2-tasks', () => {
           '++\n',
         ],
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = Array.from(tasks.getFigureRectangles(data.figure)).sort();
       const expected = data.expected.sort();
       assert.deepEqual(

@@ -16,7 +16,7 @@ describe('09-functions-n-closures-tasks', () => {
       {
         f: x => x * x, g: x => x + 2, arg: 5, result: 49,
       },
-    ].forEach((data) => {
+    ].forEach(data => {
       const actual = tasks.getComposition(data.f, data.g);
       assert(actual(data.arg) === data.result);
     });
@@ -48,8 +48,8 @@ describe('09-functions-n-closures-tasks', () => {
         polynom: tasks.getPolynom(8),
         results: [{ x: 0, y: 8 }, { x: 2, y: 8 }, { x: 5, y: 8 }],
       },
-    ].forEach((data) => {
-      data.results.forEach((test) => {
+    ].forEach(data => {
+      data.results.forEach(test => {
         assert(test.y == data.polynom(test.x));
       });
     });
