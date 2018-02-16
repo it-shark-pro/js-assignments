@@ -1,5 +1,4 @@
 
-
 /** ********************************************************************************************
  *                                                                                            *
  * Plese read the following tutorial before implementing tasks:                               *
@@ -25,9 +24,10 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
  *
  */
-function getComposition(f, g) {
+export const getComposition = (f, g) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -46,9 +46,10 @@ function getComposition(f, g) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(exponent) {
+export const getPowerFunction = exponent => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -64,9 +65,10 @@ function getPowerFunction(exponent) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom() {
+export const getPolynom = () => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -83,9 +85,10 @@ function getPolynom() {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-function memoize(func) {
+export const memoize = func => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -103,9 +106,10 @@ function memoize(func) {
  * }, 2);
  * retryer() => 2
  */
-function retry(func, attempts) {
+export const retry = (func, attempts) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -131,9 +135,10 @@ function retry(func, attempts) {
  * cos(3.141592653589793) ends
  *
  */
-function logger(func, logFunc) {
+export const logger = (func, logFunc) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -149,9 +154,10 @@ function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
-function partialUsingArguments(fn) {
+export const partialUsingArguments = fn => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -170,18 +176,7 @@ function partialUsingArguments(fn) {
  *   getId4() => 7
  *   getId10() => 11
  */
-function getIdGeneratorFunction(startFrom) {
+export const getIdGeneratorFunction = startFrom => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
-
-
-export {
-  getComposition,
-  getPowerFunction,
-  getPolynom,
-  memoize,
-  retry,
-  logger,
-  partialUsingArguments,
-  getIdGeneratorFunction,
 };

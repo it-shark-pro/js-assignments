@@ -1,5 +1,4 @@
 
-
 /**
  * Returns true if word occurrs in the specified word snaking puzzle.
  * Each words can be constructed using "snake" path inside a grid with top, left, right and bottom directions.
@@ -27,9 +26,10 @@
  *   'FUNCTION'  => false
  *   'NULL'      => false
  */
-function findStringInSnakingPuzzle(puzzle, searchStr) {
+export const findStringInSnakingPuzzle = (puzzle, searchStr) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -44,7 +44,8 @@ function findStringInSnakingPuzzle(puzzle, searchStr) {
  *    'ab'  => 'ab','ba'
  *    'abc' => 'abc','acb','bac','bca','cab','cba'
  */
-function* getPermutations(chars) {
+export function* getPermutations(chars) {
+  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -64,9 +65,10 @@ function* getPermutations(chars) {
  *    [ 6, 5, 4, 3, 2, 1]   => 0   (nothing to buy)
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (buy at 1,6,5 and sell all at 10)
  */
-function getMostProfitFromStockQuotes(quotes) {
+export const getMostProfitFromStockQuotes = quotes => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -83,7 +85,7 @@ function getMostProfitFromStockQuotes(quotes) {
  *     var original  = urlShortener.decode(shortLink); // => 'https://en.wikipedia.org/wiki/URL_shortening'
  *
  */
-function UrlShortener() {
+export function UrlShortener() {
   this.urlAllowedChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
                           'abcdefghijklmnopqrstuvwxyz' +
                           "0123456789-_.~!*'();:@&=+$,/?#[]";
@@ -98,12 +100,4 @@ UrlShortener.prototype = {
   decode(code) {
     throw new Error('Not implemented');
   },
-};
-
-
-export {
-  findStringInSnakingPuzzle,
-  getPermutations,
-  getMostProfitFromStockQuotes,
-  UrlShortener,
 };

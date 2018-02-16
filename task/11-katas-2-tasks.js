@@ -1,5 +1,4 @@
 
-
 /**
  * Returns the bank account number parsed from specified string.
  *
@@ -33,9 +32,10 @@
  *   '|_||_  _||_| _||_| _||_| _|\n',
  *
  */
-function parseBankAccount(bankAccount) {
+export const parseBankAccount = bankAccount => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -62,7 +62,8 @@ function parseBankAccount(bankAccount) {
  *                                                                                                'sequence of',
  *                                                                                                'characters.'
  */
-function* wrapText(text, columns) {
+export function* wrapText(text, columns) {
+  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -87,7 +88,7 @@ function* wrapText(text, columns) {
  *   [ '3♥','4♥','10♥','3♦','A♠' ] => PokerRank.OnePair
  *   [ 'A♥','K♥','Q♥','2♦','3♠' ] =>  PokerRank.HighCard
  */
-const PokerRank = {
+export const PokerRank = {
   StraightFlush: 8,
   FourOfKind: 7,
   FullHouse: 6,
@@ -99,9 +100,10 @@ const PokerRank = {
   HighCard: 0,
 };
 
-function getPokerHandRank(hand) {
+export const getPokerHandRank = hand => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -134,15 +136,7 @@ function getPokerHandRank(hand) {
  *    '|             |\n'+              '+-----+\n'           '+-------------+\n'
  *    '+-------------+\n'
  */
-function* getFigureRectangles(figure) {
+export function* getFigureRectangles(figure) {
+  /* implement your code here */
   throw new Error('Not implemented');
 }
-
-
-export {
-  parseBankAccount,
-  wrapText,
-  PokerRank,
-  getPokerHandRank,
-  getFigureRectangles,
-};

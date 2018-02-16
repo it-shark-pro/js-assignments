@@ -1,5 +1,4 @@
 
-
 /** ************************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
@@ -29,9 +28,10 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(num) {
+export const getFizzBuzz = num => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -45,9 +45,10 @@ function getFizzBuzz(num) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(n) {
+export const getFactorial = n => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -62,9 +63,10 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(n1, n2) {
+export const getSumBetweenNumbers = (n1, n2) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -81,9 +83,10 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(a, b, c) {
+export const isTriangle = (a, b, c) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -118,9 +121,10 @@ function isTriangle(a, b, c) {
  *   { top:20, left:20, width: 20, height: 20 }    =>  false
  *
  */
-function doRectanglesOverlap(rect1, rect2) {
+export const doRectanglesOverlap = (rect1, rect2) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -149,9 +153,10 @@ function doRectanglesOverlap(rect1, rect2) {
  *   { center: { x:0, y:0 }, radius:10 },  { x:10, y:10 }   => false
  *
  */
-function isInsideCircle(circle, point) {
+export const isInsideCircle = (circle, point) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -165,9 +170,10 @@ function isInsideCircle(circle, point) {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-function findFirstSingleChar(str) {
+export const findFirstSingleChar = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -191,9 +197,10 @@ function findFirstSingleChar(str) {
  *   5, 3, true, true   => '[3, 5]'
  *
  */
-function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
+export const getIntervalString = (a, b, isStartIncluded, isEndIncluded) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -208,9 +215,10 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-function reverseString(str) {
+export const reverseString = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -225,9 +233,10 @@ function reverseString(str) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(num) {
+export const reverseInteger = num => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -250,9 +259,10 @@ function reverseInteger(num) {
  *   5436468789016589 => false
  *   4916123456789012 => false
  */
-function isCreditCardNumber(ccn) {
+export const isCreditCardNumber = ccn => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -269,9 +279,10 @@ function isCreditCardNumber(ccn) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(num) {
+export const getDigitalRoot = num => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -295,9 +306,10 @@ function getDigitalRoot(num) {
  *   '{)' = false
  *   '{[(<{[]}>)]}' = true
  */
-function isBracketsBalanced(str) {
+export const isBracketsBalanced = str => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -331,9 +343,10 @@ function isBracketsBalanced(str) {
  *   Date('2000-01-01 01:00:00.100'), Date('2015-01-02 03:00:05.000')  => '15 years ago'
  *
  */
-function timespanToHumanString(startDate, endDate) {
+export const timespanToHumanString = (startDate, endDate) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -355,9 +368,10 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(num, n) {
+export const toNaryString = (num, n) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -372,9 +386,10 @@ function toNaryString(num, n) {
  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
-function getCommonDirectoryPath(pathes) {
+export const getCommonDirectoryPath = pathes => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -395,9 +410,10 @@ function getCommonDirectoryPath(pathes) {
  *                         [ 6 ]]
  *
  */
-function getMatrixProduct(m1, m2) {
+export const getMatrixProduct = (m1, m2) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -430,28 +446,7 @@ function getMatrixProduct(m1, m2) {
  *    [    ,   ,    ]]
  *
  */
-function evaluateTicTacToePosition(position) {
+export const evaluateTicTacToePosition = position => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
-
-
-export {
-  getFizzBuzz,
-  getFactorial,
-  getSumBetweenNumbers,
-  isTriangle,
-  doRectanglesOverlap,
-  isInsideCircle,
-  findFirstSingleChar,
-  getIntervalString,
-  reverseString,
-  reverseInteger,
-  isCreditCardNumber,
-  getDigitalRoot,
-  isBracketsBalanced,
-  timespanToHumanString,
-  toNaryString,
-  getCommonDirectoryPath,
-  getMatrixProduct,
-  evaluateTicTacToePosition,
 };

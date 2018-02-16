@@ -1,5 +1,4 @@
 
-
 /** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -32,7 +31,7 @@
  * @return {Iterable.<string>}
  *
  */
-function* get99BottlesOfBeer() {
+export function* get99BottlesOfBeer() {
   throw new Error('Not implemented');
 }
 
@@ -46,7 +45,7 @@ function* get99BottlesOfBeer() {
  * @return {Iterable.<number>}
  *
  */
-function* getFibonacciSequence() {
+export function* getFibonacciSequence() {
   throw new Error('Not implemented');
 }
 
@@ -81,7 +80,7 @@ function* getFibonacciSequence() {
  *  depthTraversalTree(node1) => node1, node2, node3, node4, node5, node6, node7, node8
  *
  */
-function* depthTraversalTree(root) {
+export function* depthTraversalTree(root) {
   throw new Error('Not implemented');
 }
 
@@ -107,7 +106,7 @@ function* depthTraversalTree(root) {
  *           8
  *
  */
-function* breadthTraversalTree(root) {
+export function* breadthTraversalTree(root) {
   throw new Error('Not implemented');
 }
 
@@ -125,15 +124,6 @@ function* breadthTraversalTree(root) {
  *   [ 0 ], [ 2, 4, 6, ... ]  => [ 0, 2, 4, 6, ... ]
  *   [ 1, 3, 5, ... ], [ -1 ] => [ -1, 1, 3, 5, ...]
  */
-function* mergeSortedSequences(source1, source2) {
+export function* mergeSortedSequences(source1, source2) {
   throw new Error('Not implemented');
 }
-
-
-export {
-  get99BottlesOfBeer,
-  getFibonacciSequence,
-  depthTraversalTree,
-  breadthTraversalTree,
-  mergeSortedSequences,
-};

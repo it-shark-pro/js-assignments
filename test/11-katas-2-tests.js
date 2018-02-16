@@ -1,7 +1,12 @@
+import assert from 'assert';
+import {
+  parseBankAccount,
+  wrapText,
+  PokerRank,
+  getPokerHandRank,
+  getFigureRectangles,
+} from '../task/11-katas-2-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/11-katas-2-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('11-katas-2-tasks', () => {
@@ -76,7 +81,7 @@ describe('11-katas-2-tasks', () => {
       },
     ].forEach(data => {
       assert.equal(
-        tasks.parseBankAccount(data.text),
+        parseBankAccount(data.text),
         data.result,
         `${data.text} has not parsed correctly:`,
       );
@@ -113,7 +118,7 @@ describe('11-katas-2-tasks', () => {
       },
     ].forEach(data => {
       assert.deepEqual(
-        Array.from(tasks.wrapText(text, data.cols)),
+        Array.from(wrapText(text, data.cols)),
         data.expected,
         `'${text}' has not wrapped correctly for ${data.cols} columns:`,
       );
@@ -123,7 +128,6 @@ describe('11-katas-2-tasks', () => {
 
   it.optional('getPokerHandRank should return the rank of the specified poker hand', () => {
     const rankNames = [];
-    const { PokerRank } = tasks;
     rankNames[PokerRank.StraightFlush] = 'StraightFlush';
     rankNames[PokerRank.FourOfKind] = 'FourOfKind';
     rankNames[PokerRank.FullHouse] = 'FullHouse';
@@ -227,7 +231,7 @@ describe('11-katas-2-tasks', () => {
         expected: PokerRank.HighCard,
       },
     ].forEach(data => {
-      const actual = tasks.getPokerHandRank(data.hand);
+      const actual = getPokerHandRank(data.hand);
       assert(
         actual >= PokerRank.HighCard,
         'Invalid return value. The return value should be >= PokerRank.HighCard',
@@ -329,7 +333,7 @@ describe('11-katas-2-tasks', () => {
         ],
       },
     ].forEach(data => {
-      const actual = Array.from(tasks.getFigureRectangles(data.figure)).sort();
+      const actual = Array.from(getFigureRectangles(data.figure)).sort();
       const expected = data.expected.sort();
       assert.deepEqual(
         actual,

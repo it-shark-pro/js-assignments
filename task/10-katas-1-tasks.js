@@ -1,5 +1,4 @@
 
-
 /**
  * Returns the array of 32 compass points and heading.
  * See details here:
@@ -16,10 +15,11 @@
  *     { abbreviation : 'NbW',   azimuth : 348.75 }
  *  ]
  */
-function createCompassPoints() {
+export const createCompassPoints = () => {
+  /* implement your code here */
   throw new Error('Not implemented');
   const sides = ['N', 'E', 'S', 'W']; // use array of cardinal directions only!
-}
+};
 
 
 /**
@@ -55,7 +55,8 @@ function createCompassPoints() {
  *
  *   'nothing to do' => 'nothing to do'
  */
-function* expandBraces(str) {
+export function* expandBraces(str) {
+  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -87,9 +88,10 @@ function* expandBraces(str) {
  *          [ 9,10,14,15 ]]
  *
  */
-function getZigZagMatrix(n) {
+export const getZigZagMatrix = n => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -112,9 +114,10 @@ function getZigZagMatrix(n) {
  * [[0,0], [0,1], [1,1], [0,2], [1,2], [2,2], [0,3], [1,3], [2,3], [3,3]] => false
  *
  */
-function canDominoesMakeRow(dominoes) {
+export const canDominoesMakeRow = dominoes => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -136,14 +139,7 @@ function canDominoesMakeRow(dominoes) {
  * [ 0, 1, 2, 5, 7, 8, 9] => '0-2,5,7-9'
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
-function extractRanges(nums) {
+export const extractRanges = nums => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
-
-export {
-  createCompassPoints,
-  expandBraces,
-  getZigZagMatrix,
-  canDominoesMakeRow,
-  extractRanges,
 };

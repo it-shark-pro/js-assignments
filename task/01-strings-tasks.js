@@ -19,7 +19,7 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-const concatenateStrings = (value1, value2) => {
+export const concatenateStrings = (value1, value2) => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -36,7 +36,7 @@ const concatenateStrings = (value1, value2) => {
  *   'b'     => 1
  *   ''      => 0
  */
-const getStringLength = value => {
+export const getStringLength = value => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -54,7 +54,7 @@ const getStringLength = value => {
  *   'John','Doe'      => 'Hello, John Doe!'
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
-const getStringFromTemplate = (firstName, lastName) => {
+export const getStringFromTemplate = (firstName, lastName) => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -69,7 +69,7 @@ const getStringFromTemplate = (firstName, lastName) => {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-const extractNameFromTemplate = value => {
+export const extractNameFromTemplate = value => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -85,7 +85,7 @@ const extractNameFromTemplate = value => {
  *   'John Doe'  => 'J'
  *   'cat'       => 'c'
  */
-const getFirstChar = value => {
+export const getFirstChar = value => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -101,7 +101,7 @@ const getFirstChar = value => {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-const removeLeadingAndTrailingWhitespaces = value => {
+export const removeLeadingAndTrailingWhitespaces = value => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -117,7 +117,7 @@ const removeLeadingAndTrailingWhitespaces = value => {
  *   'A', 5  => 'AAAAA'
  *   'cat', 3 => 'catcatcat'
  */
-const repeatString = (value, count) => {
+export const repeatString = (value, count) => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -134,7 +134,7 @@ const repeatString = (value, count) => {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-const removeFirstOccurrences = (str, value) => {
+export const removeFirstOccurrences = (str, value) => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -150,7 +150,7 @@ const removeFirstOccurrences = (str, value) => {
  *   '<span>' => 'span'
  *   '<a>' => 'a'
  */
-const unbracketTag = str => {
+export const unbracketTag = str => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -166,7 +166,7 @@ const unbracketTag = str => {
  *   'Thunderstruck' => 'THUNDERSTRUCK'
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
-const convertToUpperCase = str => {
+export const convertToUpperCase = str => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -181,7 +181,7 @@ const convertToUpperCase = str => {
  *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com' => ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com']
  *   'info@gmail.com' => ['info@gmail.com']
  */
-const extractEmails = str => {
+export const extractEmails = str => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -209,7 +209,7 @@ const extractEmails = str => {
  *             '└──────────┘\n'
  *
  */
-const getRectangleString = (width, height) => {
+export const getRectangleString = (width, height) => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -230,7 +230,7 @@ const getRectangleString = (width, height) => {
  *   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-const encodeToRot13 = str => {
+export const encodeToRot13 = str => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -248,7 +248,7 @@ const encodeToRot13 = str => {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-const isString = value => {
+export const isString = value => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
@@ -278,25 +278,8 @@ const isString = value => {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-const getCardId = value => {
+export const getCardId = value => {
   /* implement your code here */
   throw new Error('Not implemented');
 };
 
-export {
-  concatenateStrings,
-  getStringLength,
-  getStringFromTemplate,
-  extractNameFromTemplate,
-  getFirstChar,
-  removeLeadingAndTrailingWhitespaces,
-  repeatString,
-  removeFirstOccurrences,
-  unbracketTag,
-  convertToUpperCase,
-  extractEmails,
-  getRectangleString,
-  encodeToRot13,
-  isString,
-  getCardId,
-};

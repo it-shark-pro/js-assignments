@@ -1,7 +1,12 @@
+import assert from 'assert';
+import {
+  createCompassPoints,
+  expandBraces,
+  getZigZagMatrix,
+  canDominoesMakeRow,
+  extractRanges,
+} from '../task/10-katas-1-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/10-katas-1-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('10-katas-1-tasks', () => {
@@ -50,7 +55,7 @@ describe('10-katas-1-tasks', () => {
     ];
 
     assert.deepEqual(
-      tasks.createCompassPoints(),
+      createCompassPoints(),
       expected,
     );
   });
@@ -92,7 +97,7 @@ describe('10-katas-1-tasks', () => {
         ],
       },
     ].forEach(data => {
-      const actual = Array.from(tasks.expandBraces(data.str));
+      const actual = Array.from(expandBraces(data.str));
       actual.sort();
       assert.deepEqual(
         actual,
@@ -142,7 +147,7 @@ describe('10-katas-1-tasks', () => {
         [21, 33, 34, 42, 43, 47, 48],
       ],
     ].forEach(data => {
-      const actual = tasks.getZigZagMatrix(data.length);
+      const actual = getZigZagMatrix(data.length);
       assert.deepEqual(
         actual,
         data,
@@ -162,7 +167,7 @@ describe('10-katas-1-tasks', () => {
         [1, 1], [1, 2], [2, 3], [2, 5], [2, 6], [3, 6], [5, 6], [6, 6],
       ],
     ].forEach(data => {
-      const actual = tasks.canDominoesMakeRow(data);
+      const actual = canDominoesMakeRow(data);
       assert.equal(
         actual,
         true,
@@ -180,7 +185,7 @@ describe('10-katas-1-tasks', () => {
         [0, 0], [0, 1], [0, 2], [0, 3], [1, 1], [1, 2], [1, 3], [2, 2], [2, 3], [3, 3],
       ],
     ].forEach(data => {
-      const actual = tasks.canDominoesMakeRow(data);
+      const actual = canDominoesMakeRow(data);
       assert.equal(
         actual,
         false,
@@ -210,7 +215,7 @@ describe('10-katas-1-tasks', () => {
         result: '0-2,4,6-8,11,12,14-25,27-33,35-39',
       },
     ].forEach(data => {
-      const actual = tasks.extractRanges(data.nums);
+      const actual = extractRanges(data.nums);
       assert.equal(
         actual,
         data.result,

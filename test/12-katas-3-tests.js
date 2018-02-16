@@ -1,7 +1,11 @@
+import assert from 'assert';
+import {
+  findStringInSnakingPuzzle,
+  getPermutations,
+  getMostProfitFromStockQuotes,
+  UrlShortener,
+} from '../task/12-katas-3-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/12-katas-3-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('12-katas-3-tasks', () => {
@@ -18,7 +22,7 @@ describe('12-katas-3-tasks', () => {
       'ANGULAR', 'REACT', 'UNDEFINED', 'RED', 'STRING', 'CLASS', 'ARRAY',
     ].forEach(word => {
       assert(
-        tasks.findStringInSnakingPuzzle(puzzle, word),
+        findStringInSnakingPuzzle(puzzle, word),
         `Word "${word}" occurrs in puzzle\n${puzzleToString(puzzle)}`,
       );
     });
@@ -27,7 +31,7 @@ describe('12-katas-3-tasks', () => {
       'FUNCTION', 'NULL', 'EMBER', 'HOISTING', 'GIT', 'ARENA',
     ].forEach(word => {
       assert(
-        !tasks.findStringInSnakingPuzzle(puzzle, word),
+        !findStringInSnakingPuzzle(puzzle, word),
         `Word "${word}" does not occurr in puzzle\n${puzzleToString(puzzle)}`,
       );
     });
@@ -56,13 +60,13 @@ describe('12-katas-3-tasks', () => {
       },
     ].forEach(data => {
       assert.deepEqual(
-        Array.from(tasks.getPermutations(data.chars)).sort(),
+        Array.from(getPermutations(data.chars)).sort(),
         data.expected,
         `Incorrect permutations of "${data.chars}"`,
       );
     });
     assert.equal(
-      Array.from(tasks.getPermutations('12345')).length,
+      Array.from(getPermutations('12345')).length,
       120,
       'Number of 5 chars permutations should be 120.',
     );
@@ -88,7 +92,7 @@ describe('12-katas-3-tasks', () => {
         expected: 343,
       },
     ].forEach(data => {
-      const actual = tasks.getMostProfitFromStockQuotes(data.quotes);
+      const actual = getMostProfitFromStockQuotes(data.quotes);
       assert.equal(
         actual,
         data.expected,
@@ -104,7 +108,7 @@ describe('12-katas-3-tasks', () => {
       'https://en.wikipedia.org/wiki/Percent-encoding#Types_of_URI_characters',
       'https://en.wikipedia.org/wiki/Binary-to-text_encoding#Encoding_plain_text',
     ].forEach(data => {
-      const urlShortener = new tasks.UrlShortener();
+      const urlShortener = new UrlShortener();
       const actual = urlShortener.encode(data);
       assert(
         data.length / actual.length > 1.5,
@@ -119,7 +123,7 @@ describe('12-katas-3-tasks', () => {
       'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul',
       'https://www.example.com/catalog.html?search=mobile+phones&price=100-200&year=2016#top_links',
     ].forEach(data => {
-      const urlShortener = new tasks.UrlShortener();
+      const urlShortener = new UrlShortener();
       const encoded = urlShortener.encode(data);
       const actual = urlShortener.decode(encoded);
       assert.equal(

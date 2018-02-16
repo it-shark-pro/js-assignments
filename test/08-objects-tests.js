@@ -1,12 +1,16 @@
+import assert from 'assert';
+import {
+  Rectangle,
+  getJSON,
+  fromJSON,
+  cssSelectorBuilder,
+} from '../task/08-objects-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/08-objects-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('08-objects-tasks', () => {
   it.optional('Rectangle constructor should return the rectangle object', () => {
-    const rect = new tasks.Rectangle(10, 20);
+    const rect = new Rectangle(10, 20);
 
     assert.equal(
       typeof rect,
@@ -42,7 +46,7 @@ describe('08-objects-tasks', () => {
       'Result of (new Rectangle(10,20)).getArea() should return the correct area of specified rectangle',
     );
     assert.equal(
-      (new tasks.Rectangle(3, 8)).getArea(),
+      (new Rectangle(3, 8)).getArea(),
       24,
       'Result of (new Rectangle(3,8)).getArea() should return the correct area of specified rectangle',
     );
@@ -60,7 +64,7 @@ describe('08-objects-tasks', () => {
       },
     ].forEach(data => {
       assert.equal(
-        tasks.getJSON(data.obj),
+        getJSON(data.obj),
         data.expected,
       );
     });
@@ -76,16 +80,16 @@ describe('08-objects-tasks', () => {
 
     [
       {
-        proto: tasks.Rectangle.prototype,
+        proto: Rectangle.prototype,
         json: '{ "width":10, "height":20 }',
-        expected: new tasks.Rectangle(10, 20),
+        expected: new Rectangle(10, 20),
       }, {
         proto: MockType.prototype,
         json: '{ "a":10, "b":20, "c":30 }',
         expected: new MockType(10, 20, 30),
       },
     ].forEach(data => {
-      const actual = tasks.fromJSON(data.proto, data.json);
+      const actual = fromJSON(data.proto, data.json);
       assert.deepEqual(
         actual,
         data.expected,
@@ -101,7 +105,7 @@ describe('08-objects-tasks', () => {
 
 
   it.optional('cssSelectorBuilder should creates css selector object with stringify() method', () => {
-    const builder = tasks.cssSelectorBuilder;
+    const builder = cssSelectorBuilder;
 
     // Test simple selectors
     assert.equal(

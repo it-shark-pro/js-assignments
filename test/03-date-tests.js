@@ -1,24 +1,31 @@
 
 
-const assert = require('assert');
-const tasks = require('../task/03-date-tasks');
+import assert from 'assert';
+import {
+  parseDataFromRfc2822,
+  parseDataFromIso8601,
+  isLeapYear,
+  timeSpanToString,
+  angleBetweenClockHands,
+} from '../task/03-date-tasks';
+
 it.optional = require('../extensions/it-optional');
 
 describe('03-date-tasks', () => {
   it.optional('parseDataFromRfc2822 should parse rfc2822 string into a date value', () => {
     assert.equal(
       new Date(1995, 11, 17, 3, 24, 0).valueOf(),
-      tasks.parseDataFromRfc2822('December 17, 1995 03:24:00').valueOf(),
+      parseDataFromRfc2822('December 17, 1995 03:24:00').valueOf(),
     );
 
     assert.equal(
       1453816082000,
-      tasks.parseDataFromRfc2822('Tue, 26 Jan 2016 13:48:02 GMT').valueOf(),
+      parseDataFromRfc2822('Tue, 26 Jan 2016 13:48:02 GMT').valueOf(),
     );
 
     assert.equal(
       895370400000,
-      tasks.parseDataFromRfc2822('Sun, 17 May 1998 03:00:00 GMT+0100').valueOf(),
+      parseDataFromRfc2822('Sun, 17 May 1998 03:00:00 GMT+0100').valueOf(),
     );
   });
 
@@ -26,12 +33,12 @@ describe('03-date-tasks', () => {
   it.optional('parseDataFromIso8601 should parse ISO 8601 string into a date value', () => {
     assert.equal(
       1453219657000,
-      tasks.parseDataFromIso8601('2016-01-19T16:07:37+00:00').valueOf(),
+      parseDataFromIso8601('2016-01-19T16:07:37+00:00').valueOf(),
     );
 
     assert.equal(
       1453190857000,
-      tasks.parseDataFromIso8601('2016-01-19T08:07:37Z').valueOf(),
+      parseDataFromIso8601('2016-01-19T08:07:37Z').valueOf(),
     );
   });
 
@@ -42,7 +49,7 @@ describe('03-date-tasks', () => {
       new Date(2012, 1, 1),
     ].forEach(date => {
       assert(
-        tasks.isLeapYear(date) == true,
+        isLeapYear(date) === true,
         `${date} is a leap year`,
       );
     });
@@ -52,7 +59,7 @@ describe('03-date-tasks', () => {
       new Date(2001, 1, 1),
     ].forEach(date => {
       assert(
-        tasks.isLeapYear(date) == false,
+        isLeapYear(date) === false,
         `${date} is not a leap year`,
       );
     });
@@ -85,7 +92,7 @@ describe('03-date-tasks', () => {
     ].forEach(data => {
       assert.equal(
         data.expected,
-        tasks.timeSpanToString(data.startDate, data.endDate),
+        timeSpanToString(data.startDate, data.endDate),
       );
     });
   });
@@ -123,7 +130,7 @@ describe('03-date-tasks', () => {
       },
     ].forEach(data => {
       assert.equal(
-        tasks.angleBetweenClockHands(new Date(data.date)),
+        angleBetweenClockHands(new Date(data.date)),
         data.expected,
         `Incorrect result for angleBetweenClockHands(${new Date(data.date).toUTCString()}):`,
       );

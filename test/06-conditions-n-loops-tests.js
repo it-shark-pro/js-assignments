@@ -1,7 +1,25 @@
+import assert from 'assert';
+import {
+  getFizzBuzz,
+  getFactorial,
+  getSumBetweenNumbers,
+  isTriangle,
+  doRectanglesOverlap,
+  isInsideCircle,
+  findFirstSingleChar,
+  getIntervalString,
+  reverseString,
+  reverseInteger,
+  isCreditCardNumber,
+  getDigitalRoot,
+  isBracketsBalanced,
+  timespanToHumanString,
+  toNaryString,
+  getCommonDirectoryPath,
+  getMatrixProduct,
+  evaluateTicTacToePosition,
+} from '../task/06-conditions-n-loops-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/06-conditions-n-loops-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('06-conditions-n-loops-tasks', () => {
@@ -11,7 +29,7 @@ describe('06-conditions-n-loops-tasks', () => {
       37, 38, 41, 43, 44, 47, 49, 52, 53, 56, 58, 59, 61, 62, 64, 67, 68, 71,
       73, 74, 76, 77, 79, 82, 83, 86, 88, 89, 91, 92, 94, 97, 98,
     ].forEach(num => {
-      const actual = tasks.getFizzBuzz(num);
+      const actual = getFizzBuzz(num);
       assert.equal(
         actual,
         num,
@@ -25,7 +43,7 @@ describe('06-conditions-n-loops-tasks', () => {
       63, 66, 69, 72, 78, 81, 84, 87,
       93, 96, 99,
     ].forEach(num => {
-      const actual = tasks.getFizzBuzz(num);
+      const actual = getFizzBuzz(num);
       assert.equal(
         actual,
         'Fizz',
@@ -36,7 +54,7 @@ describe('06-conditions-n-loops-tasks', () => {
     [
       5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100,
     ].forEach(num => {
-      const actual = tasks.getFizzBuzz(num);
+      const actual = getFizzBuzz(num);
       assert.equal(
         actual,
         'Buzz',
@@ -47,7 +65,7 @@ describe('06-conditions-n-loops-tasks', () => {
     [
       15, 30, 45, 60, 75, 90,
     ].forEach(num => {
-      const actual = tasks.getFizzBuzz(num);
+      const actual = getFizzBuzz(num);
       assert.equal(
         actual,
         'FizzBuzz',
@@ -63,7 +81,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { n: 5, expected: 120 },
       { n: 10, expected: 3628800 },
     ].forEach(data => {
-      const actual = tasks.getFactorial(data.n);
+      const actual = getFactorial(data.n);
       assert.equal(
         actual,
         data.expected,
@@ -79,7 +97,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { n1: 5, n2: 10, expected: 45 },
       { n1: -1, n2: 1, expected: 0 },
     ].forEach(data => {
-      const actual = tasks.getSumBetweenNumbers(data.n1, data.n2);
+      const actual = getSumBetweenNumbers(data.n1, data.n2);
       assert.equal(
         actual,
         data.expected,
@@ -97,7 +115,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { sides: [10, 10, 10], expected: true },
     ].forEach(data => {
       [[0, 1, 2], [0, 2, 1], [1, 2, 0], [1, 0, 2], [2, 0, 1], [2, 1, 0]].forEach(idx => {
-        const actual = tasks.isTriangle(
+        const actual = isTriangle(
           data.sides[idx[0]],
           data.sides[idx[1]],
           data.sides[idx[2]],
@@ -173,7 +191,7 @@ describe('06-conditions-n-loops-tasks', () => {
       },
     ].forEach(data => {
       assert.equal(
-        tasks.doRectanglesOverlap(data.rect1, data.rect2),
+        doRectanglesOverlap(data.rect1, data.rect2),
         data.expected,
         `doRectanglesOverlap(\n   ${JSON.stringify(data.rect1)},\n   ${JSON.stringify(data.rect2)}\n): expected ${data.expected}`,
       );
@@ -214,7 +232,7 @@ describe('06-conditions-n-loops-tasks', () => {
       },
     ].forEach(data => {
       assert.equal(
-        tasks.isInsideCircle(data.circle, data.point),
+        isInsideCircle(data.circle, data.point),
         data.expected,
         `isInsideCircle(\n   ${JSON.stringify(data.circle)},\n   ${JSON.stringify(data.point)}\n): expected ${data.expected}`,
       );
@@ -228,7 +246,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { str: 'abracadabra', expected: 'c' },
       { str: 'entente', expected: null },
     ].forEach(data => {
-      const actual = tasks.findFirstSingleChar(data.str);
+      const actual = findFirstSingleChar(data.str);
       assert.equal(
         actual,
         data.expected,
@@ -272,7 +290,7 @@ describe('06-conditions-n-loops-tasks', () => {
         expected: '[3, 5]',
       },
     ].forEach(data => {
-      const actual = tasks.getIntervalString(data.a, data.b, data.isStartIncluded, data.isEndIncluded);
+      const actual = getIntervalString(data.a, data.b, data.isStartIncluded, data.isEndIncluded);
       assert.equal(
         actual,
         data.expected,
@@ -289,7 +307,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { str: 'rotator', expected: 'rotator' },
       { str: 'noon', expected: 'noon' },
     ].forEach(data => {
-      const actual = tasks.reverseString(data.str);
+      const actual = reverseString(data.str);
       assert.equal(
         actual,
         data.expected,
@@ -306,7 +324,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { num: 87354, expected: 45378 },
       { num: 34143, expected: 34143 },
     ].forEach(data => {
-      const actual = tasks.reverseInteger(data.num);
+      const actual = reverseInteger(data.num);
       assert.equal(
         actual,
         data.expected,
@@ -341,7 +359,7 @@ describe('06-conditions-n-loops-tasks', () => {
       54891243456789010,
     ].forEach(ccn => {
       assert(
-        tasks.isCreditCardNumber(ccn),
+        isCreditCardNumber(ccn),
         `CCN ${ccn} is valid, but actually not`,
       );
     });
@@ -355,7 +373,7 @@ describe('06-conditions-n-loops-tasks', () => {
       9112893456789010,
     ].forEach(ccn => {
       assert(
-        tasks.isCreditCardNumber(ccn) == false,
+        isCreditCardNumber(ccn) === false,
         `CCN ${ccn} is not valid, but actually yes`,
       );
     });
@@ -369,7 +387,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { num: 10000, expected: 1 },
       { num: 165536, expected: 8 },
     ].forEach(data => {
-      const actual = tasks.getDigitalRoot(data.num);
+      const actual = getDigitalRoot(data.num);
       assert.equal(
         actual,
         data.expected,
@@ -385,7 +403,7 @@ describe('06-conditions-n-loops-tasks', () => {
       '[{(<()[]{}<>>)}]', '{}<>()[]', '{<>}{()}[[]](())',
     ].forEach(str => {
       assert(
-        tasks.isBracketsBalanced(str),
+        isBracketsBalanced(str),
         `'${str}' has balanced brackets, but actually not`,
       );
     });
@@ -396,7 +414,7 @@ describe('06-conditions-n-loops-tasks', () => {
       '{', '(', '[', '({}[]<>(((())))', '{{[]}}>',
     ].forEach(str => {
       assert(
-        tasks.isBracketsBalanced(str) == false,
+        isBracketsBalanced(str) === false,
         `'${str}' has unbalanced brackets, but actually yes`,
       );
     });
@@ -416,7 +434,7 @@ describe('06-conditions-n-loops-tasks', () => {
       { num: 365, n: 9, expected: '445' },
       { num: 365, n: 10, expected: '365' },
     ].forEach(data => {
-      const actual = tasks.toNaryString(data.num, data.n);
+      const actual = toNaryString(data.num, data.n);
       assert.equal(
         actual,
         data.expected,
@@ -442,7 +460,7 @@ describe('06-conditions-n-loops-tasks', () => {
         expected: '/',
       },
     ].forEach(data => {
-      const actual = tasks.getCommonDirectoryPath(data.pathes, data.n);
+      const actual = getCommonDirectoryPath(data.pathes, data.n);
       assert.equal(
         actual,
         data.expected,
@@ -482,7 +500,7 @@ describe('06-conditions-n-loops-tasks', () => {
         expected: [[32]],
       },
     ].forEach(data => {
-      const actual = tasks.getMatrixProduct(data.m1, data.m2);
+      const actual = getMatrixProduct(data.m1, data.m2);
       assert.deepEqual(
         actual,
         data.expected,
@@ -624,7 +642,7 @@ describe('06-conditions-n-loops-tasks', () => {
         expected: '15 years ago',
       },
     ].forEach(data => {
-      const actual = tasks.timespanToHumanString(new Date(data.startDate), new Date(data.endDate));
+      const actual = timespanToHumanString(new Date(data.startDate), new Date(data.endDate));
       assert.equal(
         actual,
         data.expected,
@@ -635,8 +653,8 @@ describe('06-conditions-n-loops-tasks', () => {
 
 
   it.optional('evaluateTicTacToePosition should return the winner if defined', () => {
-    const X = 'X',
-      O = '0';
+    const X = 'X';
+    const O = '0';
 
     function positionToSting(position) {
       let result = '';
@@ -685,7 +703,7 @@ describe('06-conditions-n-loops-tasks', () => {
       [X, , O],
     ],
     ].forEach(data => {
-      const actual = tasks.evaluateTicTacToePosition(data);
+      const actual = evaluateTicTacToePosition(data);
       assert.equal(
         actual,
         X,
@@ -696,13 +714,13 @@ describe('06-conditions-n-loops-tasks', () => {
     [[
       [O, O, O],
       [, X, X],
-      [X, ,],
+      [X, , ],
     ], [
       [X, X],
       [O, O, O],
       [X, , X],
     ], [
-      [, ,],
+      [, , ],
       [X, , X],
       [O, O, O],
     ], [
@@ -727,7 +745,7 @@ describe('06-conditions-n-loops-tasks', () => {
       [O, , X],
     ],
     ].forEach(data => {
-      const actual = tasks.evaluateTicTacToePosition(data);
+      const actual = evaluateTicTacToePosition(data);
       assert.equal(
         actual,
         O,
@@ -736,9 +754,9 @@ describe('06-conditions-n-loops-tasks', () => {
     });
 
     [[
-      [, ,],
       [, , ],
-      [, ,],
+      [, , ],
+      [, , ],
     ], [
       [X, , ],
       [O, O],
@@ -757,7 +775,7 @@ describe('06-conditions-n-loops-tasks', () => {
       [X, O, X],
     ],
     ].forEach(data => {
-      const actual = tasks.evaluateTicTacToePosition(data);
+      const actual = evaluateTicTacToePosition(data);
       assert.equal(
         actual,
         undefined,

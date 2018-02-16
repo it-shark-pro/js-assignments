@@ -1,5 +1,4 @@
 
-
 /** ************************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
@@ -22,9 +21,10 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
-function Rectangle(width, height) {
+export const Rectangle = (width, height) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -37,9 +37,10 @@ function Rectangle(width, height) {
  *    [1,2,3]   =>  '[1,2,3]'
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
-function getJSON(obj) {
+export const getJSON = obj => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -53,9 +54,10 @@ function getJSON(obj) {
  *    var r = fromJSON(Rectangle.prototype, '{"width":10, "height":20}');
  *
  */
-function fromJSON(proto, json) {
+export const fromJSON = (proto, json) => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -106,41 +108,40 @@ function fromJSON(proto, json) {
  *  For more examples see unit tests.
  */
 
-const cssSelectorBuilder = {
+export const cssSelectorBuilder = {
 
   element(value) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   id(value) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   class(value) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   attr(value) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   pseudoClass(value) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   pseudoElement(value) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   combine(selector1, combinator, selector2) {
+    /* implement your code here */
     throw new Error('Not implemented');
   },
-};
-
-
-export {
-  Rectangle,
-  getJSON,
-  fromJSON,
-  cssSelectorBuilder,
 };

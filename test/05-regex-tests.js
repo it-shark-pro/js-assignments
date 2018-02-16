@@ -1,12 +1,17 @@
+import assert from 'assert';
+import {
+  getRegexForGuid,
+  getRegexForPitSpot,
+  getRegexForIPv4,
+  getRegexForSSN,
+  getPasswordValidator,
+} from '../task/05-regex-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/05-regex-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('05-regex-tasks', () => {
   it.optional('getRegexForGuid should match the valid GUID', () => {
-    const result = tasks.getRegexForGuid();
+    const result = getRegexForGuid();
 
     [
       '{3F2504E0-4F89-41D3-9A0C-0305E82C3301}',
@@ -28,15 +33,14 @@ describe('05-regex-tasks', () => {
       'The roof, the roof, the roof is on fire',
     ].forEach(str => {
       assert(
-        result.test(str) == false,
+        result.test(str) === false,
         `regex matches '${str}'`,
       );
     });
   });
 
-
   it.optional('getRegexForPitSpot should be implemeted according to task', () => {
-    const result = tasks.getRegexForPitSpot();
+    const result = getRegexForPitSpot();
 
     ['pit', 'spot', 'spate', 'slap two', 'respite'].forEach(str => {
       assert(
@@ -47,7 +51,7 @@ describe('05-regex-tasks', () => {
 
     [' pt', 'Pot', 'peat', 'part'].forEach(str => {
       assert(
-        result.test(str) == false,
+        result.test(str) === false,
         `regex matches '${str}'`,
       );
     });
@@ -58,9 +62,8 @@ describe('05-regex-tasks', () => {
     );
   });
 
-
   it.optional('getRegexForIPv4 should match the valid IPv4', () => {
-    const result = tasks.getRegexForIPv4();
+    const result = getRegexForIPv4();
 
     [
       '0.0.0.0',
@@ -82,15 +85,14 @@ describe('05-regex-tasks', () => {
       'Set dns to 8.8.8.8',
     ].forEach(str => {
       assert(
-        result.test(str) == false,
+        result.test(str) === false,
         `regex matches '${str}'`,
       );
     });
   });
 
-
   it.optional('getRegexForSSN should match the valid SSN', () => {
-    const result = tasks.getRegexForSSN();
+    const result = getRegexForSSN();
 
     [
       '123-45-6789',
@@ -112,15 +114,14 @@ describe('05-regex-tasks', () => {
       '0S4-H1-HACK',
     ].forEach(str => {
       assert(
-        result.test(str) == false,
+        result.test(str) === false,
         `regex matches '${str}'`,
       );
     });
   });
 
-
   it.optional('getPasswordValidator should return the password validator', () => {
-    const result = tasks.getPasswordValidator(6);
+    const result = getPasswordValidator(6);
 
     [
       'password',
@@ -151,7 +152,7 @@ describe('05-regex-tasks', () => {
     });
 
     assert(
-      !'abcdABCD1234'.match(tasks.getPasswordValidator(20)),
+      !'abcdABCD1234'.match(getPasswordValidator(20)),
       'Password validator do not validate minLength restriction',
     );
   });

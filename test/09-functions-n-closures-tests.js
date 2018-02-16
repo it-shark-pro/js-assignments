@@ -1,7 +1,15 @@
+import assert from 'assert';
+import {
+  getComposition,
+  getPowerFunction,
+  getPolynom,
+  memoize,
+  retry,
+  logger,
+  partialUsingArguments,
+  getIdGeneratorFunction,
+} from '../task/09-functions-n-closures-tasks';
 
-
-const assert = require('assert');
-const tasks = require('../task/09-functions-n-closures-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('09-functions-n-closures-tasks', () => {
@@ -17,19 +25,19 @@ describe('09-functions-n-closures-tasks', () => {
         f: x => x * x, g: x => x + 2, arg: 5, result: 49,
       },
     ].forEach(data => {
-      const actual = tasks.getComposition(data.f, data.g);
+      const actual = getComposition(data.f, data.g);
       assert(actual(data.arg) === data.result);
     });
   });
 
 
   it.optional('getPowerFunction should return the math power function using the specified exponent', () => {
-    const power2 = tasks.getPowerFunction(2);
+    const power2 = getPowerFunction(2);
     for (let i = 0; i < 10; i++) {
       assert.equal(power2(i), i ** 2);
     }
 
-    const power05 = tasks.getPowerFunction(0.5);
+    const power05 = getPowerFunction(0.5);
     for (let i = 0; i < 10; i++) {
       assert.equal(power05(i), i ** 0.5);
     }
@@ -39,18 +47,18 @@ describe('09-functions-n-closures-tasks', () => {
   it.optional('getPolynom should return the polynom with specified coefficients', () => {
     [
       {
-        polynom: tasks.getPolynom(2, 3, 5),
+        polynom: getPolynom(2, 3, 5),
         results: [{ x: 0, y: 5 }, { x: 2, y: 19 }, { x: 3, y: 32 }],
       }, {
-        polynom: tasks.getPolynom(1, -3),
+        polynom: getPolynom(1, -3),
         results: [{ x: 0, y: -3 }, { x: 2, y: -1 }, { x: 5, y: 2 }],
       }, {
-        polynom: tasks.getPolynom(8),
+        polynom: getPolynom(8),
         results: [{ x: 0, y: 8 }, { x: 2, y: 8 }, { x: 5, y: 8 }],
       },
     ].forEach(data => {
       data.results.forEach(test => {
-        assert(test.y == data.polynom(test.x));
+        assert(test.y === data.polynom(test.x));
       });
     });
   });
@@ -62,7 +70,7 @@ describe('09-functions-n-closures-tasks', () => {
       numberOfCalls++;
       return Math.random();
     };
-    const memoizer = tasks.memoize(fn);
+    const memoizer = memoize(fn);
     const expected = memoizer();
     assert.equal(numberOfCalls, 1, 'memoize result should evaluate the specified function at first call');
     for (let i = 0; i < 10; i++) {
@@ -83,7 +91,7 @@ describe('09-functions-n-closures-tasks', () => {
       return expected;
     };
 
-    const actual = tasks.retry(fn, maxAttemps)();
+    const actual = retry(fn, maxAttemps)();
     assert.equal(actual, expected);
   });
 
@@ -91,8 +99,8 @@ describe('09-functions-n-closures-tasks', () => {
   it.optional('logger method should log start and end of call of the standard js function', () => {
     let log = '';
 
-    const logFunc = text => (log += `${text}\n`);
-    const cosLogger = tasks.logger(Math.cos, logFunc);
+    const logFunc = text => { log += `${text}\n`; };
+    const cosLogger = logger(Math.cos, logFunc);
 
     const actual = cosLogger(Math.PI);
 
@@ -120,10 +128,10 @@ describe('09-functions-n-closures-tasks', () => {
       return param[index];
     };
 
-    const logFunc = text => (log += `${text}\n`);
-    const logger = tasks.logger(fn, logFunc);
+    const logFunc = text => { log += `${text}\n`; };
+    const loggerFunc = logger(fn, logFunc);
 
-    const actual = logger(['expected', 'test', 1], 0);
+    const actual = loggerFunc(['expected', 'test', 1], 0);
 
     assert.equal(isCalling, true, 'logger function should call the specified function');
     assert.equal(actual, 'expected', 'logger function should return the original result from specified function');
@@ -139,22 +147,22 @@ describe('09-functions-n-closures-tasks', () => {
   it.optional('partialUsingArguments should return the function with partial applied arguments', () => {
     const fn = (x1, x2, x3, x4) => x1 + x2 + x3 + x4;
     assert.equal(
-      tasks.partialUsingArguments(fn, 'a')('b', 'c', 'd'),
+      partialUsingArguments(fn, 'a')('b', 'c', 'd'),
       'abcd',
       "partialUsingArguments(fn, 'a')('b','c','d')' should return 'abcd'",
     );
     assert.equal(
-      tasks.partialUsingArguments(fn, 'a', 'b')('c', 'd'),
+      partialUsingArguments(fn, 'a', 'b')('c', 'd'),
       'abcd',
       "partialUsingArguments(fn, 'a','b')('c','d')' should return 'abcd'",
     );
     assert.equal(
-      tasks.partialUsingArguments(fn, 'a', 'b', 'c')('d'),
+      partialUsingArguments(fn, 'a', 'b', 'c')('d'),
       'abcd',
       "partialUsingArguments(fn, 'a','b','c')('d') should return 'abcd'",
     );
     assert.equal(
-      tasks.partialUsingArguments(fn, 'a', 'b', 'c', 'd')(),
+      partialUsingArguments(fn, 'a', 'b', 'c', 'd')(),
       'abcd',
       "partialUsingArguments(fn, 'a','b','c','d')()' should return 'abcd'",
     );
@@ -162,14 +170,14 @@ describe('09-functions-n-closures-tasks', () => {
 
 
   it.optional('getIdGeneratorFunction should return the id generator function', () => {
-    const f0 = tasks.getIdGeneratorFunction(0);
-    for (var i = 0; i < 1000; i++) {
+    const f0 = getIdGeneratorFunction(0);
+    for (let i = 0; i < 1000; i++) {
       assert.equal(f0(), i);
     }
 
-    const f10 = tasks.getIdGeneratorFunction(10);
-    const f20 = tasks.getIdGeneratorFunction(20);
-    for (var i = 0; i < 1000; i++) {
+    const f10 = getIdGeneratorFunction(10);
+    const f20 = getIdGeneratorFunction(20);
+    for (let i = 0; i < 1000; i++) {
       assert.equal(f10(), 10 + i);
       assert.equal(f20(), 20 + i);
     }

@@ -30,9 +30,10 @@
  *
  * @return {RegExp}
  */
-function getRegexForGuid() {
+export const getRegexForGuid = () => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -52,9 +53,10 @@ function getRegexForGuid() {
  * @return {RegExp}
  *
  */
-function getRegexForPitSpot() {
+export const getRegexForPitSpot = () => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -71,9 +73,10 @@ function getRegexForPitSpot() {
  *
  * @return {RegExp}
  */
-function getRegexForIPv4() {
+export const getRegexForIPv4 = () => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -90,9 +93,10 @@ function getRegexForIPv4() {
  *                                   '0S4-H1-HACK'
  * @return {RegExp}
  */
-function getRegexForSSN() {
+export const getRegexForSSN = () => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
+};
 
 
 /**
@@ -115,15 +119,7 @@ function getRegexForSSN() {
  *   'PASSW0RD'.match(validator)  => false
  *   'Pa55'.match(validator) => false
  */
-function getPasswordValidator(minLength) {
+export const getPasswordValidator = minLength => {
+  /* implement your code here */
   throw new Error('Not implemented');
-}
-
-
-export {
-  getRegexForGuid,
-  getRegexForPitSpot,
-  getRegexForIPv4,
-  getRegexForSSN,
-  getPasswordValidator,
 };
