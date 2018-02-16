@@ -1,7 +1,8 @@
 
 /**
  * Returns true if word occurrs in the specified word snaking puzzle.
- * Each words can be constructed using "snake" path inside a grid with top, left, right and bottom directions.
+ * Each words can be constructed using "snake" path inside a grid with top, left, 
+ * right and bottom directions.
  * Each char can be used only once ("snake" should not cross itself).
  *
  * @param {array} puzzle
@@ -26,10 +27,10 @@
  *   'FUNCTION'  => false
  *   'NULL'      => false
  */
-export const findStringInSnakingPuzzle = (puzzle, searchStr) => {
+export function findStringInSnakingPuzzle(puzzle, searchStr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -38,7 +39,8 @@ export const findStringInSnakingPuzzle = (puzzle, searchStr) => {
  * The order of permutations does not matter.
  *
  * @param {string} chars
- * @return {Iterable.<string>} all posible strings constructed with the chars from the specfied string
+ * @return {Iterable.<string>} all posible strings constructed with the chars from 
+ *    the specfied string
  *
  * @example
  *    'ab'  => 'ab','ba'
@@ -54,8 +56,10 @@ export function* getPermutations(chars) {
  * Returns the most profit from stock quotes.
  * Stock quotes are stores in an array in order of date.
  * The stock profit is the difference in prices in buying and selling stock.
- * Each day, you can either buy one unit of stock, sell any number of stock units you have already bought, or do nothing.
- * Therefore, the most profit is the maximum difference of all pairs in a sequence of stock prices.
+ * Each day, you can either buy one unit of stock, sell any number of stock units 
+ * you have already bought, or do nothing.
+ * Therefore, the most profit is the maximum difference of all pairs in a sequence 
+ * of stock prices.
  *
  * @param {array} quotes
  * @return {number} max profit
@@ -65,10 +69,10 @@ export function* getPermutations(chars) {
  *    [ 6, 5, 4, 3, 2, 1]   => 0   (nothing to buy)
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (buy at 1,6,5 and sell all at 10)
  */
-export const getMostProfitFromStockQuotes = quotes => {
+export function getMostProfitFromStockQuotes(quotes) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -80,9 +84,9 @@ export const getMostProfitFromStockQuotes = quotes => {
  *
  * @example
  *
- *     var urlShortener = new UrlShortener();
- *     var shortLink = urlShortener.encode('https://en.wikipedia.org/wiki/URL_shortening');
- *     var original  = urlShortener.decode(shortLink); // => 'https://en.wikipedia.org/wiki/URL_shortening'
+ *   var urlShortener = new UrlShortener();
+ *   var shortLink = urlShortener.encode('https://en.wikipedia.org/wiki/URL_shortening');
+ *   var original  = urlShortener.decode(shortLink); // => 'https://en.wikipedia.org/wiki/URL_shortening'
  *
  */
 export function UrlShortener() {

@@ -20,9 +20,10 @@
  *   5, 10 => 50
  *   5, 5  => 25
  */
-export const getRectangleArea = (width, height) => {
+export function getRectangleArea(width, height) {
+  /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -36,9 +37,10 @@ export const getRectangleArea = (width, height) => {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-export const getCicleCircumference = radius => {
+export function getCicleCircumference(radius) {
+  /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns an average of two given numbers.
@@ -52,9 +54,10 @@ export const getCicleCircumference = radius => {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-export const getAverage = (value1, value2) => {
+export function getAverage(value1, value2) {
+  /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns a distance beetween two points by cartesian coordinates.
@@ -71,9 +74,10 @@ export const getAverage = (value1, value2) => {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-export const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
+export function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns a root of linear equation a*x + b = 0 given by coefficients a and b.
@@ -87,13 +91,15 @@ export const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-export const getLinearEquationRoot = (a, b) => {
+export function getLinearEquationRoot(a, b) {
+  /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns an angle (in radians) between two vectors given by xi and yi, coordinates in Cartesian plane
+ * Returns an angle (in radians) between two vectors given by xi and yi, coordinates
+ * in Cartesian plane
  * See details https://en.wikipedia.org/wiki/Euclidean_vector#Representations
  *
  * @param {number} x1
@@ -109,10 +115,10 @@ export const getLinearEquationRoot = (a, b) => {
  *   (0,1) (0,1)     => 0
  *   (0,1) (1,2)     => 0
  */
-export const getAngleBetweenVectors = (x1, y1, x2, y2) => {
+export function getAngleBetweenVectors(x1, y1, x2, y2) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns a last digit of a integer number.
@@ -126,10 +132,10 @@ export const getAngleBetweenVectors = (x1, y1, x2, y2) => {
  *     5     => 5
  *     0     => 0
  */
-export const getLastDigit = value => {
+export function getLastDigit(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -143,10 +149,10 @@ export const getLastDigit = value => {
  *     '37'     => 37
  * '-525.5'     => -525.5
  */
-export const parseNumberFromString = value => {
+export function parseNumberFromString(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
@@ -161,10 +167,10 @@ export const parseNumberFromString = value => {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-export const getParallelipidedDiagonal = (a, b, c) => {
+export function getParallelipidedDiagonal(a, b, c) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the number rounded to specified power of 10.
@@ -183,10 +189,10 @@ export const getParallelipidedDiagonal = (a, b, c) => {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-export const roundToPowerOfTen = (num, pow) => {
+export function roundToPowerOfTen(num, pow) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns true is the number is prime; otherwise false.
@@ -205,10 +211,10 @@ export const roundToPowerOfTen = (num, pow) => {
  *   16 => false
  *   17 => true
  */
-export const isPrime = n => {
+export function isPrime(n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
@@ -225,7 +231,7 @@ export const isPrime = n => {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-export const toNumber = (value, def) => {
+export function toNumber(value, def) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}

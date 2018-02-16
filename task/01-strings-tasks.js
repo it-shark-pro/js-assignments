@@ -1,10 +1,10 @@
 
-/** ******************************************************************************************
+/** *****************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String  *
  *                                                                                          *
- ******************************************************************************************* */
+ ********************************************************************************************/
 
 
 /**
@@ -19,11 +19,10 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-export const concatenateStrings = (value1, value2) => {
+export function concatenateStrings(value1, value2) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
-
+}
 
 /**
  * Returns the length of given string.
@@ -36,10 +35,10 @@ export const concatenateStrings = (value1, value2) => {
  *   'b'     => 1
  *   ''      => 0
  */
-export const getStringLength = value => {
+export function getStringLength(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the result of string template and given parameters firstName and lastName.
@@ -54,10 +53,10 @@ export const getStringLength = value => {
  *   'John','Doe'      => 'Hello, John Doe!'
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
-export const getStringFromTemplate = (firstName, lastName) => {
+export function getStringFromTemplate(firstName, lastName) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
@@ -69,10 +68,10 @@ export const getStringFromTemplate = (firstName, lastName) => {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-export const extractNameFromTemplate = value => {
+export function  extractNameFromTemplate(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -85,10 +84,10 @@ export const extractNameFromTemplate = value => {
  *   'John Doe'  => 'J'
  *   'cat'       => 'c'
  */
-export const getFirstChar = value => {
+export function getFirstChar(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Removes a leading and trailing whitespace characters from string.
@@ -101,10 +100,10 @@ export const getFirstChar = value => {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-export const removeLeadingAndTrailingWhitespaces = value => {
+export function removeLeadingAndTrailingWhitespaces(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns a string that repeated the specified number of times.
@@ -117,10 +116,10 @@ export const removeLeadingAndTrailingWhitespaces = value => {
  *   'A', 5  => 'AAAAA'
  *   'cat', 3 => 'catcatcat'
  */
-export const repeatString = (value, count) => {
+export function repeatString(value, count) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Remove the first occurrence of string inside another string
@@ -134,10 +133,10 @@ export const repeatString = (value, count) => {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-export const removeFirstOccurrences = (str, value) => {
+export function removeFirstOccurrences(str, value)  {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Remove the first and last angle brackets from tag string
@@ -150,10 +149,10 @@ export const removeFirstOccurrences = (str, value) => {
  *   '<span>' => 'span'
  *   '<a>' => 'a'
  */
-export const unbracketTag = str => {
+export function unbracketTag(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -166,10 +165,10 @@ export const unbracketTag = str => {
  *   'Thunderstruck' => 'THUNDERSTRUCK'
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
-export const convertToUpperCase = str => {
+export function convertToUpperCase(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Extracts e-mails from single string with e-mails list delimeted by semicolons
@@ -178,13 +177,14 @@ export const convertToUpperCase = str => {
  * @return {array}
  *
  * @example
- *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com' => ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com']
+ *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com' =>
+ *     ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com']
  *   'info@gmail.com' => ['info@gmail.com']
  */
-export const extractEmails = str => {
+export function extractEmails(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the string representation of rectangle with specified width and height
@@ -209,10 +209,10 @@ export const extractEmails = str => {
  *             '└──────────┘\n'
  *
  */
-export const getRectangleString = (width, height) => {
+export function getRectangleString(width, height) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -227,13 +227,14 @@ export const getRectangleString = (width, height) => {
  *   'hello' => 'uryyb'
  *   'Why did the chicken cross the road?' => 'Jul qvq gur puvpxra pebff gur ebnq?'
  *   'Gb trg gb gur bgure fvqr!' => 'To get to the other side!'
- *   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+ *   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' => 
+ *          'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-export const encodeToRot13 = str => {
+export function encodeToRot13(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns true if the value is string; otherwise false.
@@ -248,10 +249,10 @@ export const encodeToRot13 = str => {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-export const isString = value => {
+export function isString(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -278,8 +279,7 @@ export const isString = value => {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-export const getCardId = value => {
+export function getCardId(value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
-
+}

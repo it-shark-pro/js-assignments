@@ -21,10 +21,10 @@
  *    ['Array', 'Number', 'string'], 'Date'    => -1
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
-export const findElement = (arr, value) => {
+export function findElement(arr, value) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Generates an array of odd numbers of the specified length
@@ -37,14 +37,15 @@ export const findElement = (arr, value) => {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-export const generateOdds = len => {
+export function generateOdds(len) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns the doubled array - elements of the specified array are repeated twice using original order
+ * Returns the doubled array - elements of the specified array are repeated twice 
+ * using original order
  *
  * @param {array} arr
  * @return {array}
@@ -54,10 +55,10 @@ export const generateOdds = len => {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => []
  */
-export const doubleArray = arr => {
+export function doubleArray(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -71,10 +72,10 @@ export const doubleArray = arr => {
  *    [-1, 2, -5, -4, 0] => [ 2 ]
  *    [] => []
  */
-export const getArrayOfPositives = arr => {
+export function getArrayOfPositives(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the array with strings only in the specified array (in original order)
@@ -87,10 +88,10 @@ export const getArrayOfPositives = arr => {
  *    [ 1, 2, 3, 4, 5 ] => []
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
-export const getArrayOfStrings = arr => {
+export function getArrayOfStrings(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Removes falsy values from the specified array
@@ -105,10 +106,10 @@ export const getArrayOfStrings = arr => {
  *    [ 1, 2, 3, 4, 5, 'false' ]         => [ 1, 2, 3, 4, 5, 'false' ]
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
-export const removeFalsyValues = arr => {
+export function removeFalsyValues(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the array of useprcase strings from the specified array
@@ -117,13 +118,14 @@ export const removeFalsyValues = arr => {
  * @return {array}
  *
  * @example
- *    [ 'permanent-internship', 'glutinous-shriek', 'multiplicative-elevation' ] => [ 'PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION' ]
+ *    [ 'permanent-internship', 'glutinous-shriek', 'multiplicative-elevation' ] => 
+ *        [ 'PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION' ]
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
-export const getUpperCaseStrings = arr => {
+export function getUpperCaseStrings(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -136,10 +138,10 @@ export const getUpperCaseStrings = arr => {
  *    [ '', 'a', 'bc', 'def', 'ghij' ]  => [ 0, 1, 2, 3, 4 ]
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
-export const getStringsLength = arr => {
+export function getStringsLength(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Inserts the item into specified array at specified index
@@ -152,10 +154,10 @@ export const getStringsLength = arr => {
  *    [ 1, 3, 4, 5 ], 2, 1  => [ 1, 2, 3, 4, 5 ]
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
-export const insertItem = (arr, item, index) => {
+export function insertItem(arr, item, index) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the n first items of the specified array
@@ -167,10 +169,10 @@ export const insertItem = (arr, item, index) => {
  *    [ 1, 3, 4, 5 ], 2  => [ 1, 2 ]
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
-export const getHead = (arr, n) => {
+export function getHead(arr, n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -183,10 +185,10 @@ export const getHead = (arr, n) => {
  *    [ 1, 3, 4, 5 ], 2  => [ 4, 5 ]
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
-export const getTail = (arr, n) => {
+export function getTail(arr, n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -209,10 +211,10 @@ export const getTail = (arr, n) => {
  *    +'20,21,22,23,24\n'
  *    +'30,31,32,33,34'
  */
-export const toCsvText = arr => {
+export function toCsvText(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Transforms the numeric array into the according array of squares:
@@ -225,10 +227,10 @@ export const toCsvText = arr => {
  *   [ 0, 1, 2, 3, 4, 5 ] => [ 0, 1, 4, 9, 16, 25 ]
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
-export const toArrayOfSquares = arr => {
+export function toArrayOfSquares(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -245,10 +247,10 @@ export const toArrayOfSquares = arr => {
  *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0]
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
-export const getMovingSum = arr => {
+export function getMovingSum(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns every second item from the specified array:
@@ -261,10 +263,10 @@ export const getMovingSum = arr => {
  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
  * [ "a" ] => []
  */
-export const getSecondItems = arr => {
+export function getSecondItems(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -281,10 +283,10 @@ export const getSecondItems = arr => {
  *  [ 'a', 'b', 'c', null ] => [ 'a', 'b','b', 'c','c','c',  null,null,null,null ]
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
-export const propagateItemsByPositionIndex = arr => {
+export function propagateItemsByPositionIndex(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -300,10 +302,10 @@ export const propagateItemsByPositionIndex = arr => {
  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
-export const get3TopItems = arr => {
+export function get3TopItems(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -319,10 +321,10 @@ export const get3TopItems = arr => {
  *   [ null, 1, 'elephant' ] => 1
  *   [ 1, '2' ] => 1
  */
-export const getPositivesCount = arr => {
+export function getPositivesCount(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Sorts digit names
@@ -337,10 +339,10 @@ export const getPositivesCount = arr => {
  *   [ 'nine','eight','nine','eight'] => [ 'eight','eight','nine','nine']
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
-export const sortDigitNamesByNumericOrder = arr => {
+export function sortDigitNamesByNumericOrder(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the sum of all items in the specified array of numbers
@@ -354,10 +356,10 @@ export const sortDigitNamesByNumericOrder = arr => {
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
-export const getItemsSum = arr => {
+export function getItemsSum(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns the number of all falsy value in the specified array
@@ -371,10 +373,10 @@ export const getItemsSum = arr => {
  *  [ -1, 'false', null, 0 ] => 2
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
-export const getFalsyValuesCount = arr => {
+export function getFalsyValuesCount(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns a number of all occurences of the specified item in an array
@@ -390,10 +392,10 @@ export const getFalsyValuesCount = arr => {
  *    [ null, undefined, null ], null => 2
  *    [ true, 0, 1, 'true' ], true => 1
  */
-export const findAllOccurences = (arr, item) => {
+export function findAllOccurences(arr, item) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Concatenates all elements from specified array into single string with ',' delimeter
@@ -406,14 +408,15 @@ export const findAllOccurences = (arr, item) => {
  *    [1, 2, 3, 4, 5]                   => '1,2,3,4,5'
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
-export const toStringList = arr => {
+export function toStringList(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Sorts the specified array by country name first and city name (if countries are equal) in ascending order.
+ * Sorts the specified array by country name first and city name (if countries are 
+ * equal) in ascending order.
  *
  * @param {array} arr
  * @return {array}
@@ -436,10 +439,10 @@ export const toStringList = arr => {
  *      { country: 'Russia',  city: 'Moscow' },
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
-export const sortCitiesArray = arr => {
+export function sortCitiesArray(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Creates an indentity matrix of the specified size
@@ -459,10 +462,10 @@ export const sortCitiesArray = arr => {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-export const getIdentityMatrix = n => {
+export function getIdentityMatrix(n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Creates an array of integers from the specified start to end (inclusive)
@@ -477,10 +480,10 @@ export const getIdentityMatrix = n => {
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
  */
-export const getIntervalArray = (start, end) => {
+export function getIntervalArray(start, end) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Returns array containing only unique values from the specified array.
@@ -493,10 +496,10 @@ export const getIntervalArray = (start, end) => {
  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
-export const distinct = arr => {
+export function distinct(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 /**
  * Groups elements of the specified array by key.
@@ -528,27 +531,29 @@ export const distinct = arr => {
  *    "Poland" => ["Lodz"]
  *   }
  */
-export const group = (array, keySelector, valueSelector) => {
+export function group(array, keySelector, valueSelector) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Projects each element of the specified array to a sequence and flattens the resulting sequences into one array.
+ * Projects each element of the specified array to a sequence and flattens the 
+ * resulting sequences into one array.
  *
  * @param {array} arr
- * @param {Function} childrenSelector, a transform const to apply to each element that returns an array of children
+ * @param {Function} childrenSelector, a transform const to apply to each element 
+ *  that returns an array of children
  * @return {array}
  *
  * @example
  *   [[1, 2], [3, 4], [5, 6]], (x) => x     =>   [ 1, 2, 3, 4, 5, 6 ]
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
-export const selectMany = (arr, childrenSelector) => {
+export function selectMany(arr, childrenSelector) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -563,10 +568,10 @@ export const selectMany = (arr, childrenSelector) => {
  *   ['one','two','three'], [2]       => 'three'  (arr[2])
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
-export const getElementByIndexes = (arr, indexes) => {
+export function getElementByIndexes(arr, indexes) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -587,10 +592,10 @@ export const getElementByIndexes = (arr, indexes) => {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]
  *
  */
-export const swapHeadAndTail = arr => {
+export function swapHeadAndTail(arr) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 const tasks = {
   findElement,

@@ -2,8 +2,10 @@
 /**
  * Returns the bank account number parsed from specified string.
  *
- * You work for a bank, which has recently purchased an ingenious machine to assist in reading letters and faxes sent in by branch offices.
- * The machine scans the paper documents, and produces a string with a bank account that looks like this:
+ * You work for a bank, which has recently purchased an ingenious machine to assist 
+ * in reading letters and faxes sent in by branch offices.
+ * The machine scans the paper documents, and produces a string with a bank account 
+ * that looks like this:
  *
  *    _  _     _  _  _  _  _
  *  | _| _||_||_ |_   ||_||_|
@@ -12,7 +14,8 @@
  * Each string contains an account number written using pipes and underscores.
  * Each account number should have 9 digits, all of which should be in the range 0-9.
  *
- * Your task is to write a function that can take bank account string and parse it into actual account numbers.
+ * Your task is to write a function that can take bank account string and parse it 
+ * into actual account numbers.
  *
  * @param {string} bankAccount
  * @return {number}
@@ -32,14 +35,15 @@
  *   '|_||_  _||_| _||_| _||_| _|\n',
  *
  */
-export const parseBankAccount = bankAccount => {
+export function parseBankAccount(bankAccount) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns the string, but with line breaks inserted at just the right places to make sure that no line is longer than the specified column number.
+ * Returns the string, but with line breaks inserted at just the right places to make 
+ * sure that no line is longer than the specified column number.
  * Lines can be broken at word boundaries only.
  *
  * @param {string} text
@@ -48,19 +52,21 @@ export const parseBankAccount = bankAccount => {
  *
  * @example :
  *
- *  'The String global object is a constructor for strings, or a sequence of characters.', 26 =>  'The String global object',
- *                                                                                                'is a constructor for',
- *                                                                                                'strings, or a sequence of',
- *                                                                                                'characters.'
+ *  'The String global object is a constructor for strings, or a sequence of characters.', 26 =>
+ *      'The String global object',
+ *      'is a constructor for',
+ *      'strings, or a sequence of',
+ *      'characters.'
  *
- *  'The String global object is a constructor for strings, or a sequence of characters.', 12 =>  'The String',
- *                                                                                                'global',
- *                                                                                                'object is a',
- *                                                                                                'constructor',
- *                                                                                                'for strings,',
- *                                                                                                'or a',
- *                                                                                                'sequence of',
- *                                                                                                'characters.'
+ *  'The String global object is a constructor for strings, or a sequence of characters.', 12 =>
+ *      'The String',
+ *      'global',
+ *      'object is a',
+ *      'constructor',
+ *      'for strings,',
+ *      'or a',
+ *      'sequence of',
+ *      'characters.'
  */
 export function* wrapText(text, columns) {
   /* implement your code here */
@@ -100,15 +106,16 @@ export const PokerRank = {
   HighCard: 0,
 };
 
-export const getPokerHandRank = hand => {
+export function getPokerHandRank(hand) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
  * Returns the rectangles sequence of specified figure.
- * The figure is ASCII multiline string comprised of minus signs -, plus signs +, vertical bars | and whitespaces.
+ * The figure is ASCII multiline string comprised of minus signs -, plus signs +, 
+ * vertical bars | and whitespaces.
  * The task is to break the figure in the rectangles it is made of.
  *
  * NOTE: The order of rectanles does not matter.
@@ -120,11 +127,11 @@ export const getPokerHandRank = hand => {
  *
  *    '+------------+\n'+
  *    '|            |\n'+
- *    '|            |\n'+              '+------------+\n'+
- *    '|            |\n'+              '|            |\n'+         '+------+\n'+          '+-----+\n'+
- *    '+------+-----+\n'+       =>     '|            |\n'+     ,   '|      |\n'+     ,    '|     |\n'+
- *    '|      |     |\n'+              '|            |\n'+         '|      |\n'+          '|     |\n'+
- *    '|      |     |\n'               '+------------+\n'          '+------+\n'           '+-----+\n'
+ *    '|            |\n'+        '+------------+\n'+
+ *    '|            |\n'+        '|            |\n'+         '+------+\n'+          '+-----+\n'+
+ *    '+------+-----+\n'+   =>   '|            |\n'+     ,   '|      |\n'+     ,    '|     |\n'+
+ *    '|      |     |\n'+        '|            |\n'+         '|      |\n'+          '|     |\n'+
+ *    '|      |     |\n'         '+------------+\n'          '+------+\n'           '+-----+\n'
  *    '+------+-----+\n'
  *
  *

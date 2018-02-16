@@ -5,7 +5,7 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration              *
  *                                                                                                *
- ************************************************************************************************* */
+ ************************************************************************************************ */
 
 
 /**
@@ -28,10 +28,10 @@
  *  21 => 'Fizz'
  *
  */
-export const getFizzBuzz = num => {
+export function getFizzBuzz(num) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -45,10 +45,10 @@ export const getFizzBuzz = num => {
  *   5  => 120
  *   10 => 3628800
  */
-export const getFactorial = n => {
+export function getFactorial(n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -63,14 +63,15 @@ export const getFactorial = n => {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-export const getSumBetweenNumbers = (n1, n2) => {
+export function getSumBetweenNumbers(n1, n2) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns true, if a triangle can be built with the specified sides a,b,c and false in any other ways.
+ * Returns true, if a triangle can be built with the specified sides a,b,c and false 
+ * in any other ways.
  *
  * @param {number} a
  * @param {number} b
@@ -83,10 +84,10 @@ export const getSumBetweenNumbers = (n1, n2) => {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-export const isTriangle = (a, b, c) => {
+export function isTriangle(a, b, c) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -121,10 +122,10 @@ export const isTriangle = (a, b, c) => {
  *   { top:20, left:20, width: 20, height: 20 }    =>  false
  *
  */
-export const doRectanglesOverlap = (rect1, rect2) => {
+export function doRectanglesOverlap(rect1, rect2) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -153,10 +154,10 @@ export const doRectanglesOverlap = (rect1, rect2) => {
  *   { center: { x:0, y:0 }, radius:10 },  { x:10, y:10 }   => false
  *
  */
-export const isInsideCircle = (circle, point) => {
+export function isInsideCircle(circle, point) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -170,14 +171,15 @@ export const isInsideCircle = (circle, point) => {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-export const findFirstSingleChar = str => {
+export function findFirstSingleChar(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns the string representation of math interval, specified by two points and include / exclude flags.
+ * Returns the string representation of math interval, specified by two points and 
+ * include / exclude flags.
  * See the details: https://en.wikipedia.org/wiki/Interval_(mathematics)
  *
  * Please take attention, that the smaller number should be the first in the notation
@@ -197,10 +199,10 @@ export const findFirstSingleChar = str => {
  *   5, 3, true, true   => '[3, 5]'
  *
  */
-export const getIntervalString = (a, b, isStartIncluded, isEndIncluded) => {
+export function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -215,10 +217,10 @@ export const getIntervalString = (a, b, isStartIncluded, isEndIncluded) => {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-export const reverseString = str => {
+export function reverseString(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -233,10 +235,10 @@ export const reverseString = str => {
  *   87354 => 45378
  *   34143 => 34143
  */
-export const reverseInteger = num => {
+export function reverseInteger(num) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -259,10 +261,10 @@ export const reverseInteger = num => {
  *   5436468789016589 => false
  *   4916123456789012 => false
  */
-export const isCreditCardNumber = ccn => {
+export function isCreditCardNumber(ccn) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -279,10 +281,10 @@ export const isCreditCardNumber = ccn => {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-export const getDigitalRoot = num => {
+export function getDigitalRoot(num) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -306,10 +308,10 @@ export const getDigitalRoot = num => {
  *   '{)' = false
  *   '{[(<{[]}>)]}' = true
  */
-export const isBracketsBalanced = str => {
+export function isBracketsBalanced(str) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -343,14 +345,15 @@ export const isBracketsBalanced = str => {
  *   Date('2000-01-01 01:00:00.100'), Date('2015-01-02 03:00:05.000')  => '15 years ago'
  *
  */
-export const timespanToHumanString = (startDate, endDate) => {
+export function timespanToHumanString(startDate, endDate) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns the string with n-ary (binary, ternary, etc, where n<=10) representation of specified number.
+ * Returns the string with n-ary (binary, ternary, etc, where n<=10) representation of
+ * specified number.
  * See more about
  * https://en.wikipedia.org/wiki/Binary_number
  * https://en.wikipedia.org/wiki/Ternary_numeral_system
@@ -368,10 +371,10 @@ export const timespanToHumanString = (startDate, endDate) => {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-export const toNaryString = (num, n) => {
+export function toNaryString(num, n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -386,10 +389,10 @@ export const toNaryString = (num, n) => {
  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
-export const getCommonDirectoryPath = pathes => {
+export function getCommonDirectoryPath(pathes) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -410,10 +413,10 @@ export const getCommonDirectoryPath = pathes => {
  *                         [ 6 ]]
  *
  */
-export const getMatrixProduct = (m1, m2) => {
+export function getMatrixProduct(m1, m2) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -446,7 +449,7 @@ export const getMatrixProduct = (m1, m2) => {
  *    [    ,   ,    ]]
  *
  */
-export const evaluateTicTacToePosition = position => {
+export function evaluateTicTacToePosition(position) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}

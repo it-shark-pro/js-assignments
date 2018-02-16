@@ -24,10 +24,10 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
  *
  */
-export const getComposition = (f, g) => {
+export function getComposition(f, g) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -46,10 +46,10 @@ export const getComposition = (f, g) => {
  *   power05(16) => 4
  *
  */
-export const getPowerFunction = exponent => {
+export function getPowerFunction(exponent) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -65,10 +65,10 @@ export const getPowerFunction = exponent => {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-export const getPolynom = () => {
+export function getPolynom() {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -85,10 +85,10 @@ export const getPolynom = () => {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-export const memoize = func => {
+export function memoize(func) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -106,10 +106,10 @@ export const memoize = func => {
  * }, 2);
  * retryer() => 2
  */
-export const retry = (func, attempts) => {
+export function retry(func, attempts) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -135,10 +135,10 @@ export const retry = (func, attempts) => {
  * cos(3.141592653589793) ends
  *
  */
-export const logger = (func, logFunc) => {
+export function logger(func, logFunc) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -154,14 +154,15 @@ export const logger = (func, logFunc) => {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
-export const partialUsingArguments = fn => {
+export function partialUsingArguments(fn) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
- * Returns the id generator function that returns next integer starting from specified number every time when invoking.
+ * Returns the id generator function that returns next integer starting from specified 
+ * number every time when invoking.
  *
  * @param {Number} startFrom
  * @return {Function}
@@ -176,7 +177,7 @@ export const partialUsingArguments = fn => {
  *   getId4() => 7
  *   getId10() => 11
  */
-export const getIdGeneratorFunction = startFrom => {
+export function getIdGeneratorFunction(startFrom) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}

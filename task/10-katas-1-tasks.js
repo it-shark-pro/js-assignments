@@ -15,11 +15,11 @@
  *     { abbreviation : 'NbW',   azimuth : 348.75 }
  *  ]
  */
-export const createCompassPoints = () => {
+export function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
   /* implement your code here */
+  /* use array of cardinal directions only! it is a default parameter! */
   throw new Error('Not implemented');
-  const sides = ['N', 'E', 'S', 'W']; // use array of cardinal directions only!
-};
+}
 
 
 /**
@@ -27,7 +27,8 @@ export const createCompassPoints = () => {
  * See https://en.wikipedia.org/wiki/Bash_(Unix_shell)#Brace_expansion
  *
  * In the input string, balanced pairs of braces containing comma-separated substrings
- * represent alternations that specify multiple alternatives which are to appear at that position in the output.
+ * represent alternations that specify multiple alternatives which are to appear 
+ * at that position in the output.
  *
  * @param {string} str
  * @return {Iterable.<string>}
@@ -64,7 +65,8 @@ export function* expandBraces(str) {
 /**
  * Returns the ZigZag matrix
  *
- * The fundamental idea in the JPEG compression algorithm is to sort coefficient of given image by zigzag path and encode it.
+ * The fundamental idea in the JPEG compression algorithm is to sort coefficient 
+ * of given image by zigzag path and encode it.
  * In this task you are asked to implement a simple method to create a zigzag square matrix.
  * See details at https://en.wikipedia.org/wiki/JPEG#Entropy_coding
  * and zigzag path here: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/JPEG_ZigZag.svg/220px-JPEG_ZigZag.svg.png
@@ -88,10 +90,10 @@ export function* expandBraces(str) {
  *          [ 9,10,14,15 ]]
  *
  */
-export const getZigZagMatrix = n => {
+export function getZigZagMatrix(n) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -99,7 +101,8 @@ export const getZigZagMatrix = n => {
  * Dominoes details see at: https://en.wikipedia.org/wiki/Dominoes
  *
  * Each domino tile presented as an array [x,y] of tile value.
- * For example, the subset [1, 1], [2, 2], [1, 2] can be arranged in a row (as [1, 1] followed by [1, 2] followed by [2, 2]),
+ * For example, the subset [1, 1], [2, 2], [1, 2] can be arranged in a row 
+ *  (as [1, 1] followed by [1, 2] followed by [2, 2]),
  * while the subset [1, 1], [0, 3], [1, 4] can not be arranged in one row.
  * NOTE that as in usual dominoes playing any pair [i, j] can also be treated as [j, i].
  *
@@ -114,10 +117,10 @@ export const getZigZagMatrix = n => {
  * [[0,0], [0,1], [1,1], [0,2], [1,2], [2,2], [0,3], [1,3], [2,3], [3,3]] => false
  *
  */
-export const canDominoesMakeRow = dominoes => {
+export function canDominoesMakeRow(dominoes) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -125,9 +128,11 @@ export const canDominoesMakeRow = dominoes => {
  *
  * A format for expressing an ordered list of integers is to use a comma separated list of either:
  *   - individual integers
- *   - or a range of integers denoted by the starting integer separated from the end integer in the range by a dash, '-'.
+ *   - or a range of integers denoted by the starting integer separated from the end 
+ *     integer in the range by a dash, '-'.
  *     (The range includes all integers in the interval including both endpoints)
- *     The range syntax is to be used only for, and for every range that expands to more than two values.
+ *     The range syntax is to be used only for, and for every range that expands to 
+ *     more than two values.
  *
  * @params {array} nums
  * @return {bool}
@@ -139,7 +144,7 @@ export const canDominoesMakeRow = dominoes => {
  * [ 0, 1, 2, 5, 7, 8, 9] => '0-2,5,7-9'
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
-export const extractRanges = nums => {
+export function extractRanges(nums) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}

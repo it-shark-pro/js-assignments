@@ -5,14 +5,13 @@
   "scripts": {
     "lint": "eslint ./**/*.js",
     "precommit": "lint-staged",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --require babel-polyfill",
-    "test-debug": "./node_modules/.bin/mocha --debug-brk --compilers js:babel-core/register --require babel-polyfill"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register",
+    "test-debug": "./node_modules/.bin/mocha --debug-brk"
   },
   "author": "aorgish",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
     "mocha": "^2.3.4"
   },
   "repository": {
@@ -21,10 +20,9 @@
   },
   "dependencies": {
     "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "eslint": "^4.17.0",
-    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-mocha": "^4.11.0"
   },

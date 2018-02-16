@@ -1,5 +1,4 @@
 
-
 /** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -30,10 +29,10 @@
  *
  * @return {RegExp}
  */
-export const getRegexForGuid = () => {
+export function getRegexForGuid() {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -53,10 +52,10 @@ export const getRegexForGuid = () => {
  * @return {RegExp}
  *
  */
-export const getRegexForPitSpot = () => {
+export function getRegexForPitSpot() {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -73,10 +72,10 @@ export const getRegexForPitSpot = () => {
  *
  * @return {RegExp}
  */
-export const getRegexForIPv4 = () => {
+export function getRegexForIPv4() {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -93,10 +92,10 @@ export const getRegexForIPv4 = () => {
  *                                   '0S4-H1-HACK'
  * @return {RegExp}
  */
-export const getRegexForSSN = () => {
+export function getRegexForSSN() {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
 
 
 /**
@@ -119,7 +118,7 @@ export const getRegexForSSN = () => {
  *   'PASSW0RD'.match(validator)  => false
  *   'Pa55'.match(validator) => false
  */
-export const getPasswordValidator = minLength => {
+export function getPasswordValidator(minLength) {
   /* implement your code here */
   throw new Error('Not implemented');
-};
+}
