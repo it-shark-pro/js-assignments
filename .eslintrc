@@ -21,10 +21,10 @@
     "comma-spacing": [2, {"after": true}],
     "array-bracket-spacing": 0,
     "func-names": [2, "as-needed"],
-    "no-restricted-syntax": 0,
-    "no-unreachable": 0,
+    "no-restricted-syntax": 1,
+    "no-unreachable": 1,
     "no-plusplus": [
-      0,
+      1,
       {"allowForLoopAfterthoughts": true}
     ],
     "no-console": [
