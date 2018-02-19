@@ -41,6 +41,5 @@
         "allowTemplateLiterals": true
       }
     ]
-  },
-  "plugins": ["mocha"]
+  }
 }
