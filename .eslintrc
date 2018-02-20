@@ -20,7 +20,7 @@
     "no-sparse-arrays": 0,
     "comma-spacing": [2, {"after": true}],
     "array-bracket-spacing": 0,
-    "func-names": [2, "as-needed"],
+    "func-names": [2, "never"],
     "no-restricted-syntax": 1,
     "no-unreachable": 1,
     "no-plusplus": [

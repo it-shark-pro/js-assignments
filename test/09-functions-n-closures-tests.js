@@ -118,7 +118,7 @@ describe('09-functions-n-closures-tasks', () => {
     let isCalling = false;
     let log = '';
 
-    const fn = function testLogger(param, index) {
+    const testLogger = (param, index) => {
       assert.equal(
         log,
         'testLogger(["expected","test",1],0) starts\n',
@@ -129,7 +129,7 @@ describe('09-functions-n-closures-tasks', () => {
     };
 
     const logFunc = text => { log += `${text}\n`; };
-    const loggerFunc = logger(fn, logFunc);
+    const loggerFunc = logger(testLogger, logFunc);
 
     const actual = loggerFunc(['expected', 'test', 1], 0);
 
