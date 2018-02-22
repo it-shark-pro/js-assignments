@@ -13,6 +13,8 @@
     "arrow-parens": [2, "as-needed"],
     "comma-dangle": [2, "never"],
     "comma-spacing": [2, {"after": true}],
+    "curly": [2, "multi-line"],
+    "eqeqeq": 2,
     "func-names": 0,
     "indent": [2, 2],
     "max-len": 0,
@@ -23,6 +25,7 @@
     "no-restricted-syntax": 1,
     "no-sparse-arrays": 0,
     "no-unreachable": 2,
+    "no-unused-expressions": 2,
     "no-unused-vars": [2, {"args": "none"}],
     "semi": 2,
     "quotes": [
