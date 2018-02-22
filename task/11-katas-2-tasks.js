@@ -103,7 +103,7 @@ export const PokerRank = {
   ThreeOfKind: 3,
   TwoPairs: 2,
   OnePair: 1,
-  HighCard: 0,
+  HighCard: 0
 };
 
 export function getPokerHandRank(hand) {

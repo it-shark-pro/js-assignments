@@ -11,7 +11,7 @@ import {
   getParallelipidedDiagonal,
   roundToPowerOfTen,
   isPrime,
-  toNumber,
+  toNumber
 } from '../task/02-numbers-tasks';
 
 it.optional = require('../extensions/it-optional');

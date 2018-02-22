@@ -4,7 +4,7 @@ import {
   wrapText,
   PokerRank,
   getPokerHandRank,
-  getFigureRectangles,
+  getFigureRectangles
 } from '../task/11-katas-2-tasks';
 
 it.optional = require('../extensions/it-optional');
@@ -16,74 +16,74 @@ describe('11-katas-2-tasks', () => {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '| || || || || || || || || |\n' +
               '|_||_||_||_||_||_||_||_||_|\n',
-        result: 0,
+        result: 0
       }, {
         text: '                           \n' +
               '  |  |  |  |  |  |  |  |  |\n' +
               '  |  |  |  |  |  |  |  |  |\n',
-        result: 111111111,
+        result: 111111111
 
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               ' _| _| _| _| _| _| _| _| _|\n' +
               '|_ |_ |_ |_ |_ |_ |_ |_ |_ \n',
-        result: 222222222,
+        result: 222222222
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               ' _| _| _| _| _| _| _| _| _|\n' +
               ' _| _| _| _| _| _| _| _| _|\n',
-        result: 333333333,
+        result: 333333333
       }, {
         text: '                           \n' +
               '|_||_||_||_||_||_||_||_||_|\n' +
               '  |  |  |  |  |  |  |  |  |\n',
-        result: 444444444,
+        result: 444444444
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '|_ |_ |_ |_ |_ |_ |_ |_ |_ \n' +
               ' _| _| _| _| _| _| _| _| _|\n',
-        result: 555555555,
+        result: 555555555
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '|_ |_ |_ |_ |_ |_ |_ |_ |_ \n' +
               '|_||_||_||_||_||_||_||_||_|\n',
-        result: 666666666,
+        result: 666666666
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '  |  |  |  |  |  |  |  |  |\n' +
               '  |  |  |  |  |  |  |  |  |\n',
-        result: 777777777,
+        result: 777777777
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '|_||_||_||_||_||_||_||_||_|\n' +
               '|_||_||_||_||_||_||_||_||_|\n',
-        result: 888888888,
+        result: 888888888
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '|_||_||_||_||_||_||_||_||_|\n' +
               ' _| _| _| _| _| _| _| _| _|\n',
-        result: 999999999,
+        result: 999999999
       }, {
         text: '    _  _     _  _  _  _  _ \n' +
               '  | _| _||_||_ |_   ||_||_|\n' +
               '  ||_  _|  | _||_|  ||_| _|\n',
-        result: 123456789,
+        result: 123456789
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '| | _| _|| ||_ |_   ||_||_|\n' +
               '|_||_  _||_| _||_|  ||_| _|\n',
-        result: 23056789,
+        result: 23056789
       }, {
         text: ' _  _  _  _  _  _  _  _  _ \n' +
               '|_| _| _||_||_ |_ |_||_||_|\n' +
               '|_||_  _||_| _||_| _||_| _|\n',
-        result: 823856989,
-      },
+        result: 823856989
+      }
     ].forEach(data => {
       assert.equal(
         parseBankAccount(data.text),
         data.result,
-        `${data.text} has not parsed correctly:`,
+        `${data.text} has not parsed correctly:`
       );
     });
   });
@@ -98,8 +98,8 @@ describe('11-katas-2-tasks', () => {
           'The String global object',
           'is a constructor for',
           'strings, or a sequence of',
-          'characters.',
-        ],
+          'characters.'
+        ]
       }, {
         cols: 12,
         expected: [
@@ -110,17 +110,17 @@ describe('11-katas-2-tasks', () => {
           'for strings,',
           'or a',
           'sequence of',
-          'characters.',
-        ],
+          'characters.'
+        ]
       }, {
         cols: Number.MAX_SAFE_INTEGER,
-        expected: [text],
-      },
+        expected: [text]
+      }
     ].forEach(data => {
       assert.deepEqual(
         Array.from(wrapText(text, data.cols)),
         data.expected,
-        `'${text}' has not wrapped correctly for ${data.cols} columns:`,
+        `'${text}' has not wrapped correctly for ${data.cols} columns:`
       );
     });
   });
@@ -141,108 +141,108 @@ describe('11-katas-2-tasks', () => {
     [
       {
         hand: ['4♥', '5♥', '6♥', '7♥', '8♥'],
-        expected: PokerRank.StraightFlush,
+        expected: PokerRank.StraightFlush
       }, {
         hand: ['A♣', 'K♣', 'Q♣', 'J♣', '10♣'],
-        expected: PokerRank.StraightFlush,
+        expected: PokerRank.StraightFlush
       }, {
         hand: ['10♦', '9♦', '6♦', '7♦', '8♦'],
-        expected: PokerRank.StraightFlush,
+        expected: PokerRank.StraightFlush
       }, {
         hand: ['A♠', '4♠', '3♠', '5♠', '2♠'],
-        expected: PokerRank.StraightFlush,
+        expected: PokerRank.StraightFlush
       }, {
         hand: ['4♣', '4♦', '4♥', '4♠', '10♥'],
-        expected: PokerRank.FourOfKind,
+        expected: PokerRank.FourOfKind
       }, {
         hand: ['2♣', 'A♦', 'A♣', 'A♠', 'A♥'],
-        expected: PokerRank.FourOfKind,
+        expected: PokerRank.FourOfKind
       }, {
         hand: ['10♣', '10♦', '6♦', '10♠', '10♥'],
-        expected: PokerRank.FourOfKind,
+        expected: PokerRank.FourOfKind
       }, {
         hand: ['4♣', '4♦', '5♦', '5♠', '5♥'],
-        expected: PokerRank.FullHouse,
+        expected: PokerRank.FullHouse
       }, {
         hand: ['A♣', '2♦', 'A♦', '2♠', '2♥'],
-        expected: PokerRank.FullHouse,
+        expected: PokerRank.FullHouse
       }, {
         hand: ['4♣', '4♦', '5♦', '5♠', '5♥'],
-        expected: PokerRank.FullHouse,
+        expected: PokerRank.FullHouse
       }, {
         hand: ['4♣', '5♣', '6♣', '7♣', 'Q♣'],
-        expected: PokerRank.Flush,
+        expected: PokerRank.Flush
       }, {
         hand: ['A♦', '2♦', '3♦', '4♦', 'K♦'],
-        expected: PokerRank.Flush,
+        expected: PokerRank.Flush
       }, {
         hand: ['A♠', 'Q♠', 'J♠', '10♠', '9♠'],
-        expected: PokerRank.Flush,
+        expected: PokerRank.Flush
       }, {
         hand: ['2♥', '4♥', '5♥', '7♥', 'A♥'],
-        expected: PokerRank.Flush,
+        expected: PokerRank.Flush
       }, {
         hand: ['2♠', '3♥', '4♥', '5♥', '6♥'],
-        expected: PokerRank.Straight,
+        expected: PokerRank.Straight
       }, {
         hand: ['A♠', 'K♦', 'Q♦', 'J♦', '10♦'],
-        expected: PokerRank.Straight,
+        expected: PokerRank.Straight
       }, {
         hand: ['10♥', '8♥', '9♠', '7♥', '6♦'],
-        expected: PokerRank.Straight,
+        expected: PokerRank.Straight
       }, {
         hand: ['2♥', '4♦', '5♥', 'A♦', '3♠'],
-        expected: PokerRank.Straight,
+        expected: PokerRank.Straight
       }, {
         hand: ['2♥', '2♠', '2♦', '7♥', 'A♥'],
-        expected: PokerRank.ThreeOfKind,
+        expected: PokerRank.ThreeOfKind
       }, {
         hand: ['2♥', '4♥', 'A♥', 'A♦', 'A♠'],
-        expected: PokerRank.ThreeOfKind,
+        expected: PokerRank.ThreeOfKind
       }, {
         hand: ['10♥', '9♥', '10♦', 'J♥', '10♠'],
-        expected: PokerRank.ThreeOfKind,
+        expected: PokerRank.ThreeOfKind
       }, {
         hand: ['2♥', '4♦', '4♥', 'A♦', 'A♠'],
-        expected: PokerRank.TwoPairs,
+        expected: PokerRank.TwoPairs
       }, {
         hand: ['3♥', '4♥', 'A♥', '3♦', 'A♠'],
-        expected: PokerRank.TwoPairs,
+        expected: PokerRank.TwoPairs
       }, {
         hand: ['5♥', '6♥', 'A♥', '6♦', '5♠'],
-        expected: PokerRank.TwoPairs,
+        expected: PokerRank.TwoPairs
       }, {
         hand: ['2♥', '4♦', '5♥', 'A♦', 'A♠'],
-        expected: PokerRank.OnePair,
+        expected: PokerRank.OnePair
       }, {
         hand: ['3♥', '4♥', '10♥', '3♦', 'A♠'],
-        expected: PokerRank.OnePair,
+        expected: PokerRank.OnePair
       }, {
         hand: ['5♥', '6♥', '7♥', '8♦', '5♠'],
-        expected: PokerRank.OnePair,
+        expected: PokerRank.OnePair
       }, {
         hand: ['3♥', '4♥', '5♥', '7♦', '8♥'],
-        expected: PokerRank.HighCard,
+        expected: PokerRank.HighCard
       }, {
         hand: ['A♥', 'K♥', 'Q♥', 'J♦', '5♠'],
-        expected: PokerRank.HighCard,
+        expected: PokerRank.HighCard
       }, {
         hand: ['A♥', 'K♥', 'Q♥', '2♦', '3♠'],
-        expected: PokerRank.HighCard,
-      },
+        expected: PokerRank.HighCard
+      }
     ].forEach(data => {
       const actual = getPokerHandRank(data.hand);
       assert(
         actual >= PokerRank.HighCard,
-        'Invalid return value. The return value should be >= PokerRank.HighCard',
+        'Invalid return value. The return value should be >= PokerRank.HighCard'
       );
       assert(
         actual <= PokerRank.StraightFlush,
-        'Invalid return value. The return value should be <= PokerRank.StraightFlush',
+        'Invalid return value. The return value should be <= PokerRank.StraightFlush'
       );
       assert(
         actual === data.expected,
-        `'${data.hand}' is ranked as ${rankNames[data.expected]}, but actually ${rankNames[actual]} `,
+        `'${data.hand}' is ranked as ${rankNames[data.expected]}, but actually ${rankNames[actual]} `
       );
     });
   });
@@ -274,8 +274,8 @@ describe('11-katas-2-tasks', () => {
           '+-----+\n' +
           '|     |\n' +
           '|     |\n' +
-          '+-----+\n',
-        ],
+          '+-----+\n'
+        ]
       }, {
         figure: '   +-----+     \n' +
                 '   |     |     \n' +
@@ -291,8 +291,8 @@ describe('11-katas-2-tasks', () => {
           '+-------------+\n' +
           '|             |\n' +
           '|             |\n' +
-          '+-------------+\n',
-        ],
+          '+-------------+\n'
+        ]
       }, {
         figure: '   +--+   \n' +
                 '   |  |   \n' +
@@ -316,8 +316,8 @@ describe('11-katas-2-tasks', () => {
 
           '+-----+\n' +
           '|     |\n' +
-          '+-----+\n',
-        ],
+          '+-----+\n'
+        ]
       }, {
         figure: '++++\n' +
                 '++++\n',
@@ -329,16 +329,16 @@ describe('11-katas-2-tasks', () => {
           '++\n',
 
           '++\n' +
-          '++\n',
-        ],
-      },
+          '++\n'
+        ]
+      }
     ].forEach(data => {
       const actual = Array.from(getFigureRectangles(data.figure)).sort();
       const expected = data.expected.sort();
       assert.deepEqual(
         actual,
         expected,
-        `Figure \n${data.figure} has the following parts:\n${expected.join(',\n')} but actually :\n${actual.join(',\n')}`,
+        `Figure \n${data.figure} has the following parts:\n${expected.join(',\n')} but actually :\n${actual.join(',\n')}`
       );
     });
   });

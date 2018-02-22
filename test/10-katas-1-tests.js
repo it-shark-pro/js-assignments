@@ -4,7 +4,7 @@ import {
   expandBraces,
   getZigZagMatrix,
   canDominoesMakeRow,
-  extractRanges,
+  extractRanges
 } from '../task/10-katas-1-tasks';
 
 it.optional = require('../extensions/it-optional');
@@ -50,13 +50,13 @@ describe('10-katas-1-tasks', () => {
       { abbreviation: 'NW', azimuth: 315.00 },
       { abbreviation: 'NWbN', azimuth: 326.25 },
       { abbreviation: 'NNW', azimuth: 337.50 },
-      { abbreviation: 'NbW', azimuth: 348.75 },
+      { abbreviation: 'NbW', azimuth: 348.75 }
 
     ];
 
     assert.deepEqual(
       createCompassPoints(),
-      expected,
+      expected
     );
   });
 
@@ -71,8 +71,8 @@ describe('10-katas-1-tasks', () => {
           '~/Downloads/*.png',
           '~/Pictures/*.gif',
           '~/Pictures/*.jpg',
-          '~/Pictures/*.png',
-        ],
+          '~/Pictures/*.png'
+        ]
       }, {
         str: 'It{{em,alic}iz,erat}e{d,}, please.',
         result: [
@@ -81,28 +81,28 @@ describe('10-katas-1-tasks', () => {
           'Itemize, please.',
           'Itemized, please.',
           'Iterate, please.',
-          'Iterated, please.',
-        ],
+          'Iterated, please.'
+        ]
       }, {
         str: 'thumbnail.{png,jp{e,}g}',
         result: [
           'thumbnail.jpeg',
           'thumbnail.jpg',
-          'thumbnail.png',
-        ],
+          'thumbnail.png'
+        ]
       }, {
         str: 'nothing to do',
         result: [
-          'nothing to do',
-        ],
-      },
+          'nothing to do'
+        ]
+      }
     ].forEach(data => {
       const actual = Array.from(expandBraces(data.str));
       actual.sort();
       assert.deepEqual(
         actual,
         data.result,
-        `'${data.str}' have not expanded correctly:`,
+        `'${data.str}' have not expanded correctly:`
       );
     });
   });
@@ -111,32 +111,32 @@ describe('10-katas-1-tasks', () => {
   it.optional('getZigZagMatrix should create a square matrix with zigzag path', () => {
     [
       [
-        [0],
+        [0]
       ], [
         [0, 1],
-        [2, 3],
+        [2, 3]
       ], [
         [0, 1, 5],
         [2, 4, 6],
-        [3, 7, 8],
+        [3, 7, 8]
       ], [
         [0, 1, 5, 6],
         [2, 4, 7, 12],
         [3, 8, 11, 13],
-        [9, 10, 14, 15],
+        [9, 10, 14, 15]
       ], [
         [0, 1, 5, 6, 14],
         [2, 4, 7, 13, 15],
         [3, 8, 12, 16, 21],
         [9, 11, 17, 20, 22],
-        [10, 18, 19, 23, 24],
+        [10, 18, 19, 23, 24]
       ], [
         [0, 1, 5, 6, 14, 15],
         [2, 4, 7, 13, 16, 25],
         [3, 8, 12, 17, 24, 26],
         [9, 11, 18, 23, 27, 32],
         [10, 19, 22, 28, 31, 33],
-        [20, 21, 29, 30, 34, 35],
+        [20, 21, 29, 30, 34, 35]
       ], [
         [0, 1, 5, 6, 14, 15, 27],
         [2, 4, 7, 13, 16, 26, 28],
@@ -144,14 +144,14 @@ describe('10-katas-1-tasks', () => {
         [9, 11, 18, 24, 30, 37, 39],
         [10, 19, 23, 31, 36, 40, 45],
         [20, 22, 32, 35, 41, 44, 46],
-        [21, 33, 34, 42, 43, 47, 48],
-      ],
+        [21, 33, 34, 42, 43, 47, 48]
+      ]
     ].forEach(data => {
       const actual = getZigZagMatrix(data.length);
       assert.deepEqual(
         actual,
         data,
-        `Zigzag matrix of ${data.length} size has not been produced correctly:`,
+        `Zigzag matrix of ${data.length} size has not been produced correctly:`
       );
     });
   });
@@ -160,36 +160,36 @@ describe('10-katas-1-tasks', () => {
   it.optional('canDominoesMakeRow should answer if specified subset of dominoes can be arranged in a row', () => {
     [
       [
-        [0, 1], [1, 1],
+        [0, 1], [1, 1]
       ], [
-        [1, 3], [2, 3], [1, 4], [2, 4], [1, 5], [2, 5],
+        [1, 3], [2, 3], [1, 4], [2, 4], [1, 5], [2, 5]
       ], [
-        [1, 1], [1, 2], [2, 3], [2, 5], [2, 6], [3, 6], [5, 6], [6, 6],
-      ],
+        [1, 1], [1, 2], [2, 3], [2, 5], [2, 6], [3, 6], [5, 6], [6, 6]
+      ]
     ].forEach(data => {
       const actual = canDominoesMakeRow(data);
       assert.equal(
         actual,
         true,
-        `[${data.join('],[')}] can be arrangement in a row`,
+        `[${data.join('],[')}] can be arrangement in a row`
       );
     });
 
 
     [
       [
-        [0, 1], [2, 3],
+        [0, 1], [2, 3]
       ], [
-        [1, 1], [2, 2], [1, 5], [5, 6], [6, 3],
+        [1, 1], [2, 2], [1, 5], [5, 6], [6, 3]
       ], [
-        [0, 0], [0, 1], [0, 2], [0, 3], [1, 1], [1, 2], [1, 3], [2, 2], [2, 3], [3, 3],
-      ],
+        [0, 0], [0, 1], [0, 2], [0, 3], [1, 1], [1, 2], [1, 3], [2, 2], [2, 3], [3, 3]
+      ]
     ].forEach(data => {
       const actual = canDominoesMakeRow(data);
       assert.equal(
         actual,
         false,
-        `[${data.join('],[')}] can't be arrangement in a row`,
+        `[${data.join('],[')}] can't be arrangement in a row`
       );
     });
   });
@@ -199,27 +199,27 @@ describe('10-katas-1-tasks', () => {
     [
       {
         nums: [0, 1, 2, 3, 4, 5],
-        result: '0-5',
+        result: '0-5'
       }, {
         nums: [1, 4, 5],
-        result: '1,4,5',
+        result: '1,4,5'
       }, {
         nums: [0, 1, 2, 5, 7, 8, 9],
-        result: '0-2,5,7-9',
+        result: '0-2,5,7-9'
       }, {
         nums: [1, 2, 4, 5],
-        result: '1,2,4,5',
+        result: '1,2,4,5'
       }, {
         nums: [0, 1, 2, 4, 6, 7, 8, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
           25, 27, 28, 29, 30, 31, 32, 33, 35, 36, 37, 38, 39],
-        result: '0-2,4,6-8,11,12,14-25,27-33,35-39',
-      },
+        result: '0-2,4,6-8,11,12,14-25,27-33,35-39'
+      }
     ].forEach(data => {
       const actual = extractRanges(data.nums);
       assert.equal(
         actual,
         data.result,
-        `[${data.nums}] have not expanded correctly:`,
+        `[${data.nums}] have not expanded correctly:`
       );
     });
   });

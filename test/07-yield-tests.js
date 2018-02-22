@@ -4,7 +4,7 @@ import {
   getFibonacciSequence,
   depthTraversalTree,
   breadthTraversalTree,
-  mergeSortedSequences,
+  mergeSortedSequences
 } from '../task/07-yield-tasks';
 
 it.optional = require('../extensions/it-optional');
@@ -211,7 +211,7 @@ describe('07-yield-tasks', () => {
       '1 bottle of beer on the wall, 1 bottle of beer.',
       'Take one down and pass it around, no more bottles of beer on the wall.',
       'No more bottles of beer on the wall, no more bottles of beer.',
-      'Go to the store and buy some more, 99 bottles of beer on the wall.',
+      'Go to the store and buy some more, 99 bottles of beer on the wall.'
     ];
 
     let lineNo = 0;
@@ -219,14 +219,14 @@ describe('07-yield-tasks', () => {
       assert.equal(
         line,
         expected[lineNo++],
-        `Text mismatch at line no ${lineNo}: `,
+        `Text mismatch at line no ${lineNo}: `
       );
     }
 
     assert.equal(
       expected.length,
       lineNo,
-      'Lines count is incorrect:',
+      'Lines count is incorrect:'
     );
   });
 
@@ -235,7 +235,7 @@ describe('07-yield-tasks', () => {
     const expected = [
       0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,
       6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269,
-      2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169,
+      2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169
     ];
 
     let index = 0;
@@ -243,7 +243,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         num,
         expected[index++],
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
       if (index >= expected.length) break;
     }
@@ -283,7 +283,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         num.n,
         expected[index++].n,
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
     }
     if (index < expected.length) assert.fail(index, expected.length, `sequence length should be equal to ${expected.length}`);
@@ -315,7 +315,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         node.n,
         index,
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
       index++;
     }
@@ -330,7 +330,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         node.n,
         index,
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
       index++;
     }
@@ -370,7 +370,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         num.n,
         expected[index++].n,
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
     }
     if (index < expected.length) assert.fail(index, expected.length, `sequence length should be equal to ${expected.length}`);
@@ -385,7 +385,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         node.n,
         index,
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
       index++;
     }
@@ -400,7 +400,7 @@ describe('07-yield-tasks', () => {
       assert.equal(
         node.n,
         index,
-        `Sequence mismatch at index no ${index}: `,
+        `Sequence mismatch at index no ${index}: `
       );
       index++;
     }
@@ -422,7 +422,7 @@ describe('07-yield-tasks', () => {
     for (const value of mergeSortedSequences(odds, evens)) {
       assert.equal(
         value,
-        expected++,
+        expected++
       );
       count++;
       if (count === ITEMS_COUNT) break;
@@ -435,7 +435,7 @@ describe('07-yield-tasks', () => {
     for (const value of mergeSortedSequences(zero, evens)) {
       assert.equal(
         value,
-        expected,
+        expected
       );
       expected += 2;
       count++;
@@ -450,7 +450,7 @@ describe('07-yield-tasks', () => {
     for (const value of mergeSortedSequences(odds, minus1)) {
       assert.equal(
         value,
-        expected,
+        expected
       );
       expected += 2;
       count++;

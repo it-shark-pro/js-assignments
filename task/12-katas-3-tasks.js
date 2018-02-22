@@ -103,5 +103,5 @@ UrlShortener.prototype = {
 
   decode(code) {
     throw new Error('Not implemented');
-  },
+  }
 };

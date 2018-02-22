@@ -628,7 +628,7 @@ const tasks = {
   group,
   selectMany,
   getElementByIndexes,
-  swapHeadAndTail,
+  swapHeadAndTail
 };
 
 export default tasks;

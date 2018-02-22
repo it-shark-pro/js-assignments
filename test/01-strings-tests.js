@@ -14,7 +14,7 @@ import {
   getRectangleString,
   encodeToRot13,
   isString,
-  getCardId,
+  getCardId
 } from '../task/01-strings-tasks';
 
 it.optional = require('../extensions/it-optional');
@@ -77,11 +77,11 @@ describe('01-strings-tasks', () => {
   it.optional('extractEmails should extract emails from string list delimeted by semicolons', () => {
     assert.deepEqual(
       ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com'],
-      extractEmails('angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'),
+      extractEmails('angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com')
     );
     assert.deepEqual(
       ['info@gmail.com'],
-      extractEmails('info@gmail.com'),
+      extractEmails('info@gmail.com')
     );
   });
 
@@ -91,18 +91,18 @@ describe('01-strings-tasks', () => {
       '│    │\n' +
       '│    │\n' +
       '└────┘\n',
-      getRectangleString(6, 4),
+      getRectangleString(6, 4)
     );
     assert.deepEqual(
       '┌┐\n' +
       '└┘\n',
-      getRectangleString(2, 2),
+      getRectangleString(2, 2)
     );
     assert.deepEqual(
       '┌──────────┐\n' +
       '│          │\n' +
       '└──────────┘\n',
-      getRectangleString(12, 3),
+      getRectangleString(12, 3)
     );
   });
 
@@ -112,7 +112,7 @@ describe('01-strings-tasks', () => {
     assert.equal('To get to the other side!', encodeToRot13('Gb trg gb gur bgure fvqr!'));
     assert.equal(
       'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm',
-      encodeToRot13('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'),
+      encodeToRot13('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')
     );
   });
 
@@ -129,12 +129,12 @@ describe('01-strings-tasks', () => {
       'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
       'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
       'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-      'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
+      'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'
     ].forEach((val, index) => {
       assert.equal(
         index,
         getCardId(val),
-        `Invalid id for card '${val}':`,
+        `Invalid id for card '${val}':`
       );
     });
   });

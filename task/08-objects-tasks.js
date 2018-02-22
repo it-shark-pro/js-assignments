@@ -23,7 +23,6 @@
  */
 export function Rectangle(width, height) {
   /* implement your code here */
-  Math.pow(5, 2)
   throw new Error('Not implemented');
 }
 
@@ -151,5 +150,5 @@ export const cssSelectorBuilder = {
   combine(selector1, combinator, selector2) {
     /* implement your code here */
     throw new Error('Not implemented');
-  },
+  }
 };
