@@ -1,4 +1,3 @@
-'use strict';
 
 /**
  * Returns the array of 32 compass points and heading.
@@ -16,9 +15,10 @@
  *     { abbreviation : 'NbW',   azimuth : 348.75 }
  *  ]
  */
-function createCompassPoints() {
-    throw new Error('Not implemented');
-    var sides = ['N','E','S','W'];  // use array of cardinal directions only!
+export function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
+  /* implement your code here */
+  /* use array of cardinal directions only! it is a default parameter! */
+  throw new Error('Not implemented');
 }
 
 
@@ -27,7 +27,8 @@ function createCompassPoints() {
  * See https://en.wikipedia.org/wiki/Bash_(Unix_shell)#Brace_expansion
  *
  * In the input string, balanced pairs of braces containing comma-separated substrings
- * represent alternations that specify multiple alternatives which are to appear at that position in the output.
+ * represent alternations that specify multiple alternatives which are to appear 
+ * at that position in the output.
  *
  * @param {string} str
  * @return {Iterable.<string>}
@@ -55,15 +56,17 @@ function createCompassPoints() {
  *
  *   'nothing to do' => 'nothing to do'
  */
-function* expandBraces(str) {
-    throw new Error('Not implemented');
+export function* expandBraces(str) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
  * Returns the ZigZag matrix
  *
- * The fundamental idea in the JPEG compression algorithm is to sort coefficient of given image by zigzag path and encode it.
+ * The fundamental idea in the JPEG compression algorithm is to sort coefficient 
+ * of given image by zigzag path and encode it.
  * In this task you are asked to implement a simple method to create a zigzag square matrix.
  * See details at https://en.wikipedia.org/wiki/JPEG#Entropy_coding
  * and zigzag path here: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/JPEG_ZigZag.svg/220px-JPEG_ZigZag.svg.png
@@ -87,8 +90,9 @@ function* expandBraces(str) {
  *          [ 9,10,14,15 ]]
  *
  */
-function getZigZagMatrix(n) {
-    throw new Error('Not implemented');
+export function getZigZagMatrix(n) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -97,7 +101,8 @@ function getZigZagMatrix(n) {
  * Dominoes details see at: https://en.wikipedia.org/wiki/Dominoes
  *
  * Each domino tile presented as an array [x,y] of tile value.
- * For example, the subset [1, 1], [2, 2], [1, 2] can be arranged in a row (as [1, 1] followed by [1, 2] followed by [2, 2]),
+ * For example, the subset [1, 1], [2, 2], [1, 2] can be arranged in a row 
+ *  (as [1, 1] followed by [1, 2] followed by [2, 2]),
  * while the subset [1, 1], [0, 3], [1, 4] can not be arranged in one row.
  * NOTE that as in usual dominoes playing any pair [i, j] can also be treated as [j, i].
  *
@@ -112,8 +117,9 @@ function getZigZagMatrix(n) {
  * [[0,0], [0,1], [1,1], [0,2], [1,2], [2,2], [0,3], [1,3], [2,3], [3,3]] => false
  *
  */
-function canDominoesMakeRow(dominoes) {
-    throw new Error('Not implemented');
+export function canDominoesMakeRow(dominoes) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -122,9 +128,11 @@ function canDominoesMakeRow(dominoes) {
  *
  * A format for expressing an ordered list of integers is to use a comma separated list of either:
  *   - individual integers
- *   - or a range of integers denoted by the starting integer separated from the end integer in the range by a dash, '-'.
+ *   - or a range of integers denoted by the starting integer separated from the end 
+ *     integer in the range by a dash, '-'.
  *     (The range includes all integers in the interval including both endpoints)
- *     The range syntax is to be used only for, and for every range that expands to more than two values.
+ *     The range syntax is to be used only for, and for every range that expands to 
+ *     more than two values.
  *
  * @params {array} nums
  * @return {bool}
@@ -136,14 +144,7 @@ function canDominoesMakeRow(dominoes) {
  * [ 0, 1, 2, 5, 7, 8, 9] => '0-2,5,7-9'
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
-function extractRanges(nums) {
-    throw new Error('Not implemented');
+export function extractRanges(nums) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
-
-module.exports = {
-    createCompassPoints : createCompassPoints,
-    expandBraces : expandBraces,
-    getZigZagMatrix : getZigZagMatrix,
-    canDominoesMakeRow : canDominoesMakeRow,
-    extractRanges : extractRanges
-};

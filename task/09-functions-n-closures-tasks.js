@@ -1,6 +1,5 @@
-'use strict';
 
-/**********************************************************************************************
+/** ********************************************************************************************
  *                                                                                            *
  * Plese read the following tutorial before implementing tasks:                               *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions                    *
@@ -8,7 +7,7 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments      *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures                           *
  *                                                                                            *
- **********************************************************************************************/
+ ********************************************************************************************* */
 
 
 /**
@@ -25,8 +24,9 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
  *
  */
-function getComposition(f,g) {
-    throw new Error('Not implemented');
+export function getComposition(f, g) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -46,8 +46,9 @@ function getComposition(f,g) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(exponent) {
-    throw new Error('Not implemented');
+export function getPowerFunction(exponent) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -64,8 +65,9 @@ function getPowerFunction(exponent) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom() {
-    throw new Error('Not implemented');
+export function getPolynom() {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -83,8 +85,9 @@ function getPolynom() {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-function memoize(func) {
-    throw new Error('Not implemented');
+export function memoize(func) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -103,8 +106,9 @@ function memoize(func) {
  * }, 2);
  * retryer() => 2
  */
-function retry(func, attempts) {
-    throw new Error('Not implemented');
+export function retry(func, attempts) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -131,8 +135,9 @@ function retry(func, attempts) {
  * cos(3.141592653589793) ends
  *
  */
-function logger(func, logFunc) {
-    throw new Error('Not implemented');
+export function logger(func, logFunc) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -149,13 +154,15 @@ function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
-function partialUsingArguments(fn) {
-    throw new Error('Not implemented');
+export function partialUsingArguments(fn) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
- * Returns the id generator function that returns next integer starting from specified number every time when invoking.
+ * Returns the id generator function that returns next integer starting from specified 
+ * number every time when invoking.
  *
  * @param {Number} startFrom
  * @return {Function}
@@ -170,18 +177,7 @@ function partialUsingArguments(fn) {
  *   getId4() => 7
  *   getId10() => 11
  */
-function getIdGeneratorFunction(startFrom) {
-    throw new Error('Not implemented');
+export function getIdGeneratorFunction(startFrom) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
-
-
-module.exports = {
-    getComposition: getComposition,
-    getPowerFunction: getPowerFunction,
-    getPolynom: getPolynom,
-    memoize: memoize,
-    retry: retry,
-    logger: logger,
-    partialUsingArguments: partialUsingArguments,
-    getIdGeneratorFunction: getIdGeneratorFunction,
-};

@@ -1,12 +1,11 @@
-'use strict';
 
-/********************************************************************************************
+/** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield        *
  *                                                                                          *
- ********************************************************************************************/
+ ****************************************************************************************** */
 
 
 /**
@@ -32,8 +31,8 @@
  * @return {Iterable.<string>}
  *
  */
-function* get99BottlesOfBeer() {
-    throw new Error('Not implemented');
+export function* get99BottlesOfBeer() {
+  throw new Error('Not implemented');
 }
 
 
@@ -46,8 +45,8 @@ function* get99BottlesOfBeer() {
  * @return {Iterable.<number>}
  *
  */
-function* getFibonacciSequence() {
-    throw new Error('Not implemented');
+export function* getFibonacciSequence() {
+  throw new Error('Not implemented');
 }
 
 
@@ -81,8 +80,8 @@ function* getFibonacciSequence() {
  *  depthTraversalTree(node1) => node1, node2, node3, node4, node5, node6, node7, node8
  *
  */
-function* depthTraversalTree(root) {
-    throw new Error('Not implemented');
+export function* depthTraversalTree(root) {
+  throw new Error('Not implemented');
 }
 
 
@@ -107,8 +106,8 @@ function* depthTraversalTree(root) {
  *           8
  *
  */
-function* breadthTraversalTree(root) {
-    throw new Error('Not implemented');
+export function* breadthTraversalTree(root) {
+  throw new Error('Not implemented');
 }
 
 
@@ -125,15 +124,6 @@ function* breadthTraversalTree(root) {
  *   [ 0 ], [ 2, 4, 6, ... ]  => [ 0, 2, 4, 6, ... ]
  *   [ 1, 3, 5, ... ], [ -1 ] => [ -1, 1, 3, 5, ...]
  */
-function* mergeSortedSequences(source1, source2) {
-    throw new Error('Not implemented');
+export function* mergeSortedSequences(source1, source2) {
+  throw new Error('Not implemented');
 }
-
-
-module.exports = {
-    get99BottlesOfBeer: get99BottlesOfBeer,
-    getFibonacciSequence: getFibonacciSequence,
-    depthTraversalTree: depthTraversalTree,
-    breadthTraversalTree: breadthTraversalTree,
-    mergeSortedSequences: mergeSortedSequences
-};

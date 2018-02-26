@@ -1,12 +1,11 @@
-'use strict';
 
-/**************************************************************************************************
+/** ************************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration              *
  *                                                                                                *
- **************************************************************************************************/
+ ************************************************************************************************ */
 
 
 /**
@@ -29,8 +28,9 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+export function getFizzBuzz(num) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -45,8 +45,9 @@ function getFizzBuzz(num) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(n) {
-    throw new Error('Not implemented');
+export function getFactorial(n) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -62,13 +63,15 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+export function getSumBetweenNumbers(n1, n2) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
- * Returns true, if a triangle can be built with the specified sides a,b,c and false in any other ways.
+ * Returns true, if a triangle can be built with the specified sides a,b,c and false 
+ * in any other ways.
  *
  * @param {number} a
  * @param {number} b
@@ -81,31 +84,32 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+export function isTriangle(a, b, c) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
  * Returns true, if two specified axis-aligned rectangles overlap, otherwise false.
- * Each rectangle representing by object 
+ * Each rectangle representing by object
  *  {
  *     top: 5,
  *     left: 5,
  *     width: 20,
  *     height: 10
  *  }
- * 
+ *
  *  (5;5)
- *     -------------  
- *     |           | 
+ *     -------------
+ *     |           |
  *     |           |  height = 10
- *     ------------- 
- *        width=20    
- * 
+ *     -------------
+ *        width=20
+ *
  * NOTE: Please use canvas coordinate space (https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#The_grid),
  * it differs from Cartesian coordinate system.
- * 
+ *
  * @param {object} rect1
  * @param {object} rect2
  * @return {bool}
@@ -113,33 +117,34 @@ function isTriangle(a,b,c) {
  * @example:
  *   { top: 0, left: 0, width: 10, height: 10 },
  *   { top: 5, left: 5, width: 20, height: 20 }    =>  true
- * 
+ *
  *   { top: 0, left: 0, width: 10, height: 10 },
  *   { top:20, left:20, width: 20, height: 20 }    =>  false
- *  
+ *
  */
-function doRectanglesOverlap(rect1, rect2) {
-    throw new Error('Not implemented');
+export function doRectanglesOverlap(rect1, rect2) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
  * Returns true, if point lies inside the circle, otherwise false.
- * Circle is an object of 
+ * Circle is an object of
  *  {
  *     center: {
- *       x: 5,       
+ *       x: 5,
  *       y: 5
- *     },        
+ *     },
  *     radius: 20
  *  }
- * 
- * Point is object of 
+ *
+ * Point is object of
  *  {
  *     x: 5,
  *     y: 5
  *  }
- * 
+ *
  * @param {object} circle
  * @param {object} point
  * @return {bool}
@@ -147,10 +152,11 @@ function doRectanglesOverlap(rect1, rect2) {
  * @example:
  *   { center: { x:0, y:0 }, radius:10 },  { x:0, y:0 }     => true
  *   { center: { x:0, y:0 }, radius:10 },  { x:10, y:10 }   => false
- *   
+ *
  */
-function isInsideCircle(circle, point) {
-    throw new Error('Not implemented');
+export function isInsideCircle(circle, point) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -165,13 +171,15 @@ function isInsideCircle(circle, point) {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-function findFirstSingleChar(str) {
-    throw new Error('Not implemented');
+export function findFirstSingleChar(str) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
- * Returns the string representation of math interval, specified by two points and include / exclude flags.
+ * Returns the string representation of math interval, specified by two points and 
+ * include / exclude flags.
  * See the details: https://en.wikipedia.org/wiki/Interval_(mathematics)
  *
  * Please take attention, that the smaller number should be the first in the notation
@@ -191,8 +199,9 @@ function findFirstSingleChar(str) {
  *   5, 3, true, true   => '[3, 5]'
  *
  */
-function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-    throw new Error('Not implemented');
+export function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -208,8 +217,9 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-function reverseString(str) {
-    throw new Error('Not implemented');
+export function reverseString(str) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -225,8 +235,9 @@ function reverseString(str) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(num) {
-    throw new Error('Not implemented');
+export function reverseInteger(num) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -250,8 +261,9 @@ function reverseInteger(num) {
  *   5436468789016589 => false
  *   4916123456789012 => false
  */
-function isCreditCardNumber(ccn) {
-    throw new Error('Not implemented');
+export function isCreditCardNumber(ccn) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -269,8 +281,9 @@ function isCreditCardNumber(ccn) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+export function getDigitalRoot(num) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -293,10 +306,11 @@ function getDigitalRoot(num) {
  *   '[[][][[]]]' => true
  *   '[[][]][' => false
  *   '{)' = false
- *   '{[(<{[]}>)]}' = true 
+ *   '{[(<{[]}>)]}' = true
  */
-function isBracketsBalanced(str) {
-    throw new Error('Not implemented');
+export function isBracketsBalanced(str) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -331,13 +345,15 @@ function isBracketsBalanced(str) {
  *   Date('2000-01-01 01:00:00.100'), Date('2015-01-02 03:00:05.000')  => '15 years ago'
  *
  */
-function timespanToHumanString(startDate, endDate) {
-    throw new Error('Not implemented');
+export function timespanToHumanString(startDate, endDate) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
 /**
- * Returns the string with n-ary (binary, ternary, etc, where n<=10) representation of specified number.
+ * Returns the string with n-ary (binary, ternary, etc, where n<=10) representation of
+ * specified number.
  * See more about
  * https://en.wikipedia.org/wiki/Binary_number
  * https://en.wikipedia.org/wiki/Ternary_numeral_system
@@ -355,8 +371,9 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(num, n) {
-    throw new Error('Not implemented');
+export function toNaryString(num, n) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -372,8 +389,9 @@ function toNaryString(num, n) {
  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
-function getCommonDirectoryPath(pathes) {
-    throw new Error('Not implemented');
+export function getCommonDirectoryPath(pathes) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -395,8 +413,9 @@ function getCommonDirectoryPath(pathes) {
  *                         [ 6 ]]
  *
  */
-function getMatrixProduct(m1, m2) {
-    throw new Error('Not implemented');
+export function getMatrixProduct(m1, m2) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
 
 
@@ -430,28 +449,7 @@ function getMatrixProduct(m1, m2) {
  *    [    ,   ,    ]]
  *
  */
-function evaluateTicTacToePosition(position) {
-    throw new Error('Not implemented');
+export function evaluateTicTacToePosition(position) {
+  /* implement your code here */
+  throw new Error('Not implemented');
 }
-
-
-module.exports = {
-    getFizzBuzz: getFizzBuzz,
-    getFactorial: getFactorial,
-    getSumBetweenNumbers: getSumBetweenNumbers,
-    isTriangle: isTriangle,
-    doRectanglesOverlap: doRectanglesOverlap,
-    isInsideCircle: isInsideCircle,
-    findFirstSingleChar: findFirstSingleChar,
-    getIntervalString : getIntervalString,
-    reverseString: reverseString,
-    reverseInteger: reverseInteger,
-    isCreditCardNumber: isCreditCardNumber,
-    getDigitalRoot: getDigitalRoot,
-    isBracketsBalanced: isBracketsBalanced,
-    timespanToHumanString : timespanToHumanString,
-    toNaryString: toNaryString,
-    getCommonDirectoryPath: getCommonDirectoryPath,
-    getMatrixProduct: getMatrixProduct,
-    evaluateTicTacToePosition : evaluateTicTacToePosition
-};
