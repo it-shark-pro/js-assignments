@@ -449,6 +449,12 @@ describe('04-arrays-tasks', () => {
       }, {
         arr: [10, 10, 10, 10],
         expected: [10, 10, 10]
+      }, {
+        arr: [4, 1, 9, 3, 1, 5],
+        expected: [9, 5, 4]
+      }, {
+        arr: [30, -4, -27, 0, -2],
+        expected: [30, 0, -2]
       }
     ].forEach(data => {
       const actual = get3TopItems(data.arr);
