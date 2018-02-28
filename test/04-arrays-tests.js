@@ -483,6 +483,9 @@ describe('04-arrays-tasks', () => {
       }, {
         arr: [1, '2'],
         expected: 1
+      }, {
+        arr: [1, '3', '-4', 0.5, -0.3],
+        expected: 2
       }
     ].forEach(data => {
       const actual = getPositivesCount(data.arr);
