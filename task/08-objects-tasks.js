@@ -63,7 +63,7 @@ export function fromJSON(proto, json) {
 /**
  * Css selectors builder
  *
- * Each complex selector can consists of type, id, class, attribute, pseudo-class and 
+ * Each complex selector can consists of type, id, class, attribute, pseudo-class and
  * pseudo-element selectors:
  *
  *    element#id.class[attr]:pseudoClass::pseudoElement
@@ -72,10 +72,10 @@ export function fromJSON(proto, json) {
  *
  * All types of selectors can be combined using the combinators ' ','+','~','>' .
  *
- * The task is to design a single class, independent classes or classes hierarchy and 
+ * The task is to design a single class, independent classes or classes hierarchy and
  * implement the functionality
  * to build the css selectors using the provided cssSelectorBuilder.
- * Each selector should have the stringify() method to output the string repsentation 
+ * Each selector should have the stringify() method to output the string repsentation
  * according to css specification.
  *
  * Provided cssSelectorBuilder should be used as facade only to create your own classes,
@@ -84,17 +84,17 @@ export function fromJSON(proto, json) {
  *       return new MySuperBaseElementSelector(...)...
  *   },
  *
- * The design of class(es) is totally up to you, but try to make it as simple, clear 
+ * The design of class(es) is totally up to you, but try to make it as simple, clear
  * and readable as possible.
  *
  * @example
  *
  *  var builder = cssSelectorBuilder;
  *
- *  builder.id('main').class('container').class('editable').stringify() => 
+ *  builder.id('main').class('container').class('editable').stringify() =>
  *    '#main.container.editable'
  *
- *  builder.element('a').attr('href$=".png"').pseudoClass('focus').stringify() => 
+ *  builder.element('a').attr('href$=".png"').pseudoClass('focus').stringify() =>
  *    'a[href$=".png"]:focus'
  *
  *  builder.combine(
