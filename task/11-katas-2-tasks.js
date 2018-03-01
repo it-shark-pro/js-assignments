@@ -2,9 +2,9 @@
 /**
  * Returns the bank account number parsed from specified string.
  *
- * You work for a bank, which has recently purchased an ingenious machine to assist 
+ * You work for a bank, which has recently purchased an ingenious machine to assist
  * in reading letters and faxes sent in by branch offices.
- * The machine scans the paper documents, and produces a string with a bank account 
+ * The machine scans the paper documents, and produces a string with a bank account
  * that looks like this:
  *
  *    _  _     _  _  _  _  _
@@ -14,7 +14,7 @@
  * Each string contains an account number written using pipes and underscores.
  * Each account number should have 9 digits, all of which should be in the range 0-9.
  *
- * Your task is to write a function that can take bank account string and parse it 
+ * Your task is to write a function that can take bank account string and parse it
  * into actual account numbers.
  *
  * @param {string} bankAccount
@@ -42,7 +42,7 @@ export function parseBankAccount(bankAccount) {
 
 
 /**
- * Returns the string, but with line breaks inserted at just the right places to make 
+ * Returns the string, but with line breaks inserted at just the right places to make
  * sure that no line is longer than the specified column number.
  * Lines can be broken at word boundaries only.
  *
@@ -114,7 +114,7 @@ export function getPokerHandRank(hand) {
 
 /**
  * Returns the rectangles sequence of specified figure.
- * The figure is ASCII multiline string comprised of minus signs -, plus signs +, 
+ * The figure is ASCII multiline string comprised of minus signs -, plus signs +,
  * vertical bars | and whitespaces.
  * The task is to break the figure in the rectangles it is made of.
  *

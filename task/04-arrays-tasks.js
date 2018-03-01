@@ -44,7 +44,7 @@ export function generateOdds(len) {
 
 
 /**
- * Returns the doubled array - elements of the specified array are repeated twice 
+ * Returns the doubled array - elements of the specified array are repeated twice
  * using original order
  *
  * @param {array} arr
@@ -118,7 +118,7 @@ export function removeFalsyValues(arr) {
  * @return {array}
  *
  * @example
- *    [ 'permanent-internship', 'glutinous-shriek', 'multiplicative-elevation' ] => 
+ *    [ 'permanent-internship', 'glutinous-shriek', 'multiplicative-elevation' ] =>
  *        [ 'PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION' ]
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
@@ -415,7 +415,7 @@ export function toStringList(arr) {
 
 
 /**
- * Sorts the specified array by country name first and city name (if countries are 
+ * Sorts the specified array by country name first and city name (if countries are
  * equal) in ascending order.
  *
  * @param {array} arr
@@ -538,11 +538,11 @@ export function group(array, keySelector, valueSelector) {
 
 
 /**
- * Projects each element of the specified array to a sequence and flattens the 
+ * Projects each element of the specified array to a sequence and flattens the
  * resulting sequences into one array.
  *
  * @param {array} arr
- * @param {Function} childrenSelector, a transform const to apply to each element 
+ * @param {Function} childrenSelector, a transform const to apply to each element
  *  that returns an array of children
  * @return {array}
  *

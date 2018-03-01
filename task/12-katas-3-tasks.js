@@ -1,7 +1,7 @@
 
 /**
  * Returns true if word occurrs in the specified word snaking puzzle.
- * Each words can be constructed using "snake" path inside a grid with top, left, 
+ * Each words can be constructed using "snake" path inside a grid with top, left,
  * right and bottom directions.
  * Each char can be used only once ("snake" should not cross itself).
  *
@@ -39,7 +39,7 @@ export function findStringInSnakingPuzzle(puzzle, searchStr) {
  * The order of permutations does not matter.
  *
  * @param {string} chars
- * @return {Iterable.<string>} all posible strings constructed with the chars from 
+ * @return {Iterable.<string>} all posible strings constructed with the chars from
  *    the specfied string
  *
  * @example
@@ -56,9 +56,9 @@ export function* getPermutations(chars) {
  * Returns the most profit from stock quotes.
  * Stock quotes are stores in an array in order of date.
  * The stock profit is the difference in prices in buying and selling stock.
- * Each day, you can either buy one unit of stock, sell any number of stock units 
+ * Each day, you can either buy one unit of stock, sell any number of stock units
  * you have already bought, or do nothing.
- * Therefore, the most profit is the maximum difference of all pairs in a sequence 
+ * Therefore, the most profit is the maximum difference of all pairs in a sequence
  * of stock prices.
  *
  * @param {array} quotes
