@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - "lts/*"
+
+script:
+  - yarn run lint
+  - yarn run test
