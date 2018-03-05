@@ -1,8 +1,14 @@
-[![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
-# Brest IT Shark School
-## Javascript Assignments  [![Build Status](https://travis-ci.org/it-shark-pro/js-assignments.svg?branch=master)](https://travis-ci.org/it-shark-pro/js-assignments)
-
+[![Build Status](https://travis-ci.org/it-shark-pro/js-assignments.svg?branch=master)](https://travis-ci.org/it-shark-pro/js-assignments)
+![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/it-shark-pro/js-assignments.svg)](https://greenkeeper.io/)
+
+# [Brest IT Shark](https://it-shark.pro/)
+[![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
+## Javascript Assignments
+
+### Docs
+* [How to sync your fork from original repo to keep up with their changes](/docs/sync-fork.md)
+* [Submit your solution to us for review](https://goo.gl/X6GjMB)
 
 Yet another javascript assignments. There are a lot of interactive javascript resources for beginners, but most of them are online and do not cover the modern programming workflow. There are some excellent training resources on github (https://github.com/rmurphey/js-assessment, https://github.com/mrdavidlaing/javascript-koans, https://github.com/vasanthk/js-bits etc) but they are not exactly simulate the everyday programming process. So the motivation of this project is to show TDD process in the wild to the beginners. Assingment tests are implemented in various ways to feel a difference and gain the experience what manner is good, what is bad and what is ugly.
 
@@ -10,7 +16,7 @@ Another idea is to prepare assignment to cover all standard javascript functions
 
 And the last idea is to inure trainees to work using unit test and feel uncomfortable when programming without tests.
 
-To start javascript assignments please follow the next steps:
+### To start javascript assignments please follow the next steps:
 *  [Fork this repo](#user-content-how-to-fork-this-repo)
 *  [Setup travis-ci to test the commits](#user-content-how-to-setup-travis-ci)
 *  [Setup the work environment](#user-content-how-to-setup-work-environment)
@@ -108,9 +114,6 @@ There is an easier way to debug for beginners with free Visual Studio Code:
 ```
 * Click in the gutter to the left of the line number to set the breakpoint. Press `F5` to run debug.
 * NOTE: The `launch.json` is stored in the `.vscode` project folder.
-
-### Submit your solution to us for review
-* https://goo.gl/X6GjMB
 
 ## Contribution
 Feel free to contribute into this project. New tasks and katas are welcome.
