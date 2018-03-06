@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/it-shark-pro/js-assignments.svg?branch=master)](https://travis-ci.org/it-shark-pro/js-assignments)
 ![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/it-shark-pro/js-assignments.svg)](https://greenkeeper.io/)
+[![GitHub release](https://img.shields.io/github/release/it-shark-pro/js-assignments.svg)](https://github.com/it-shark-pro/js-assignments/releases/latest)
+
 
 # [Brest IT Shark](https://it-shark.pro/)
 [![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
