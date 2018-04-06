@@ -56,16 +56,16 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('getLastDigit should return a last digit of the number', () => {
-    assert.equal(getLastDigit(100), 0);
-    assert.equal(getLastDigit(37), 7);
-    assert.equal(getLastDigit(5), 5);
-    assert.equal(getLastDigit(0), 0);
+    assert.strictEqual(getLastDigit(100), 0);
+    assert.strictEqual(getLastDigit(37), 7);
+    assert.strictEqual(getLastDigit(5), 5);
+    assert.strictEqual(getLastDigit(0), 0);
   });
 
   it.optional('parseNumberFromString should return a number from the given string representation', () => {
-    assert.equal(parseNumberFromString('100'), 100);
-    assert.equal(parseNumberFromString('37'), 37);
-    assert.equal(parseNumberFromString('-525.5'), -525.5);
+    assert.strictEqual(parseNumberFromString('100'), 100);
+    assert.strictEqual(parseNumberFromString('37'), 37);
+    assert.strictEqual(parseNumberFromString('-525.5'), -525.5);
   });
 
   it.optional('getParallelipidedDiagonal should return a diagonal length of the rectagular parallepiped', () => {
@@ -107,11 +107,11 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('toNumber should convert any value to number or return the default', () => {
-    assert.equal(toNumber(null, 0), 0);
-    assert.equal(toNumber('test', 0), 0);
-    assert.equal(toNumber('1', 0), 1);
-    assert.equal(toNumber(42, 0), 42);
-    assert.equal(toNumber(new Number(42), 0), 42);
-    assert.equal(toNumber(undefined, -1), -1);
+    assert.strictEqual(toNumber(null, 0), 0);
+    assert.strictEqual(toNumber('test', 0), 0);
+    assert.strictEqual(toNumber('1', 0), 1);
+    assert.strictEqual(toNumber(42, 0), 42);
+    assert.strictEqual(toNumber(new Number(42), 0), 42);
+    assert.strictEqual(toNumber(undefined, -1), -1);
   });
 });
