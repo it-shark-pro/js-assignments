@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint ./**/*.js",
     "precommit": "lint-staged",
-    "test": "./node_modules/.bin/mocha --require babel-core/register",
+    "test": "./node_modules/.bin/mocha",
     "test-debug": "./node_modules/.bin/mocha --debug-brk"
   },
   "author": "IT Shark Pro",
