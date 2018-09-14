@@ -22,7 +22,6 @@
 export function concatenateStrings(value1, value2) {
   /* implement your code here */
   return value1+value2;
-  throw new Error('Not implemented');
 }
 
 /**
@@ -39,7 +38,6 @@ export function concatenateStrings(value1, value2) {
 export function getStringLength(value) {
   /* implement your code here */
   return value.length;
-  throw new Error('Not implemented');
 }
 
 /**
@@ -58,7 +56,6 @@ export function getStringLength(value) {
 export function getStringFromTemplate(firstName, lastName) {
   /* implement your code here */
   return `Hello, ${firstName} ${lastName}!`;
-  throw new Error('Not implemented');
 }
 
 /**
@@ -73,8 +70,7 @@ export function getStringFromTemplate(firstName, lastName) {
  */
 export function  extractNameFromTemplate(value) {
   /* implement your code here */
-  return value.replace("Hello,",'').replace('!',"").replace(" ","");
-  throw new Error('Not implemented');
+  return value.replace('Hello,', '').replace('!', '').replace(' ', '');
 }
 
 
@@ -89,8 +85,7 @@ export function  extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 export function getFirstChar(value) {
-  return value[0]; 
-  throw new Error('Not implemented');
+  return value[0];
 }
 
 /**
@@ -106,7 +101,6 @@ export function getFirstChar(value) {
  */
 export function removeLeadingAndTrailingWhitespaces(value) {
   return value.trim();
-  throw new Error('Not implemented');
 }
 
 /**
@@ -123,7 +117,6 @@ export function removeLeadingAndTrailingWhitespaces(value) {
 export function repeatString(value, count) {
   /* implement your code here */
   return value.repeat(count);
-  throw new Error('Not implemented');
 }
 
 /**
@@ -140,8 +133,7 @@ export function repeatString(value, count) {
  */
 export function removeFirstOccurrences(str, value)  {
   /* implement your code here */
-  return str.replace(value,"");
-  throw new Error('Not implemented');
+  return str.replace(value, '');
 }
 
 /**
@@ -157,8 +149,7 @@ export function removeFirstOccurrences(str, value)  {
  */
 export function unbracketTag(str) {
   /* implement your code here */
-  return str.replace('<',"").replace('>',"");
-  throw new Error('Not implemented');
+  return str.replace('<', '').replace('>', '');
 }
 
 
@@ -175,7 +166,6 @@ export function unbracketTag(str) {
 export function convertToUpperCase(str) {
   /* implement your code here */
   return str.toUpperCase();
-  throw new Error('Not implemented');
 }
 
 /**
@@ -192,7 +182,6 @@ export function convertToUpperCase(str) {
 export function extractEmails(str) {
   /* implement your code here */
   return str.split(';');
-  throw new Error('Not implemented');
 }
 
 /**
@@ -220,25 +209,23 @@ export function extractEmails(str) {
  */
 export function getRectangleString(width, height) {
   /* implement your code here */
-  let first_line = "";
-  let last_line = "";
-  let middle_line = "";
+  let first_line = '';
+  let last_line = '';
+  let middle_line = '';
   if (width <= 2) {
-    first_line = "┌┐\n";
-    last_line = "└┘\n";
+    first_line = '┌┐\n';
+    last_line = '└┘\n';
   } else {
-    first_line = "┌" + "─".repeat(width - 2) + "┐\n";
-    last_line = "└" + "─".repeat(width - 2) + "┘\n";
+    first_line = '┌' + '─'.repeat(width - 2) + '┐\n';
+    last_line = '└' + '─'.repeat(width - 2) + '┘\n';
   }
   if (height > 2) {
-    middle_line = "│"+" ".repeat(width-2)+"│\n"; 
+    middle_line = '│'+' '.repeat(width-2)+'│\n'; 
     middle_line = middle_line.repeat(height-2);
   } else {
-    middle_line = "";
+    middle_line = '';
   }
   return first_line+middle_line+last_line;
-
-  throw new Error('Not implemented');
 }
 
 
@@ -260,25 +247,24 @@ export function getRectangleString(width, height) {
  */
 export function encodeToRot13(str) {
   /* implement your code here */
-  let firstPart = "abcdefghijklmABCDEFGHIJKLM";
-  let secondPart = "nopqrstuvwxyzNOPQRSTUVWXYZ";
+  let firstPart = 'abcdefghijklmABCDEFGHIJKLM';
+  let secondPart = 'nopqrstuvwxyzNOPQRSTUVWXYZ';
   let res_arr = [];
   let start_arr = str.split('');
   for (let key in start_arr) {
     let pos;
-    if (firstPart.indexOf(start_arr[key]) == -1) {
+    if (firstPart.indexOf(start_arr[key]) === -1) {
       pos = secondPart.indexOf(start_arr[key]);
       res_arr[key] = firstPart[pos];
-    } else if (secondPart.indexOf(start_arr[key]) == -1) {
+    } else if (secondPart.indexOf(start_arr[key]) === -1) {
       pos = firstPart.indexOf(start_arr[key]);
       res_arr[key] = secondPart[pos];
     }
-    if (pos == -1) {
+    if (pos === -1) {
       res_arr[key] = start_arr[key];
     }
   }
   return res_arr.join('');
-  throw new Error('Not implemented');
 }
 
 /**
@@ -296,14 +282,13 @@ export function encodeToRot13(str) {
  */
 export function isString(value) {
   /* implement your code here */
-  if (typeof(value) == 'string') {
+  if (typeof(value) === 'string') {
     return true;
   } else if(value instanceof String) {
     return true;
   } else {
     return false;
   }
-  throw new Error('Not implemented');
 }
 
 
@@ -334,11 +319,10 @@ export function isString(value) {
 export function getCardId(value) {
   /* implement your code here */
   const card_array = [
-    'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
-    'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
-    'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
-    'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'
+    'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'
   ];
   return card_array.indexOf(value);
-  throw new Error('Not implemented');
 }
