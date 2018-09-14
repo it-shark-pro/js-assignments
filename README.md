@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/eneko7/js-assignments.svg?branch=master)](https://travis-ci.org/eneko7/js-assignments)
 ![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)
-[![Greenkeeper badge](https://badges.greenkeeper.io/eneko7/js-assignments.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/it-shark-pro/js-assignments.svg)](https://greenkeeper.io/)
 [![GitHub release](https://img.shields.io/github/release/eneko7/js-assignments.svg)](https://github.com/eneko7/js-assignments/releases/latest)
 
 
