@@ -22,7 +22,7 @@
  */
 export function parseDataFromRfc2822(value) {
   /* implement your code here */
-  throw new Error('Not implemented');
+  return new Date(value);
 }
 
 /**
@@ -38,7 +38,7 @@ export function parseDataFromRfc2822(value) {
  */
 export function parseDataFromIso8601(value) {
   /* implement your code here */
-  throw new Error('Not implemented');
+  return new Date(value);
 }
 
 
@@ -58,7 +58,15 @@ export function parseDataFromIso8601(value) {
  */
 export function isLeapYear(date) {
   /* implement your code here */
-  throw new Error('Not implemented');
+  if (date.getFullYear()%4 !== 0 ) {
+    return false;
+  } else if (date.getFullYear()%100 !== 0) {
+    return true;
+  } else if (date.getFullYear()%400 !== 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 
@@ -79,7 +87,20 @@ export function isLeapYear(date) {
  */
 export function timeSpanToString(startDate, endDate) {
   /* implement your code here */
-  throw new Error('Not implemented');
+  let time = endDate - startDate;
+  let milisec = time%1000;
+  time = time - milisec; 
+  let seconds = (time/1000)%60;
+  time = time - seconds*1000;
+  let minutes = (time/1000/60)%60;
+  time = time - minutes*1000*60;
+  let hours = (time/1000/60/60)%60;
+  Number.prototype.pad = function(size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {s = '0' + s;}
+    return s;
+  };
+  return `${hours.pad(2)}:${minutes.pad(2)}:${seconds.pad(2)}.${milisec.pad(3)}`;
 }
 
 
@@ -99,5 +120,11 @@ export function timeSpanToString(startDate, endDate) {
  */
 export function angleBetweenClockHands(date) {
   /* implement your code here */
-  throw new Error('Not implemented');
+  let hours = date.getUTCHours() % 12;
+  let minutes = date.getUTCMinutes();
+  let angle_h = 0.5*(60*hours + minutes);
+  let angle_m = 6 * minutes;
+  let angleDiv = Math.abs(angle_h - angle_m);
+  let radians = angleDiv*Math.PI / 180;
+  return angleDiv <= 180 ? radians : radians - Math.PI;
 }
