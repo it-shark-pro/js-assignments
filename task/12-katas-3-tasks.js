@@ -28,7 +28,6 @@
  *   'NULL'      => false
  */
 export function findStringInSnakingPuzzle(puzzle, searchStr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -47,7 +46,6 @@ export function findStringInSnakingPuzzle(puzzle, searchStr) {
  *    'abc' => 'abc','acb','bac','bca','cab','cba'
  */
 export function* getPermutations(chars) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -70,7 +68,6 @@ export function* getPermutations(chars) {
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (buy at 1,6,5 and sell all at 10)
  */
 export function getMostProfitFromStockQuotes(quotes) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 

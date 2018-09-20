@@ -21,7 +21,6 @@
  *   5, 5  => 25
  */
 export function getRectangleArea(width, height) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -38,7 +37,6 @@ export function getRectangleArea(width, height) {
  *   0    => 0
  */
 export function getCicleCircumference(radius) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -55,7 +53,6 @@ export function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 export function getAverage(value1, value2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -75,7 +72,6 @@ export function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 export function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -92,7 +88,6 @@ export function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 export function getLinearEquationRoot(a, b) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -116,7 +111,6 @@ export function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 export function getAngleBetweenVectors(x1, y1, x2, y2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -133,7 +127,6 @@ export function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 export function getLastDigit(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -150,7 +143,6 @@ export function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 export function parseNumberFromString(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -168,7 +160,6 @@ export function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 export function getParallelipidedDiagonal(a, b, c) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -190,7 +181,6 @@ export function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 export function roundToPowerOfTen(num, pow) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -212,7 +202,6 @@ export function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 export function isPrime(n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -232,6 +221,5 @@ export function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 export function toNumber(value, def) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }

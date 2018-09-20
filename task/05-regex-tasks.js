@@ -30,7 +30,6 @@
  * @return {RegExp}
  */
 export function getRegexForGuid() {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -53,7 +52,6 @@ export function getRegexForGuid() {
  *
  */
 export function getRegexForPitSpot() {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -73,7 +71,6 @@ export function getRegexForPitSpot() {
  * @return {RegExp}
  */
 export function getRegexForIPv4() {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -93,7 +90,6 @@ export function getRegexForIPv4() {
  * @return {RegExp}
  */
 export function getRegexForSSN() {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -119,6 +115,5 @@ export function getRegexForSSN() {
  *   'Pa55'.match(validator) => false
  */
 export function getPasswordValidator(minLength) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }

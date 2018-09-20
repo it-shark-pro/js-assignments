@@ -12,7 +12,6 @@
  *   'abcdefghijklmnop',  'lmnopqrstuvwxyz'  => 'abcdefghijklmnopqrstuvwxyz'
  */
 export function distinctLettersString(value1, value2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -30,7 +29,6 @@ export function distinctLettersString(value1, value2) {
  */
 
 export function lowerLetters(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -53,7 +51,6 @@ export function lowerLetters(value) {
  */
 
 export function titleCaseConvert(title, minorWords) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -75,6 +72,5 @@ export function titleCaseConvert(title, minorWords) {
  */
 
 export function calcRPN(expr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }

@@ -25,6 +25,8 @@ describe('03-date-tasks', () => {
       parseDataFromRfc2822('Sun, 17 May 1998 03:00:00 GMT+0100').valueOf(),
       895370400000
     );
+
+    assert.linesOfCode(parseDataFromRfc2822, 1);
   });
 
 
@@ -38,6 +40,8 @@ describe('03-date-tasks', () => {
       parseDataFromIso8601('2016-01-19T08:07:37Z').valueOf(),
       1453190857000
     );
+
+    assert.linesOfCode(parseDataFromIso8601, 1);
   });
 
 
@@ -61,6 +65,8 @@ describe('03-date-tasks', () => {
         `${date} is not a leap year`
       );
     });
+
+    assert.linesOfCode(isLeapYear, 4);
   });
 
 
@@ -93,6 +99,8 @@ describe('03-date-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(timeSpanToString, 2);
   });
 
 
@@ -133,5 +141,7 @@ describe('03-date-tasks', () => {
         `Incorrect result for angleBetweenClockHands(${new Date(data.date).toUTCString()}):`
       );
     });
+
+    assert.linesOfCode(angleBetweenClockHands, 9, 2);
   });
 });

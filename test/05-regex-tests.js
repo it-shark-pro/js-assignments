@@ -37,6 +37,8 @@ describe('05-regex-tasks', () => {
         `regex matches '${str}'`
       );
     });
+
+    assert.linesOfCode(getRegexForGuid, 2);
   });
 
   it.optional('getRegexForPitSpot should be implemeted according to task', () => {
@@ -60,6 +62,8 @@ describe('05-regex-tasks', () => {
       result.source.length < 13,
       `regexp length should be < 13, actual ${result.source.length} `
     );
+
+    assert.linesOfCode(getRegexForPitSpot, 1);
   });
 
   it.optional('getRegexForIPv4 should match the valid IPv4', () => {
@@ -89,6 +93,8 @@ describe('05-regex-tasks', () => {
         `regex matches '${str}'`
       );
     });
+
+    assert.linesOfCode(getRegexForIPv4, 2);
   });
 
   it.optional('getRegexForSSN should match the valid SSN', () => {
@@ -118,6 +124,8 @@ describe('05-regex-tasks', () => {
         `regex matches '${str}'`
       );
     });
+
+    assert.linesOfCode(getRegexForSSN, 1);
   });
 
   it.optional('getPasswordValidator should return the password validator', () => {
@@ -155,5 +163,7 @@ describe('05-regex-tasks', () => {
       !'abcdABCD1234'.match(getPasswordValidator(20)),
       'Password validator do not validate minLength restriction'
     );
+
+    assert.linesOfCode(getPasswordValidator, 2);
   });
 });

@@ -20,7 +20,6 @@
  *   '',  'bb'  => 'bb'
  */
 export function concatenateStrings(value1, value2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -36,7 +35,6 @@ export function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 export function getStringLength(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -54,7 +52,6 @@ export function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 export function getStringFromTemplate(firstName, lastName) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -69,7 +66,6 @@ export function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 export function  extractNameFromTemplate(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -85,7 +81,6 @@ export function  extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 export function getFirstChar(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -101,7 +96,6 @@ export function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 export function removeLeadingAndTrailingWhitespaces(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -117,7 +111,6 @@ export function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 export function repeatString(value, count) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -134,7 +127,6 @@ export function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 export function removeFirstOccurrences(str, value)  {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -150,7 +142,6 @@ export function removeFirstOccurrences(str, value)  {
  *   '<a>' => 'a'
  */
 export function unbracketTag(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -166,7 +157,6 @@ export function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 export function convertToUpperCase(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -182,7 +172,6 @@ export function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 export function extractEmails(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -210,7 +199,6 @@ export function extractEmails(str) {
  *
  */
 export function getRectangleString(width, height) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -232,7 +220,6 @@ export function getRectangleString(width, height) {
  *
  */
 export function encodeToRot13(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -250,7 +237,6 @@ export function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 export function isString(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -280,6 +266,5 @@ export function isString(value) {
  *   'K♠' => 51
  */
 export function getCardId(value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }

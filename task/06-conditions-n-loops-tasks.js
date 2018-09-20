@@ -29,7 +29,6 @@
  *
  */
 export function getFizzBuzz(num) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -46,7 +45,6 @@ export function getFizzBuzz(num) {
  *   10 => 3628800
  */
 export function getFactorial(n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -64,7 +62,6 @@ export function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 export function getSumBetweenNumbers(n1, n2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -85,7 +82,6 @@ export function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 export function isTriangle(a, b, c) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -123,7 +119,6 @@ export function isTriangle(a, b, c) {
  *
  */
 export function doRectanglesOverlap(rect1, rect2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -155,7 +150,6 @@ export function doRectanglesOverlap(rect1, rect2) {
  *
  */
 export function isInsideCircle(circle, point) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -172,7 +166,6 @@ export function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 export function findFirstSingleChar(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -200,7 +193,6 @@ export function findFirstSingleChar(str) {
  *
  */
 export function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -218,7 +210,6 @@ export function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 export function reverseString(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -236,7 +227,6 @@ export function reverseString(str) {
  *   34143 => 34143
  */
 export function reverseInteger(num) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -262,7 +252,6 @@ export function reverseInteger(num) {
  *   4916123456789012 => false
  */
 export function isCreditCardNumber(ccn) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -282,7 +271,6 @@ export function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 export function getDigitalRoot(num) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -309,7 +297,6 @@ export function getDigitalRoot(num) {
  *   '{[(<{[]}>)]}' = true
  */
 export function isBracketsBalanced(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -346,7 +333,6 @@ export function isBracketsBalanced(str) {
  *
  */
 export function timespanToHumanString(startDate, endDate) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -372,7 +358,6 @@ export function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 export function toNaryString(num, n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -390,7 +375,6 @@ export function toNaryString(num, n) {
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
 export function getCommonDirectoryPath(pathes) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -414,7 +398,6 @@ export function getCommonDirectoryPath(pathes) {
  *
  */
 export function getMatrixProduct(m1, m2) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -450,6 +433,5 @@ export function getMatrixProduct(m1, m2) {
  *
  */
 export function evaluateTicTacToePosition(position) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
