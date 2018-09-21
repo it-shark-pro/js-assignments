@@ -1,7 +1,7 @@
 import assert from 'assert';
 
 function linesOfCode(fn, expected, recommended) {
-  const actualLinesOfCode = fn.toString().split('\n').length - 2;
+  const actualLinesOfCode = fn.toString().split('\n').filter(s => s.trim()).length - 2;
   const isValid = actualLinesOfCode <= expected;
   if (actualLinesOfCode <= expected && actualLinesOfCode > recommended) {
     console.log(`Recommended lines of code for ${fn.name} is ${recommended}`); 

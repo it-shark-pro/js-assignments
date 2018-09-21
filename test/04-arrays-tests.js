@@ -950,7 +950,6 @@ describe('04-arrays-tasks', () => {
     assert.linesOfCode(swapHeadAndTail, 8, 2);
   });
 
-
   it.optional('Functions from 04-array-test.js should not use basic loops statements', () => {
     Object.getOwnPropertyNames(tasks)
       .filter(x => tasks[x] instanceof Function)

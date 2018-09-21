@@ -1,5 +1,7 @@
 import assert from 'assert';
-import {
+import * as tasks from '../task/01-strings-tasks';
+
+const {
   concatenateStrings,
   getStringLength,
   getStringFromTemplate,
@@ -15,7 +17,7 @@ import {
   encodeToRot13,
   isString,
   getCardId
-} from '../task/01-strings-tasks';
+} = tasks;
 
 it.optional = require('../extensions/it-optional');
 
@@ -154,5 +156,16 @@ describe('01-strings-tasks', () => {
       );
     });
     assert.linesOfCode(getCardId, 3);
+  });
+
+  it.optional('Functions from 01-strings-test.js should not use basic loops statements', () => {
+    Object.getOwnPropertyNames(tasks)
+      .filter(x => tasks[x] instanceof Function)
+      .forEach(f => {
+        assert(
+          !/([;{]\s*(for|while)\s*\()|(\.forEach\s*\()/.test(tasks[f].toString()),
+          `Function "${f}" should not use basic loop statements (for, while or Array.forEach)! Please use specialized array methods (Array.map, Array.reduce etc).`
+        );
+      });
   });
 });
