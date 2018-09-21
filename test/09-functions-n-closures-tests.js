@@ -28,6 +28,8 @@ describe('09-functions-n-closures-tasks', () => {
       const actual = getComposition(data.f, data.g);
       assert(actual(data.arg) === data.result);
     });
+
+    assert.linesOfCode(getComposition, 1);
   });
 
 
@@ -41,6 +43,8 @@ describe('09-functions-n-closures-tasks', () => {
     for (let i = 0; i < 10; i++) {
       assert.equal(power05(i), Math.pow(i, 0.5));
     }
+
+    assert.linesOfCode(getPowerFunction, 1);
   });
 
 
@@ -61,6 +65,8 @@ describe('09-functions-n-closures-tasks', () => {
         assert(test.y === data.polynom(test.x));
       });
     });
+
+    assert.linesOfCode(getPolynom, 8, 3);
   });
 
 
@@ -85,7 +91,6 @@ describe('09-functions-n-closures-tasks', () => {
     const maxAttemps = 3;
     let attemps = 0;
     const expected = 'expected';
-
     const fn = function () {
       if (++attemps < maxAttemps) throw new Error();
       return expected;
@@ -93,6 +98,17 @@ describe('09-functions-n-closures-tasks', () => {
 
     const actual = retry(fn, maxAttemps)();
     assert.equal(actual, expected);
+
+    assert.throws(
+      () => {
+        retry(() =>{
+          throw new Error();
+        }, 1)();
+      },
+      Error
+    );
+
+    assert.linesOfCode(retry, 10);
   });
 
 
@@ -141,6 +157,8 @@ describe('09-functions-n-closures-tasks', () => {
            + 'testLogger(["expected","test",1],0) ends\n',
       'logger function shoud log the end of specified function after calling'
     );
+
+    assert.linesOfCode(logger, 7);
   });
 
 
@@ -166,6 +184,8 @@ describe('09-functions-n-closures-tasks', () => {
       'abcd',
       "partialUsingArguments(fn, 'a','b','c','d')()' should return 'abcd'"
     );
+
+    assert.linesOfCode(partialUsingArguments, 1);
   });
 
 
@@ -181,5 +201,7 @@ describe('09-functions-n-closures-tasks', () => {
       assert.equal(f10(), 10 + i);
       assert.equal(f20(), 20 + i);
     }
+
+    assert.linesOfCode(getIdGeneratorFunction, 1);
   });
 });

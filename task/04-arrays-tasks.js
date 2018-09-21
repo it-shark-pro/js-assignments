@@ -22,7 +22,6 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 export function findElement(arr, value) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -38,7 +37,6 @@ export function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 export function generateOdds(len) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -56,7 +54,6 @@ export function generateOdds(len) {
  *    [] => []
  */
 export function doubleArray(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -73,7 +70,6 @@ export function doubleArray(arr) {
  *    [] => []
  */
 export function getArrayOfPositives(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -89,7 +85,6 @@ export function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 export function getArrayOfStrings(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -107,7 +102,6 @@ export function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 export function removeFalsyValues(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -123,7 +117,6 @@ export function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 export function getUpperCaseStrings(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -139,7 +132,6 @@ export function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 export function getStringsLength(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -155,7 +147,6 @@ export function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
 export function insertItem(arr, item, index) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -170,7 +161,6 @@ export function insertItem(arr, item, index) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 export function getHead(arr, n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -186,7 +176,6 @@ export function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 export function getTail(arr, n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -212,7 +201,6 @@ export function getTail(arr, n) {
  *    +'30,31,32,33,34'
  */
 export function toCsvText(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -228,7 +216,6 @@ export function toCsvText(arr) {
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 export function toArrayOfSquares(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -248,7 +235,6 @@ export function toArrayOfSquares(arr) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 export function getMovingSum(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -264,7 +250,6 @@ export function getMovingSum(arr) {
  * [ "a" ] => []
  */
 export function getSecondItems(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -284,7 +269,6 @@ export function getSecondItems(arr) {
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
 export function propagateItemsByPositionIndex(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -303,7 +287,6 @@ export function propagateItemsByPositionIndex(arr) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 export function get3TopItems(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -322,7 +305,6 @@ export function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 export function getPositivesCount(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -340,7 +322,6 @@ export function getPositivesCount(arr) {
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
 export function sortDigitNamesByNumericOrder(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -357,7 +338,6 @@ export function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 export function getItemsSum(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -374,7 +354,6 @@ export function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 export function getFalsyValuesCount(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -393,7 +372,6 @@ export function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 export function findAllOccurences(arr, item) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -409,7 +387,6 @@ export function findAllOccurences(arr, item) {
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
 export function toStringList(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -440,7 +417,6 @@ export function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 export function sortCitiesArray(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -463,7 +439,6 @@ export function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 export function getIdentityMatrix(n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -481,7 +456,6 @@ export function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 export function getIntervalArray(start, end) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -497,7 +471,6 @@ export function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 export function distinct(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -532,7 +505,6 @@ export function distinct(arr) {
  *   }
  */
 export function group(array, keySelector, valueSelector) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -551,7 +523,6 @@ export function group(array, keySelector, valueSelector) {
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
 export function selectMany(arr, childrenSelector) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -569,7 +540,6 @@ export function selectMany(arr, childrenSelector) {
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 export function getElementByIndexes(arr, indexes) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -593,7 +563,6 @@ export function getElementByIndexes(arr, indexes) {
  *
  */
 export function swapHeadAndTail(arr) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 

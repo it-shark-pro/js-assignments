@@ -72,6 +72,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `getFizzBuzz shoud return 'FizzBuzz' for ${num}, but actually ${actual}`
       );
     });
+
+    assert.linesOfCode(getFizzBuzz, 8);
   });
 
 
@@ -88,6 +90,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `${data.n}! = ${data.expected}, but actual ${actual}`
       );
     });
+
+    assert.linesOfCode(getFactorial, 5);
   });
 
 
@@ -104,6 +108,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `Sum of [${data.n1},${data.n2}] = ${data.expected}, but actual ${actual}`
       );
     });
+
+    assert.linesOfCode(getSumBetweenNumbers, 1);
   });
 
 
@@ -127,6 +133,8 @@ describe('06-conditions-n-loops-tasks', () => {
         );
       });
     });
+
+    assert.linesOfCode(isTriangle, 3);
   });
 
 
@@ -196,6 +204,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `doRectanglesOverlap(\n   ${JSON.stringify(data.rect1)},\n   ${JSON.stringify(data.rect2)}\n): expected ${data.expected}`
       );
     });
+
+    assert.linesOfCode(doRectanglesOverlap, 9, 6);
   });
 
 
@@ -237,6 +247,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `isInsideCircle(\n   ${JSON.stringify(data.circle)},\n   ${JSON.stringify(data.point)}\n): expected ${data.expected}`
       );
     });
+
+    assert.linesOfCode(isInsideCircle, 2);
   });
 
 
@@ -253,6 +265,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `First single char of '${data.str}' = '${data.expected}', but actual '${actual}'`
       );
     });
+
+    assert.linesOfCode(findFirstSingleChar, 6);
   });
 
 
@@ -297,6 +311,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `getIntervalString(${data.a}, ${data.b}, ${data.isStartIncluded}, ${data.isEndIncluded}) shoud return '${data.expected}', but actually '${actual}'`
       );
     });
+
+    assert.linesOfCode(getIntervalString, 6);
   });
 
 
@@ -314,6 +330,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `Reversed '${data.str}' = '${data.expected}', but actual '${actual}'`
       );
     });
+
+    assert.linesOfCode(reverseString, 1);
   });
 
 
@@ -331,6 +349,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `Reversed ${data.num} = ${data.expected}, but actual ${actual}`
       );
     });
+
+    assert.linesOfCode(reverseInteger, 1);
   });
 
 
@@ -394,6 +414,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `GetDigitalRoot(${data.num}) = ${data.expected}, but actual ${actual}`
       );
     });
+
+    assert.linesOfCode(getDigitalRoot, 2);
   });
 
 
@@ -418,6 +440,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `'${str}' has unbalanced brackets, but actually yes`
       );
     });
+
+    assert.linesOfCode(isBracketsBalanced, 13);
   });
 
 
@@ -441,6 +465,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `${data.num} with radix ${data.n} = ${data.expected}, but actual ${actual}`
       );
     });
+
+    assert.linesOfCode(toNaryString, 7);
   });
 
 
@@ -507,8 +533,9 @@ describe('06-conditions-n-loops-tasks', () => {
         `Product of [${data.m1}] x [${data.m2}] = [${data.expected}], but actual ${actual}`
       );
     });
-  });
 
+    assert.linesOfCode(getMatrixProduct, 12);
+  });
 
   it.optional('timespanToHumanString should return the human string representation of datetime period', () => {
     [
@@ -649,6 +676,8 @@ describe('06-conditions-n-loops-tasks', () => {
         `timespanToHumanString('${data.startDate}', '${data.endDate}') shoud return '${data.expected}', but actually '${actual}'`
       );
     });
+
+    assert.linesOfCode(timespanToHumanString, 1);
   });
 
 

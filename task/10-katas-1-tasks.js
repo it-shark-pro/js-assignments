@@ -16,7 +16,6 @@
  *  ]
  */
 export function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
-  /* implement your code here */
   /* use array of cardinal directions only! it is a default parameter! */
   throw new Error('Not implemented');
 }
@@ -57,7 +56,6 @@ export function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
  *   'nothing to do' => 'nothing to do'
  */
 export function* expandBraces(str) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -91,7 +89,6 @@ export function* expandBraces(str) {
  *
  */
 export function getZigZagMatrix(n) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -118,7 +115,6 @@ export function getZigZagMatrix(n) {
  *
  */
 export function canDominoesMakeRow(dominoes) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -145,6 +141,5 @@ export function canDominoesMakeRow(dominoes) {
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
 export function extractRanges(nums) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }

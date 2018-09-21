@@ -22,7 +22,6 @@
  *    console.log(r.getArea());   // => 200
  */
 export function Rectangle(width, height) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -38,7 +37,6 @@ export function Rectangle(width, height) {
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
 export function getJSON(obj) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -55,7 +53,6 @@ export function getJSON(obj) {
  *
  */
 export function fromJSON(proto, json) {
-  /* implement your code here */
   throw new Error('Not implemented');
 }
 
@@ -118,37 +115,30 @@ export function fromJSON(proto, json) {
 export const cssSelectorBuilder = {
 
   element(value) {
-    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   id(value) {
-    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   class(value) {
-    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   attr(value) {
-    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   pseudoClass(value) {
-    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   pseudoElement(value) {
-    /* implement your code here */
     throw new Error('Not implemented');
   },
 
   combine(selector1, combinator, selector2) {
-    /* implement your code here */
     throw new Error('Not implemented');
   }
 };

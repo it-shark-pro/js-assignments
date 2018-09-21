@@ -68,6 +68,8 @@ describe('08-objects-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getJSON, 1);
   });
 
 
@@ -101,6 +103,8 @@ describe('08-objects-tasks', () => {
         'fromJson method shoud restore type from prototype argument'
       );
     });
+
+    assert.linesOfCode(fromJSON, 1);
   });
 
 

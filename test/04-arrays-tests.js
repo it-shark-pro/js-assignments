@@ -59,6 +59,8 @@ describe('04-arrays-tasks', () => {
         `Index of '${data.value}' inside of [${data.arr}] = ${data.expected}, but actually ${actual}`
       );
     });
+
+    assert.linesOfCode(findElement, 1);
   });
 
 
@@ -83,6 +85,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(generateOdds, 1);
   });
 
 
@@ -106,6 +110,8 @@ describe('04-arrays-tasks', () => {
         `The result of doubling [${data.arr}] is not correct`
       );
     });
+
+    assert.linesOfCode(doubleArray, 1);
   });
 
 
@@ -128,6 +134,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getArrayOfPositives, 1);
   });
 
 
@@ -150,6 +158,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getArrayOfStrings, 1);
   });
 
 
@@ -172,6 +182,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(removeFalsyValues, 1);
   });
 
 
@@ -206,6 +218,8 @@ describe('04-arrays-tasks', () => {
         `Number of occurences of ${JSON.stringify(data.item)} in ${JSON.stringify(data.arr)} is ${data.expected}, but actually ${actual})`
       );
     });
+
+    assert.linesOfCode(findAllOccurences, 1);
   });
 
 
@@ -225,6 +239,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getUpperCaseStrings, 1);
   });
 
 
@@ -244,6 +260,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getStringsLength, 1);
   });
 
 
@@ -267,6 +285,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(insertItem, 1);
   });
 
 
@@ -287,6 +307,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getHead, 1);
   });
 
 
@@ -307,6 +329,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getTail, 1);
   });
 
 
@@ -335,6 +359,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(toCsvText, 1);
   });
 
 
@@ -354,6 +380,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(toArrayOfSquares, 1);
   });
 
 
@@ -379,6 +407,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getMovingSum, 2);
   });
 
 
@@ -401,6 +431,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getSecondItems, 1);
   });
 
 
@@ -429,6 +461,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(propagateItemsByPositionIndex, 4);
   });
 
 
@@ -463,6 +497,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(get3TopItems, 1);
   });
 
 
@@ -495,6 +531,8 @@ describe('04-arrays-tasks', () => {
         `Test failed for argument [${data.arr}]`
       );
     });
+
+    assert.linesOfCode(getPositivesCount, 1);
   });
 
 
@@ -526,6 +564,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(sortDigitNamesByNumericOrder, 2);
   });
 
 
@@ -549,6 +589,8 @@ describe('04-arrays-tasks', () => {
         `Test failed for [${data.arr}]`
       );
     });
+
+    assert.linesOfCode(getItemsSum, 1);
   });
 
 
@@ -575,6 +617,8 @@ describe('04-arrays-tasks', () => {
         `Test failed for [${data.arr}]`
       );
     });
+
+    assert.linesOfCode(getFalsyValuesCount, 1);
   });
 
 
@@ -597,6 +641,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(toStringList, 1);
   });
 
 
@@ -673,6 +719,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(sortCitiesArray, 8, 5);
   });
 
 
@@ -700,6 +748,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getIdentityMatrix, 5);
   });
 
 
@@ -736,6 +786,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(getIntervalArray, 2);
   });
 
 
@@ -761,6 +813,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(distinct, 1);
   });
 
 
@@ -807,8 +861,9 @@ describe('04-arrays-tasks', () => {
         Array.from(data.expected)
       );
     });
-  });
 
+    assert.linesOfCode(group, 7);
+  });
 
   it.optional('selectMany should return an array of child items from the specified array', () => {
     [
@@ -832,6 +887,8 @@ describe('04-arrays-tasks', () => {
         data.expected
       );
     });
+
+    assert.linesOfCode(selectMany, 1);
   });
 
 
@@ -858,6 +915,8 @@ describe('04-arrays-tasks', () => {
         `getElementByIndexes(${JSON.stringify(data.arr)}, ${JSON.stringify(data.indexes)}) returns an incorrect result. Expected ${data.expected}, but actual ${actual}`
       );
     });
+
+    assert.linesOfCode(getElementByIndexes, 1);
   });
 
 
@@ -887,8 +946,9 @@ describe('04-arrays-tasks', () => {
         `The result of swaping head and tail [${data.arr}] is not correct`
       );
     });
-  });
 
+    assert.linesOfCode(swapHeadAndTail, 8, 2);
+  });
 
   it.optional('Functions from 04-array-test.js should not use basic loops statements', () => {
     Object.getOwnPropertyNames(tasks)

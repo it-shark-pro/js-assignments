@@ -1,6 +1,11 @@
 import assert from 'assert';
 
-import { distinctLettersString, lowerLetters, titleCaseConvert, calcRPN } from '../task/13-more-tasks';
+import { 
+  distinctLettersString, 
+  lowerLetters, 
+  titleCaseConvert, 
+  calcRPN
+} from '../task/13-more-tasks';
 
 it.optional = require('../extensions/it-optional');
 
