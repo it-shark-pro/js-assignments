@@ -676,8 +676,6 @@ describe('06-conditions-n-loops-tasks', () => {
         `timespanToHumanString('${data.startDate}', '${data.endDate}') shoud return '${data.expected}', but actually '${actual}'`
       );
     });
-
-    assert.linesOfCode(timespanToHumanString, 1);
   });
 
 
