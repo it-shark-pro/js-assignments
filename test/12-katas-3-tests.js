@@ -1,10 +1,10 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   findStringInSnakingPuzzle,
   getPermutations,
   getMostProfitFromStockQuotes,
   UrlShortener
-} from '../task/12-katas-3-tasks';
+} = require('../task/12-katas-3-tasks');
 
 it.optional = require('../extensions/it-optional');
 

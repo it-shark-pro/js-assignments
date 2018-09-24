@@ -24,7 +24,7 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
  *
  */
-export function getComposition(f, g) {
+function getComposition(f, g) {
   throw new Error('Not implemented');
 }
 
@@ -45,7 +45,7 @@ export function getComposition(f, g) {
  *   power05(16) => 4
  *
  */
-export function getPowerFunction(exponent) {
+function getPowerFunction(exponent) {
   throw new Error('Not implemented');
 }
 
@@ -63,7 +63,7 @@ export function getPowerFunction(exponent) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-export function getPolynom() {
+function getPolynom() {
   throw new Error('Not implemented');
 }
 
@@ -82,7 +82,7 @@ export function getPolynom() {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-export function memoize(func) {
+function memoize(func) {
   throw new Error('Not implemented');
 }
 
@@ -102,7 +102,7 @@ export function memoize(func) {
  * }, 2);
  * retryer() => 2
  */
-export function retry(func, attempts) {
+function retry(func, attempts) {
   throw new Error('Not implemented');     
 }
 
@@ -130,7 +130,7 @@ export function retry(func, attempts) {
  * cos(3.141592653589793) ends
  *
  */
-export function logger(func, logFunc) {
+function logger(func, logFunc) {
   throw new Error('Not implemented');
 }
 
@@ -148,7 +148,7 @@ export function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
-export function partialUsingArguments(fn) {
+function partialUsingArguments(fn) {
   throw new Error('Not implemented');
 }
 
@@ -170,6 +170,17 @@ export function partialUsingArguments(fn) {
  *   getId4() => 7
  *   getId10() => 11
  */
-export function getIdGeneratorFunction(startFrom) {
+function getIdGeneratorFunction(startFrom) {
   throw new Error('Not implemented');
 }
+
+module.exports = {
+  getComposition: getComposition,
+  getPowerFunction: getPowerFunction,
+  getPolynom: getPolynom,
+  memoize: memoize,
+  retry: retry,
+  logger: logger,
+  partialUsingArguments: partialUsingArguments,
+  getIdGeneratorFunction: getIdGeneratorFunction
+};

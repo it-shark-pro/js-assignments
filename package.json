@@ -11,8 +11,6 @@
   "author": "IT Shark Pro",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "eslint": "^5.4.0",
     "husky": "^0.14.3",
     "mocha": "^5.2.0"

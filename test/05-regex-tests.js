@@ -1,11 +1,11 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   getRegexForGuid,
   getRegexForPitSpot,
   getRegexForIPv4,
   getRegexForSSN,
   getPasswordValidator
-} from '../task/05-regex-tasks';
+} = require('../task/05-regex-tasks');
 
 it.optional = require('../extensions/it-optional');
 

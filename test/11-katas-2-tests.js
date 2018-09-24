@@ -1,11 +1,11 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   parseBankAccount,
   wrapText,
   PokerRank,
   getPokerHandRank,
   getFigureRectangles
-} from '../task/11-katas-2-tasks';
+} = require('../task/11-katas-2-tasks');
 
 it.optional = require('../extensions/it-optional');
 

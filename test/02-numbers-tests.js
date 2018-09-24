@@ -1,5 +1,5 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   getRectangleArea,
   getCicleCircumference,
   getAverage,
@@ -12,7 +12,7 @@ import {
   roundToPowerOfTen,
   isPrime,
   toNumber
-} from '../task/02-numbers-tasks';
+} = require('../task/02-numbers-tasks');
 
 it.optional = require('../extensions/it-optional');
 

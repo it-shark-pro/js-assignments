@@ -1,11 +1,11 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   parseDataFromRfc2822,
   parseDataFromIso8601,
   isLeapYear,
   timeSpanToString,
   angleBetweenClockHands
-} from '../task/03-date-tasks';
+} = require('../task/03-date-tasks');
 
 it.optional = require('../extensions/it-optional');
 

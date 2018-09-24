@@ -1,5 +1,5 @@
-import assert from 'assert';
-import * as tasks from '../task/01-strings-tasks';
+const assert = require('assert');
+const tasks = require('../task/01-strings-tasks');
 
 const {
   concatenateStrings,

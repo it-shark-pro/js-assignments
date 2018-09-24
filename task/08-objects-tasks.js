@@ -21,7 +21,7 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
-export function Rectangle(width, height) {
+function Rectangle(width, height) {
   throw new Error('Not implemented');
 }
 
@@ -36,7 +36,7 @@ export function Rectangle(width, height) {
  *    [1,2,3]   =>  '[1,2,3]'
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
-export function getJSON(obj) {
+function getJSON(obj) {
   throw new Error('Not implemented');
 }
 
@@ -52,7 +52,7 @@ export function getJSON(obj) {
  *    var r = fromJSON(Rectangle.prototype, '{"width":10, "height":20}');
  *
  */
-export function fromJSON(proto, json) {
+function fromJSON(proto, json) {
   throw new Error('Not implemented');
 }
 
@@ -112,7 +112,7 @@ export function fromJSON(proto, json) {
  *  For more examples see unit tests.
  */
 
-export const cssSelectorBuilder = {
+const cssSelectorBuilder = {
 
   element(value) {
     throw new Error('Not implemented');
@@ -141,4 +141,11 @@ export const cssSelectorBuilder = {
   combine(selector1, combinator, selector2) {
     throw new Error('Not implemented');
   }
+};
+
+module.exports = {
+  Rectangle: Rectangle,
+  getJSON: getJSON,
+  fromJSON: fromJSON,
+  cssSelectorBuilder: cssSelectorBuilder
 };

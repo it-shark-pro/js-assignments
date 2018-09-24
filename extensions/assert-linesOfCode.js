@@ -1,9 +1,7 @@
-import assert from 'assert';
-
-const exclude = ['', ');'];
+const assert = require('assert');
 
 function linesOfCode(fn, expected, recommended) {
-  const actualLinesOfCode = fn.toString().split('\n').filter(s => !exclude.includes(s.trim())).length - 2;
+  const actualLinesOfCode = fn.toString().split('\n').filter(s => s.trim()).length - 2;
   const isValid = actualLinesOfCode <= expected;
 
   const messages = [`
