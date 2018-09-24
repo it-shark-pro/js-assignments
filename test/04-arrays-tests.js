@@ -1,5 +1,7 @@
-import assert from 'assert';
-import tasks, {
+const assert = require('assert');
+const tasks = require('../task/04-arrays-tasks');
+
+const {
   findElement,
   generateOdds,
   doubleArray,
@@ -31,7 +33,7 @@ import tasks, {
   selectMany,
   getElementByIndexes,
   swapHeadAndTail
-} from '../task/04-arrays-tasks';
+} = tasks;
 
 it.optional = require('../extensions/it-optional');
 

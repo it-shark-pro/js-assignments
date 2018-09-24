@@ -35,7 +35,7 @@
  *   '|_||_  _||_| _||_| _||_| _|\n',
  *
  */
-export function parseBankAccount(bankAccount) {
+function parseBankAccount(bankAccount) {
   throw new Error('Not implemented');
 }
 
@@ -67,7 +67,7 @@ export function parseBankAccount(bankAccount) {
  *      'sequence of',
  *      'characters.'
  */
-export function* wrapText(text, columns) {
+function* wrapText(text, columns) {
   throw new Error('Not implemented');
 }
 
@@ -92,7 +92,7 @@ export function* wrapText(text, columns) {
  *   [ '3♥','4♥','10♥','3♦','A♠' ] => PokerRank.OnePair
  *   [ 'A♥','K♥','Q♥','2♦','3♠' ] =>  PokerRank.HighCard
  */
-export const PokerRank = {
+const PokerRank = {
   StraightFlush: 8,
   FourOfKind: 7,
   FullHouse: 6,
@@ -104,7 +104,7 @@ export const PokerRank = {
   HighCard: 0
 };
 
-export function getPokerHandRank(hand) {
+function getPokerHandRank(hand) {
   throw new Error('Not implemented');
 }
 
@@ -140,6 +140,14 @@ export function getPokerHandRank(hand) {
  *    '|             |\n'+              '+-----+\n'           '+-------------+\n'
  *    '+-------------+\n'
  */
-export function* getFigureRectangles(figure) {
+function* getFigureRectangles(figure) {
   throw new Error('Not implemented');
 }
+
+module.exports = {
+  parseBankAccount: parseBankAccount,
+  wrapText: wrapText,
+  PokerRank: PokerRank,
+  getPokerHandRank: getPokerHandRank,
+  getFigureRectangles: getFigureRectangles
+};

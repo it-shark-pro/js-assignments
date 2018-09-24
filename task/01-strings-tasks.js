@@ -19,7 +19,7 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-export function concatenateStrings(value1, value2) {
+function concatenateStrings(value1, value2) {
   throw new Error('Not implemented');
 }
 
@@ -34,7 +34,7 @@ export function concatenateStrings(value1, value2) {
  *   'b'     => 1
  *   ''      => 0
  */
-export function getStringLength(value) {
+function getStringLength(value) {
   throw new Error('Not implemented');
 }
 
@@ -51,7 +51,7 @@ export function getStringLength(value) {
  *   'John','Doe'      => 'Hello, John Doe!'
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
-export function getStringFromTemplate(firstName, lastName) {
+function getStringFromTemplate(firstName, lastName) {
   throw new Error('Not implemented');
 }
 
@@ -65,7 +65,7 @@ export function getStringFromTemplate(firstName, lastName) {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-export function  extractNameFromTemplate(value) {
+function  extractNameFromTemplate(value) {
   throw new Error('Not implemented');
 }
 
@@ -80,7 +80,7 @@ export function  extractNameFromTemplate(value) {
  *   'John Doe'  => 'J'
  *   'cat'       => 'c'
  */
-export function getFirstChar(value) {
+function getFirstChar(value) {
   throw new Error('Not implemented');
 }
 
@@ -95,7 +95,7 @@ export function getFirstChar(value) {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-export function removeLeadingAndTrailingWhitespaces(value) {
+function removeLeadingAndTrailingWhitespaces(value) {
   throw new Error('Not implemented');
 }
 
@@ -110,7 +110,7 @@ export function removeLeadingAndTrailingWhitespaces(value) {
  *   'A', 5  => 'AAAAA'
  *   'cat', 3 => 'catcatcat'
  */
-export function repeatString(value, count) {
+function repeatString(value, count) {
   throw new Error('Not implemented');
 }
 
@@ -126,7 +126,7 @@ export function repeatString(value, count) {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-export function removeFirstOccurrences(str, value)  {
+function removeFirstOccurrences(str, value)  {
   throw new Error('Not implemented');
 }
 
@@ -141,7 +141,7 @@ export function removeFirstOccurrences(str, value)  {
  *   '<span>' => 'span'
  *   '<a>' => 'a'
  */
-export function unbracketTag(str) {
+function unbracketTag(str) {
   throw new Error('Not implemented');
 }
 
@@ -156,7 +156,7 @@ export function unbracketTag(str) {
  *   'Thunderstruck' => 'THUNDERSTRUCK'
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
-export function convertToUpperCase(str) {
+function convertToUpperCase(str) {
   throw new Error('Not implemented');
 }
 
@@ -171,7 +171,7 @@ export function convertToUpperCase(str) {
  *     ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com']
  *   'info@gmail.com' => ['info@gmail.com']
  */
-export function extractEmails(str) {
+function extractEmails(str) {
   throw new Error('Not implemented');
 }
 
@@ -198,7 +198,7 @@ export function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-export function getRectangleString(width, height) {
+function getRectangleString(width, height) {
   throw new Error('Not implemented');
 }
 
@@ -219,7 +219,7 @@ export function getRectangleString(width, height) {
  *          'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-export function encodeToRot13(str) {
+function encodeToRot13(str) {
   throw new Error('Not implemented');
 }
 
@@ -236,7 +236,7 @@ export function encodeToRot13(str) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-export function isString(value) {
+function isString(value) {
   throw new Error('Not implemented');
 }
 
@@ -265,6 +265,24 @@ export function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-export function getCardId(value) {
+function getCardId(value) {
   throw new Error('Not implemented');
 }
+
+module.exports = {
+  concatenateStrings: concatenateStrings,
+  getStringLength: getStringLength,
+  getStringFromTemplate: getStringFromTemplate,
+  extractNameFromTemplate: extractNameFromTemplate,
+  getFirstChar: getFirstChar,
+  removeLeadingAndTrailingWhitespaces: removeLeadingAndTrailingWhitespaces,
+  repeatString: repeatString,
+  removeFirstOccurrences: removeFirstOccurrences,
+  unbracketTag: unbracketTag,
+  convertToUpperCase: convertToUpperCase,
+  extractEmails: extractEmails,
+  getRectangleString: getRectangleString,
+  encodeToRot13: encodeToRot13,
+  isString: isString,
+  getCardId: getCardId
+};

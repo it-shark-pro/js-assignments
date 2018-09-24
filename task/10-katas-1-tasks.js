@@ -15,7 +15,7 @@
  *     { abbreviation : 'NbW',   azimuth : 348.75 }
  *  ]
  */
-export function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
+function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
   /* use array of cardinal directions only! it is a default parameter! */
   throw new Error('Not implemented');
 }
@@ -55,7 +55,7 @@ export function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
  *
  *   'nothing to do' => 'nothing to do'
  */
-export function* expandBraces(str) {
+function* expandBraces(str) {
   throw new Error('Not implemented');
 }
 
@@ -88,7 +88,7 @@ export function* expandBraces(str) {
  *          [ 9,10,14,15 ]]
  *
  */
-export function getZigZagMatrix(n) {
+function getZigZagMatrix(n) {
   throw new Error('Not implemented');
 }
 
@@ -114,7 +114,7 @@ export function getZigZagMatrix(n) {
  * [[0,0], [0,1], [1,1], [0,2], [1,2], [2,2], [0,3], [1,3], [2,3], [3,3]] => false
  *
  */
-export function canDominoesMakeRow(dominoes) {
+function canDominoesMakeRow(dominoes) {
   throw new Error('Not implemented');
 }
 
@@ -140,6 +140,14 @@ export function canDominoesMakeRow(dominoes) {
  * [ 0, 1, 2, 5, 7, 8, 9] => '0-2,5,7-9'
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
-export function extractRanges(nums) {
+function extractRanges(nums) {
   throw new Error('Not implemented');
 }
+
+module.exports = {
+  createCompassPoints : createCompassPoints,
+  expandBraces : expandBraces,
+  getZigZagMatrix : getZigZagMatrix,
+  canDominoesMakeRow : canDominoesMakeRow,
+  extractRanges : extractRanges
+};

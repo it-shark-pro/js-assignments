@@ -21,7 +21,7 @@
  *    ['Array', 'Number', 'string'], 'Date'    => -1
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
-export function findElement(arr, value) {
+function findElement(arr, value) {
   throw new Error('Not implemented');
 }
 
@@ -36,7 +36,7 @@ export function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-export function generateOdds(len) {
+function generateOdds(len) {
   throw new Error('Not implemented');
 }
 
@@ -53,7 +53,7 @@ export function generateOdds(len) {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => []
  */
-export function doubleArray(arr) {
+function doubleArray(arr) {
   throw new Error('Not implemented');
 }
 
@@ -69,7 +69,7 @@ export function doubleArray(arr) {
  *    [-1, 2, -5, -4, 0] => [ 2 ]
  *    [] => []
  */
-export function getArrayOfPositives(arr) {
+function getArrayOfPositives(arr) {
   throw new Error('Not implemented');
 }
 
@@ -84,7 +84,7 @@ export function getArrayOfPositives(arr) {
  *    [ 1, 2, 3, 4, 5 ] => []
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
-export function getArrayOfStrings(arr) {
+function getArrayOfStrings(arr) {
   throw new Error('Not implemented');
 }
 
@@ -101,7 +101,7 @@ export function getArrayOfStrings(arr) {
  *    [ 1, 2, 3, 4, 5, 'false' ]         => [ 1, 2, 3, 4, 5, 'false' ]
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
-export function removeFalsyValues(arr) {
+function removeFalsyValues(arr) {
   throw new Error('Not implemented');
 }
 
@@ -116,7 +116,7 @@ export function removeFalsyValues(arr) {
  *        [ 'PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION' ]
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
-export function getUpperCaseStrings(arr) {
+function getUpperCaseStrings(arr) {
   throw new Error('Not implemented');
 }
 
@@ -131,7 +131,7 @@ export function getUpperCaseStrings(arr) {
  *    [ '', 'a', 'bc', 'def', 'ghij' ]  => [ 0, 1, 2, 3, 4 ]
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
-export function getStringsLength(arr) {
+function getStringsLength(arr) {
   throw new Error('Not implemented');
 }
 
@@ -146,7 +146,7 @@ export function getStringsLength(arr) {
  *    [ 1, 3, 4, 5 ], 2, 1  => [ 1, 2, 3, 4, 5 ]
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
-export function insertItem(arr, item, index) {
+function insertItem(arr, item, index) {
   throw new Error('Not implemented');
 }
 
@@ -160,7 +160,7 @@ export function insertItem(arr, item, index) {
  *    [ 1, 3, 4, 5 ], 2  => [ 1, 2 ]
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
-export function getHead(arr, n) {
+function getHead(arr, n) {
   throw new Error('Not implemented');
 }
 
@@ -175,7 +175,7 @@ export function getHead(arr, n) {
  *    [ 1, 3, 4, 5 ], 2  => [ 4, 5 ]
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
-export function getTail(arr, n) {
+function getTail(arr, n) {
   throw new Error('Not implemented');
 }
 
@@ -200,7 +200,7 @@ export function getTail(arr, n) {
  *    +'20,21,22,23,24\n'
  *    +'30,31,32,33,34'
  */
-export function toCsvText(arr) {
+function toCsvText(arr) {
   throw new Error('Not implemented');
 }
 
@@ -215,7 +215,7 @@ export function toCsvText(arr) {
  *   [ 0, 1, 2, 3, 4, 5 ] => [ 0, 1, 4, 9, 16, 25 ]
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
-export function toArrayOfSquares(arr) {
+function toArrayOfSquares(arr) {
   throw new Error('Not implemented');
 }
 
@@ -234,7 +234,7 @@ export function toArrayOfSquares(arr) {
  *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0]
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
-export function getMovingSum(arr) {
+function getMovingSum(arr) {
   throw new Error('Not implemented');
 }
 
@@ -249,7 +249,7 @@ export function getMovingSum(arr) {
  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
  * [ "a" ] => []
  */
-export function getSecondItems(arr) {
+function getSecondItems(arr) {
   throw new Error('Not implemented');
 }
 
@@ -268,7 +268,7 @@ export function getSecondItems(arr) {
  *  [ 'a', 'b', 'c', null ] => [ 'a', 'b','b', 'c','c','c',  null,null,null,null ]
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
-export function propagateItemsByPositionIndex(arr) {
+function propagateItemsByPositionIndex(arr) {
   throw new Error('Not implemented');
 }
 
@@ -286,7 +286,7 @@ export function propagateItemsByPositionIndex(arr) {
  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
-export function get3TopItems(arr) {
+function get3TopItems(arr) {
   throw new Error('Not implemented');
 }
 
@@ -304,7 +304,7 @@ export function get3TopItems(arr) {
  *   [ null, 1, 'elephant' ] => 1
  *   [ 1, '2' ] => 1
  */
-export function getPositivesCount(arr) {
+function getPositivesCount(arr) {
   throw new Error('Not implemented');
 }
 
@@ -321,7 +321,7 @@ export function getPositivesCount(arr) {
  *   [ 'nine','eight','nine','eight'] => [ 'eight','eight','nine','nine']
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
-export function sortDigitNamesByNumericOrder(arr) {
+function sortDigitNamesByNumericOrder(arr) {
   throw new Error('Not implemented');
 }
 
@@ -337,7 +337,7 @@ export function sortDigitNamesByNumericOrder(arr) {
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
-export function getItemsSum(arr) {
+function getItemsSum(arr) {
   throw new Error('Not implemented');
 }
 
@@ -353,7 +353,7 @@ export function getItemsSum(arr) {
  *  [ -1, 'false', null, 0 ] => 2
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
-export function getFalsyValuesCount(arr) {
+function getFalsyValuesCount(arr) {
   throw new Error('Not implemented');
 }
 
@@ -371,7 +371,7 @@ export function getFalsyValuesCount(arr) {
  *    [ null, undefined, null ], null => 2
  *    [ true, 0, 1, 'true' ], true => 1
  */
-export function findAllOccurences(arr, item) {
+function findAllOccurences(arr, item) {
   throw new Error('Not implemented');
 }
 
@@ -386,7 +386,7 @@ export function findAllOccurences(arr, item) {
  *    [1, 2, 3, 4, 5]                   => '1,2,3,4,5'
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
-export function toStringList(arr) {
+function toStringList(arr) {
   throw new Error('Not implemented');
 }
 
@@ -416,7 +416,7 @@ export function toStringList(arr) {
  *      { country: 'Russia',  city: 'Moscow' },
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
-export function sortCitiesArray(arr) {
+function sortCitiesArray(arr) {
   throw new Error('Not implemented');
 }
 
@@ -438,7 +438,7 @@ export function sortCitiesArray(arr) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-export function getIdentityMatrix(n) {
+function getIdentityMatrix(n) {
   throw new Error('Not implemented');
 }
 
@@ -455,7 +455,7 @@ export function getIdentityMatrix(n) {
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
  */
-export function getIntervalArray(start, end) {
+function getIntervalArray(start, end) {
   throw new Error('Not implemented');
 }
 
@@ -470,7 +470,7 @@ export function getIntervalArray(start, end) {
  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
-export function distinct(arr) {
+function distinct(arr) {
   throw new Error('Not implemented');
 }
 
@@ -504,7 +504,7 @@ export function distinct(arr) {
  *    "Poland" => ["Lodz"]
  *   }
  */
-export function group(array, keySelector, valueSelector) {
+function group(array, keySelector, valueSelector) {
   throw new Error('Not implemented');
 }
 
@@ -522,7 +522,7 @@ export function group(array, keySelector, valueSelector) {
  *   [[1, 2], [3, 4], [5, 6]], (x) => x     =>   [ 1, 2, 3, 4, 5, 6 ]
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
-export function selectMany(arr, childrenSelector) {
+function selectMany(arr, childrenSelector) {
   throw new Error('Not implemented');
 }
 
@@ -539,7 +539,7 @@ export function selectMany(arr, childrenSelector) {
  *   ['one','two','three'], [2]       => 'three'  (arr[2])
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
-export function getElementByIndexes(arr, indexes) {
+function getElementByIndexes(arr, indexes) {
   throw new Error('Not implemented');
 }
 
@@ -562,42 +562,40 @@ export function getElementByIndexes(arr, indexes) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]
  *
  */
-export function swapHeadAndTail(arr) {
+function swapHeadAndTail(arr) {
   throw new Error('Not implemented');
 }
 
-const tasks = {
-  findElement,
-  generateOdds,
-  doubleArray,
-  getArrayOfPositives,
-  getArrayOfStrings,
-  removeFalsyValues,
-  getUpperCaseStrings,
-  getStringsLength,
-  insertItem,
-  getHead,
-  getTail,
-  toCsvText,
-  toStringList,
-  toArrayOfSquares,
-  getMovingSum,
-  getSecondItems,
-  propagateItemsByPositionIndex,
-  get3TopItems,
-  getPositivesCount,
-  sortDigitNamesByNumericOrder,
-  getItemsSum,
-  getFalsyValuesCount,
-  findAllOccurences,
-  sortCitiesArray,
-  getIdentityMatrix,
-  getIntervalArray,
-  distinct,
-  group,
-  selectMany,
-  getElementByIndexes,
-  swapHeadAndTail
+module.exports = {
+  findElement: findElement,
+  generateOdds: generateOdds,
+  doubleArray: doubleArray,
+  getArrayOfPositives: getArrayOfPositives,
+  getArrayOfStrings: getArrayOfStrings,
+  removeFalsyValues: removeFalsyValues,
+  getUpperCaseStrings: getUpperCaseStrings,
+  getStringsLength: getStringsLength,
+  insertItem: insertItem,
+  getHead: getHead,
+  getTail: getTail,
+  toCsvText: toCsvText,
+  toStringList: toStringList,
+  toArrayOfSquares: toArrayOfSquares,
+  getMovingSum: getMovingSum,
+  getSecondItems: getSecondItems,
+  propagateItemsByPositionIndex: propagateItemsByPositionIndex,
+  get3TopItems: get3TopItems,
+  getPositivesCount: getPositivesCount,
+  sortDigitNamesByNumericOrder: sortDigitNamesByNumericOrder,
+  getItemsSum: getItemsSum,
+  getFalsyValuesCount: getFalsyValuesCount,
+  findAllOccurences: findAllOccurences,
+  sortCitiesArray: sortCitiesArray,
+  getIdentityMatrix: getIdentityMatrix,
+  getIntervalArray: getIntervalArray,
+  distinct: distinct,
+  group: group,
+  selectMany: selectMany,
+  getElementByIndexes: getElementByIndexes,
+  swapHeadAndTail: swapHeadAndTail
 };
-
-export default tasks;

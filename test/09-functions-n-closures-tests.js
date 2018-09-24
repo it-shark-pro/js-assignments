@@ -1,5 +1,5 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   getComposition,
   getPowerFunction,
   getPolynom,
@@ -8,7 +8,7 @@ import {
   logger,
   partialUsingArguments,
   getIdGeneratorFunction
-} from '../task/09-functions-n-closures-tasks';
+} = require('../task/09-functions-n-closures-tasks');
 
 it.optional = require('../extensions/it-optional');
 

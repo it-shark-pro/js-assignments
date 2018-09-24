@@ -27,7 +27,7 @@
  *   'FUNCTION'  => false
  *   'NULL'      => false
  */
-export function findStringInSnakingPuzzle(puzzle, searchStr) {
+function findStringInSnakingPuzzle(puzzle, searchStr) {
   throw new Error('Not implemented');
 }
 
@@ -45,7 +45,7 @@ export function findStringInSnakingPuzzle(puzzle, searchStr) {
  *    'ab'  => 'ab','ba'
  *    'abc' => 'abc','acb','bac','bca','cab','cba'
  */
-export function* getPermutations(chars) {
+function* getPermutations(chars) {
   throw new Error('Not implemented');
 }
 
@@ -67,7 +67,7 @@ export function* getPermutations(chars) {
  *    [ 6, 5, 4, 3, 2, 1]   => 0   (nothing to buy)
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (buy at 1,6,5 and sell all at 10)
  */
-export function getMostProfitFromStockQuotes(quotes) {
+function getMostProfitFromStockQuotes(quotes) {
   throw new Error('Not implemented');
 }
 
@@ -86,14 +86,13 @@ export function getMostProfitFromStockQuotes(quotes) {
  *   var original  = urlShortener.decode(shortLink); // => 'https://en.wikipedia.org/wiki/URL_shortening'
  *
  */
-export function UrlShortener() {
+function UrlShortener() {
   this.urlAllowedChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
                           'abcdefghijklmnopqrstuvwxyz' +
                           "0123456789-_.~!*'();:@&=+$,/?#[]";
 }
 
 UrlShortener.prototype = {
-
   encode(url) {
     throw new Error('Not implemented');
   },
@@ -101,4 +100,11 @@ UrlShortener.prototype = {
   decode(code) {
     throw new Error('Not implemented');
   }
+};
+
+module.exports = {
+  findStringInSnakingPuzzle: findStringInSnakingPuzzle,
+  getPermutations: getPermutations,
+  getMostProfitFromStockQuotes: getMostProfitFromStockQuotes,
+  UrlShortener: UrlShortener
 };

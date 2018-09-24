@@ -1,11 +1,11 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   createCompassPoints,
   expandBraces,
   getZigZagMatrix,
   canDominoesMakeRow,
   extractRanges
-} from '../task/10-katas-1-tasks';
+} = require('../task/10-katas-1-tasks');
 
 it.optional = require('../extensions/it-optional');
 

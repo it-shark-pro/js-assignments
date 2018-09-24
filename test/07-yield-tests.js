@@ -1,11 +1,11 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   get99BottlesOfBeer,
   getFibonacciSequence,
   depthTraversalTree,
   breadthTraversalTree,
   mergeSortedSequences
-} from '../task/07-yield-tasks';
+} = require('../task/07-yield-tasks');
 
 it.optional = require('../extensions/it-optional');
 

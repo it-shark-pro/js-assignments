@@ -1,10 +1,10 @@
-import assert from 'assert';
-import {
+const assert = require('assert');
+const {
   Rectangle,
   getJSON,
   fromJSON,
   cssSelectorBuilder
-} from '../task/08-objects-tasks';
+} = require('../task/08-objects-tasks');
 
 it.optional = require('../extensions/it-optional');
 
