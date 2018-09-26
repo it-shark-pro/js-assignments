@@ -76,7 +76,7 @@ export function getAverage(value1, value2) {
  */
 export function getDistanceBetweenPoints(x1, y1, x2, y2) {
   /* implement your code here */
-  return Math.sqrt(Math.pow(Math.abs(x1)+Math.abs(x2), 2) + Math.pow(Math.abs(y1)+Math.abs(y2), 2));
+  return Math.hypot(Math.abs(x1)+Math.abs(x2), Math.abs(y1)+Math.abs(y2));
 }
 
 /**
@@ -93,7 +93,7 @@ export function getDistanceBetweenPoints(x1, y1, x2, y2) {
  */
 export function getLinearEquationRoot(a, b) {
   /* implement your code here */
-  return (-b)/a;
+  return -b/a;
 }
 
 
@@ -118,7 +118,7 @@ export function getLinearEquationRoot(a, b) {
 export function getAngleBetweenVectors(x1, y1, x2, y2) {
   /* implement your code here */
   let a  = x1*x2 + y1*y2;
-  let b = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2) * Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2)));
+  let b = Math.hypot(x1, y1) * Math.hypot(x2, y2);
   return Math.acos(a/b);
 }
 
@@ -136,7 +136,7 @@ export function getAngleBetweenVectors(x1, y1, x2, y2) {
  */
 export function getLastDigit(value) {
   /* implement your code here */
-  return Number(String(value)[String(value).length -1]);
+  return value % 10;
 }
 
 
@@ -171,7 +171,7 @@ export function parseNumberFromString(value) {
  */
 export function getParallelipidedDiagonal(a, b, c) {
   /* implement your code here */
-  return Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)+Math.pow(c, 2));
+  return Math.hypot( a, b, c);
 }
 
 /**
@@ -193,7 +193,7 @@ export function getParallelipidedDiagonal(a, b, c) {
  */
 export function roundToPowerOfTen(num, pow) {
   /* implement your code here */
-  return Math.round(num/(1 * Math.pow(10, pow))) * (1 * Math.pow(10, pow));
+  return Math.round(num/(Math.pow(10, pow))) * (Math.pow(10, pow));
 }
 
 /**
