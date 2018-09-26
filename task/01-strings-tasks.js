@@ -70,7 +70,7 @@ export function getStringFromTemplate(firstName, lastName) {
  */
 export function  extractNameFromTemplate(value) {
   /* implement your code here */
-  return value.replace('Hello,', '').replace('!', '').replace(' ', '');
+  return value.slice(7, -1);
 }
 
 
@@ -149,7 +149,7 @@ export function removeFirstOccurrences(str, value)  {
  */
 export function unbracketTag(str) {
   /* implement your code here */
-  return str.replace('<', '').replace('>', '');
+  return str.slice(1, -1);
 }
 
 
@@ -209,22 +209,16 @@ export function extractEmails(str) {
  */
 export function getRectangleString(width, height) {
   /* implement your code here */
-  let first_line = '';
-  let last_line = '';
-  let middle_line = '';
-  if (width <= 2) {
-    first_line = '┌┐\n';
-    last_line = '└┘\n';
-  } else {
-    first_line = '┌' + '─'.repeat(width - 2) + '┐\n';
-    last_line = '└' + '─'.repeat(width - 2) + '┘\n';
-  }
+  let first_line = '', last_line = '', middle_line = '';
+
+  first_line = '┌' + '─'.repeat(width - 2) + '┐\n';
+  last_line = '└' + '─'.repeat(width - 2) + '┘\n';
+  
   if (height > 2) {
     middle_line = '│'+' '.repeat(width-2)+'│\n'; 
     middle_line = middle_line.repeat(height-2);
-  } else {
-    middle_line = '';
   }
+  
   return first_line+middle_line+last_line;
 }
 
@@ -247,24 +241,21 @@ export function getRectangleString(width, height) {
  */
 export function encodeToRot13(str) {
   /* implement your code here */
-  let firstPart = 'abcdefghijklmABCDEFGHIJKLM';
-  let secondPart = 'nopqrstuvwxyzNOPQRSTUVWXYZ';
-  let res_arr = [];
-  let start_arr = str.split('');
-  for (let key in start_arr) {
-    let pos;
-    if (firstPart.indexOf(start_arr[key]) === -1) {
-      pos = secondPart.indexOf(start_arr[key]);
-      res_arr[key] = firstPart[pos];
-    } else if (secondPart.indexOf(start_arr[key]) === -1) {
-      pos = firstPart.indexOf(start_arr[key]);
-      res_arr[key] = secondPart[pos];
-    }
-    if (pos === -1) {
-      res_arr[key] = start_arr[key];
+  let res_str = '';
+  for (let i = 0; i < str.length; i++) {
+    if(str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 77){
+      res_str += String.fromCharCode(str.charCodeAt(i) + 13);
+    } else if (str.charCodeAt(i) >= 78 && str.charCodeAt(i) <= 90) {
+      res_str += String.fromCharCode(str.charCodeAt(i) - 13);
+    } else if(str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 109){
+      res_str += String.fromCharCode(str.charCodeAt(i) + 13);
+    } else if (str.charCodeAt(i) >= 110 && str.charCodeAt(i) <= 122) {
+      res_str += String.fromCharCode(str.charCodeAt(i) - 13);
+    } else {
+      res_str += str[i];
     }
   }
-  return res_arr.join('');
+  return res_str;
 }
 
 /**
@@ -286,9 +277,8 @@ export function isString(value) {
     return true;
   } else if(value instanceof String) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 
@@ -317,12 +307,7 @@ export function isString(value) {
  *   'K♠' => 51
  */
 export function getCardId(value) {
-  /* implement your code here */
-  const card_array = [
-    'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
-    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'
-  ];
-  return card_array.indexOf(value);
+  let mast = '♣♦♥♠'.indexOf(value.slice(-1)) * 13;
+  let card_pos = 'A,2,3,4,5,6,7,8,9,10,J,Q,K'.split(',').indexOf(value.slice(0, -1));
+  return mast + card_pos;
 }
