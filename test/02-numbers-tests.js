@@ -43,6 +43,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(getDistanceBetweenPoints(0, 0, 0, 1), 1);
     assert.equal(getDistanceBetweenPoints(0, 0, 1, 0), 1);
     assert.equal(getDistanceBetweenPoints(-5, 0, 10, -10), 18.027756377319946);
+    assert.equal(getDistanceBetweenPoints(4, 2, 1, 6), 5);
     assert.linesOfCode(getDistanceBetweenPoints, 1);
   });
 
