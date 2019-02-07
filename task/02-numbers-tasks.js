@@ -70,6 +70,7 @@ function getAverage(value1, value2) {
  *   (0,0) (0,1)    => 1
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
+ *   (4, 2) (1, 6) => 5
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
   throw new Error('Not implemented');
