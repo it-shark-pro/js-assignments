@@ -4,6 +4,7 @@
   "description": "JS training tasks",
   "scripts": {
     "lint": "eslint ./**/*.js",
+    "fix": "eslint --fix ./**/*.js",
     "test": "./node_modules/.bin/mocha",
     "test-debug": "./node_modules/.bin/mocha --debug-brk",
     "prepush": "npm run lint && npm test"
