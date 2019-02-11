@@ -37,7 +37,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-  throw new Error('Not implemented');
+  return 2 * radius * Math.PI;
 }
 
 /**
@@ -54,6 +54,7 @@ function getCicleCircumference(radius) {
  */
 function getAverage(value1, value2) {
   throw new Error('Not implemented');
+  // return (value1 + value2) / 2;
 }
 
 /**
@@ -73,7 +74,7 @@ function getAverage(value1, value2) {
  *   (4, 2) (1, 6) => 5
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 }
 
 /**
@@ -89,7 +90,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  throw new Error('Not implemented');
+  return (-b) / a; 
 }
 
 
@@ -111,8 +112,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  *   (0,1) (1,2)     => 0
  */
+// eslint require max length of line 80 chars
+// tests require only 1 line
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  return Math.acos((x1 * x2 + y1 * y2) / (Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2)) * Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2)))); // eslint-disable-line
 }
 
 /**
