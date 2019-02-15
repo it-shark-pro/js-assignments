@@ -227,7 +227,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  return !Number.isNaN(+value) && (typeof(+value) === 'number' || value instanceof Number) ? +value : def;
+  return !Number.isNaN(+value) && (typeof(+value) === 'number' || value instanceof Number) ? +value : def; // eslint-disable-line
 }
 
 module.exports = {
