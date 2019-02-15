@@ -53,8 +53,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  throw new Error('Not implemented');
-  // return (value1 + value2) / 2;
+  return (value1 / 100 + value2 / 100) * 50;
 }
 
 /**
@@ -131,7 +130,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  throw new Error('Not implemented');
+  return +value.toString().split('').pop();
 }
 
 
@@ -147,7 +146,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  throw new Error('Not implemented');
+  return +value;
 }
 
 /**
@@ -164,7 +163,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  throw new Error('Not implemented');
+  return Math.sqrt(a * a + b * b + c * c);
 }
 
 /**
@@ -228,7 +227,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  throw new Error('Not implemented');
+  return !Number.isNaN(+value) && (typeof(+value) === 'number' || value instanceof Number) ? +value : def;
 }
 
 module.exports = {
