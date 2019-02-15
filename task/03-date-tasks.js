@@ -94,8 +94,18 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,18, 0) => Math.PI
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
+// can`t use getHours() becouse that method returns local time hours.
+// task about analog watch, it`s reason for second string of function.
+// we always need only acute angle, it`s reason for seventh string.
 function angleBetweenClockHands(date) {
-  throw new Error('Not implemented');
+  let hours = +date.toISOString().substring(11, 13);
+  if (hours >= 12) hours -= 12;
+  const hoursAngle = (0.5 * (hours * 60 + date.getMinutes()));
+  const minutesAngle = 6 * date.getMinutes();
+  let angle = hoursAngle >= minutesAngle ? hoursAngle - minutesAngle 
+    : minutesAngle - hoursAngle;
+  if(angle > 180) angle -= 180;
+  return angle * Math.PI / 180;
 }
 
 module.exports = {
