@@ -605,6 +605,19 @@ function getElementByIndexes(arr, indexes) {
  *
  */
 function swapHeadAndTail(arr) {
+  // console.log(arr);
+  // const head = arr.slice(0, Math.ceil(arr.length / 2));
+  // const tail = arr.slice(Math.ceil(arr.length / 2) + 1);
+  // console.log(head);
+  // console.log(tail);
+  // if(!(arr.length % 2)) {
+  //   console.log(tail.concat(head));
+  //   return tail.concat(head);
+  // } else {
+  //   const middleEl = arr.slice(Math.ceil(arr.length / 2), Math.ceil(arr.length / 2) + 1);
+  //   console.log(tail.concat(middleEl, head));
+  //   return tail.concat(middleEl, head);
+  // }
   throw new Error('Not implemented');
 }
 
