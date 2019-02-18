@@ -423,7 +423,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Moscow' },
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
-function sortCitiesArray(arr) {
+// must be delete. Wanna ask mentor.
 //   console.log(arr);
 //   console.log('first result', arr.sort((a, b) => {
 //     if(a.country < b.country) return -1;
@@ -453,8 +453,9 @@ function sortCitiesArray(arr) {
 //     if(a.city > b.city) return 1;
 //   }
 // });
-// }
-  throw new Error('Not implemented');
+function sortCitiesArray(arr) {
+  return arr.sort((a, b ) => a.country.localeCompare(b.country) ||
+    a.city.localeCompare(b.city));
 }
 /**
  * Creates an indentity matrix of the specified size
@@ -547,6 +548,8 @@ function distinct(arr) {
  *   }
  */
 function group(array, keySelector, valueSelector) {
+  // const map = new Map;
+  // console.log(map.set(array.filter(keySelector), array.filter(valueSelector)));
   throw new Error('Not implemented');
 }
 
@@ -605,20 +608,14 @@ function getElementByIndexes(arr, indexes) {
  *
  */
 function swapHeadAndTail(arr) {
-  // console.log(arr);
-  // const head = arr.slice(0, Math.ceil(arr.length / 2));
-  // const tail = arr.slice(Math.ceil(arr.length / 2) + 1);
-  // console.log(head);
-  // console.log(tail);
-  // if(!(arr.length % 2)) {
-  //   console.log(tail.concat(head));
-  //   return tail.concat(head);
-  // } else {
-  //   const middleEl = arr.slice(Math.ceil(arr.length / 2), Math.ceil(arr.length / 2) + 1);
-  //   console.log(tail.concat(middleEl, head));
-  //   return tail.concat(middleEl, head);
-  // }
-  throw new Error('Not implemented');
+  const head = arr.slice(0, Math.floor(arr.length / 2));
+  const tail = arr.slice(Math.floor(arr.length / 2));
+  if(!(arr.length % 2)) {
+    return tail.concat(head);
+  } else {
+    const middleEl = tail.shift();
+    return tail.concat(middleEl, head);
+  }
 }
 
 module.exports = {
