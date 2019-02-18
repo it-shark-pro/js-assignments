@@ -8,6 +8,8 @@
 [![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
 ## Javascript Assignments
 
+# DON'T FORGET to send your results! [Send Results](https://goo.gl/forms/ijydrwLg7BeTD6E73)
+
 ### Docs
 * [How to sync your fork from original repo to keep up with their changes](/docs/sync-fork.md)
 * [Submit your solution to us for review](https://goo.gl/X6GjMB)
