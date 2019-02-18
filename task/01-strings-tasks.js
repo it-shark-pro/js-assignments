@@ -66,8 +66,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function  extractNameFromTemplate(value) {
-  // return((value.match(/Hello,\s(.*)\s(.*)!/))[1]+' '+(value.match(/Hello,\s(.*)\s(.*)!/))[2]);
-  throw new Error('Not implemented');
+  return value.slice(7, value.length - 1);
 }
 
 
@@ -200,11 +199,9 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  // return String.fromCharCode(9484) + String.fromCharCode(9472).repeat(width-2) + String.fromCharCode(9488) + "\n" +
-  //        (String.fromCharCode(9474) + " ".repeat(width-2) + String.fromCharCode(9474) + "\n").repeat(height-2) +
-  //        String.fromCharCode(9492) + String.fromCharCode(9472).repeat(width-2) + String.fromCharCode(9496);
-
-  throw new Error('Not implemented');
+  return '┌'+'─'.repeat(width-2)+'┐\n'+
+  ('│'+' '.repeat(width-2)+'│\n').repeat(height-2)+
+  '└'+'─'.repeat(width-2)+'┘\n';
 }
 
 
@@ -276,8 +273,11 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  throw new Error('Not implemented');
+  var pic=['♣', '♦', '♥', '♠'];
+  var num=['A', '2', '3', '4', '5', '6', '7', '8', '9', '1', 'J', 'Q', 'K'];
+ return value=pic.indexOf(value.charAt(value.length-1))*13+num.indexOf(value.charAt(0));// eslint-disable-line
 }
+
 
 module.exports = {
   concatenateStrings: concatenateStrings,

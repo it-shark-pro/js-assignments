@@ -73,10 +73,7 @@ function getAverage(value1, value2) {
  *   (4, 2) (1, 6) => 5
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  // var a = Math.pow(Math.abs(x1) + Math.abs(x2), 2);
-  // var b = Math.pow(Math.abs(y1) + Math.abs(y2), 2);
-  // return Math.sqrt(Math.pow(a) + Math.pow(b));
-  throw new Error('Not implemented');
+  return Math.hypot((x2-x1), (y2-y1));
 }
 
 /**
@@ -92,7 +89,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  throw new Error('Not implemented');
+  return  -b /(a);
 }
 
 
@@ -115,7 +112,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  return Math.acos((x1 * x2)+(y1 * y2))/Math.hypot(x1, y1) * Math.hypot(x2, y2);
 }
 
 /**
@@ -126,16 +123,17 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *
  * @example:
  *   100     => 0
- *    37     => 7
+ *    37     => 7 
  *     5     => 5
  *     0     => 0
  */
 function getLastDigit(value) {
-  throw new Error('Not implemented');
+  return +value.toString().split('').pop();
 }
 
 
 /**
+ * 
  * Returns a number by given string representation.
  *
  * @param {string} value
@@ -164,7 +162,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  throw new Error('Not implemented');
+  return Math.hypot(a, b, c);
 }
 
 /**
@@ -185,7 +183,7 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  throw new Error('Not implemented');
+  return Math.round(num / +(1+'0'.repeat(pow))) * +(1+'0'.repeat(pow));
 }
 
 /**
@@ -206,7 +204,7 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  throw new Error('Not implemented');
+  return (n % 2 === 1 && n !== 1 || n === 2 || n !== 9) ? true:false;
 }
 
 /**
