@@ -21,7 +21,7 @@
  *    'Sun, 17 May 1998 03:00:00 GMT+01' => Date()
  */
 function parseDataFromRfc2822(value) {
-  throw new Error('Not implemented');
+  return new Date(value);
 }
 
 /**
@@ -36,7 +36,7 @@ function parseDataFromRfc2822(value) {
  *    '2016-01-19T08:07:37Z' => Date()
  */
 function parseDataFromIso8601(value) {
-  throw new Error('Not implemented');
+  return Date.parse(value);
 }
 
 
@@ -55,7 +55,10 @@ function parseDataFromIso8601(value) {
  *    Date(2015,1,1)    => false
  */
 function isLeapYear(date) {
-  throw new Error('Not implemented');
+  if(date.getUTCFullYear()%4 !== 0) return false;
+  else if(date.getUTCFullYear()%100 !== 0) return true ;
+  else if(date.getUTCFullYear()% 400 !== 0) return false;
+  return true;
 }
 
 
@@ -75,9 +78,9 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
 function timeSpanToString(startDate, endDate) {
-  throw new Error('Not implemented');
+  var n = new Date(endDate - startDate) ;
+  return  n.toISOString().substr(11, 12) ;
 }
-
 
 /**
  * Returns the angle (in radians) between the hands of an analog clock for the 
@@ -93,8 +96,13 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,18, 0) => Math.PI
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
-function angleBetweenClockHands(date) {
-  throw new Error('Not implemented');
+function angleBetweenClockHands(date){
+  var hours = date.getUTCHours();
+  var min = date.getMinutes();
+  hours = (hours > 12) ? hours - 12 : hours;
+  var result = ((60*hours+min)*0.5 - min * 6);
+  result = result >180? 360-result : result;
+  return Math.abs(result*(Math.PI/180));
 }
 
 module.exports = {

@@ -41,7 +41,7 @@ And the last idea is to inure trainees to work using unit test and feel uncomfor
 ```
 * Open https://github.com/SozonikOleg/js-assignments and test the build icon. Now it will run all tests and update status once you push changes to github. Keep this icon green!
 
-
+npm 
 ### How to setup work environment
 * Download and install the latest [Nodejs](https://nodejs.org/en/download/).
 * Run `npm install` from you repository folder to download the required modules. All dependent modules will be located in the  *node_modules* folder.
