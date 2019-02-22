@@ -19,9 +19,25 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
+
 function concatenateStrings(value1, value2) {
-  throw new Error('Not implemented');
+  return value1 + value2;
 }
+// var
+//   a = 'aa',
+//   b = 'bb';
+// function concatenateStrings(value1, value2) {
+//   if (value1 === undefined) {
+//     value1 = ''
+//   };
+//   if (value2 === undefined) {
+//     value2 = ''
+//   }
+//   return value1 + value2;
+// }
+// console.log(concatenateStrings(a));
+// console.log(concatenateStrings(b));
+// console.log(concatenateStrings(a, b));
 
 /**
  * Returns the length of given string.
