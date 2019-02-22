@@ -222,10 +222,10 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  var input     = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  var output    = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  var index     = x => input.indexOf(x);
-  var translate = x => index(x) > -1 ? output[index(x)] : x;
+  const input     = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const output    = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  const index     = x => input.indexOf(x);
+  const translate = x => index(x) > -1 ? output[index(x)] : x;
   return str.split('').map(translate).join('');
 }
 
@@ -243,7 +243,7 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  return (typeof(value)==='string'||value instanceof String) ? true : false;
+  return typeof(value)==='string'||value instanceof String;
 }
 
 
@@ -274,10 +274,9 @@ function isString(value) {
  */
 function getCardId(value) {
   var pic=['♣', '♦', '♥', '♠'];
-  var num=['A', '2', '3', '4', '5', '6', '7', '8', '9', '1', 'J', 'Q', 'K'];
- return value=pic.indexOf(value.charAt(value.length-1))*13+num.indexOf(value.charAt(0));// eslint-disable-line
+  var num=['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  return value=pic.indexOf(value.charAt(value.length === 2 ? 1 : 2)) * 13 + num.indexOf(value.length === 2 ? value.charAt(0) : value.substring(0, 2));
 }
-
 
 module.exports = {
   concatenateStrings: concatenateStrings,

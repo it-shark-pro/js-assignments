@@ -37,7 +37,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-  return 2 * 3.1415926535897931384626433832795 * radius;
+  return 2 * Math.PI  * radius;
 }
 
 /**
@@ -112,7 +112,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  return Math.acos((x1 * x2)+(y1 * y2))/Math.hypot(x1, y1) * Math.hypot(x2, y2);
+  return Math.acos((x1 * x2)+(y1 * y2)) / Math.hypot(x1, y1) * Math.hypot(x2, y2);// eslint-disable-line
 }
 
 /**
@@ -128,7 +128,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  return +value.toString().split('').pop();
+  return +value.toString().slice(-1);
 }
 
 
@@ -183,7 +183,8 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  return Math.round(num / +(1+'0'.repeat(pow))) * +(1+'0'.repeat(pow));
+  // Math.round(num / +(1+'0'.repeat(pow))) * +(1+'0'.repeat(pow))
+  return (Math.round(num / ( Math.pow(10, pow))) * Math.pow(10, pow));
 }
 
 /**
