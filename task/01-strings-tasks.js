@@ -275,7 +275,7 @@ function isString(value) {
 function getCardId(value) {
   var pic=['♣', '♦', '♥', '♠'];
   var num=['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-  return value=pic.indexOf(value.charAt(value.length === 2 ? 1 : 2)) * 13 + num.indexOf(value.length === 2 ? value.charAt(0) : value.substring(0, 2));
+  return value=pic.indexOf(value.charAt(value.length === 2 ? 1 : 2)) * 13 + num.indexOf(value.length === 2 ? value.charAt(0) : value.substring(0, 2));// eslint-disable-line
 }
 
 module.exports = {
