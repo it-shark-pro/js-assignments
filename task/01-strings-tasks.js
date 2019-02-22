@@ -98,7 +98,6 @@ function getFirstChar(value) {
  */
 function removeLeadingAndTrailingWhitespaces(value) {
   throw new Error('Not implemented');
-  return value.replace(' ', '').replace(' ', '').replace(',', ', ').replace('\t', '');
 }
 
 /**
