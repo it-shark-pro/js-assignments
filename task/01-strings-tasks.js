@@ -271,9 +271,9 @@ function isString(value) {
  */
 function getCardId(value) {
   const card_bg = '♣♦♥♠', card_value = 'A23456789 JQK';
-  if (value[1] == 0) {return card_bg.indexOf(value[value.length - 1]) * 13 + 9;}
-  else {return card_bg.indexOf(value[value.length - 1]) * 13 + card_value.indexOf(value[0]);};
-};
+  if(value[1]===0){return bg.indexOf(value[value.length-1])*13+9}
+  else{return bg.indexOf(value[value.length-1])*13+num.indexOf(value[0])}
+}
 
 module.exports = {
   concatenateStrings: concatenateStrings,
