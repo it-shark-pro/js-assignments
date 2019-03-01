@@ -270,8 +270,10 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  throw new Error('Not implemented');
-}
+  const card_bg = '♣♦♥♠', card_value = 'A23456789 JQK'; let a = card_bg.indexOf(value[value.length - 1]) * 13, b = card_value.indexOf(value[0]);
+  if (value[1] == 0) {return a + 9}
+  else {return a + b}
+};
 
 module.exports = {
   concatenateStrings: concatenateStrings,
