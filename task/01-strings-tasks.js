@@ -270,7 +270,7 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const card_bg = '♣♦♥♠', card_value = 'A23456789 JQK';
+  const bg = '♣♦♥♠', num = 'A23456789 JQK';
   if(value[1]===0){return bg.indexOf(value[value.length-1])*13+9}
   else{return bg.indexOf(value[value.length-1])*13+num.indexOf(value[0])}
 }
