@@ -56,6 +56,7 @@ function getStringFromTemplate(firstName, lastName) {
   throw new Error('Not implemented');
 }
 
+//task 01-4
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
