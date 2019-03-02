@@ -136,6 +136,7 @@ function removeFirstOccurrences(str, value)  {
   return str.replace(value, '');
 }
 
+// task 01-9
 /**
  * Remove the first and last angle brackets from tag string
  *
