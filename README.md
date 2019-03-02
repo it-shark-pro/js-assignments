@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/it-shark-pro/js-assignments.svg?branch=master)](https://travis-ci.org/it-shark-pro/js-assignments)
+[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
 ![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/it-shark-pro/js-assignments.svg)](https://greenkeeper.io/)
 [![GitHub release](https://img.shields.io/github/release/it-shark-pro/js-assignments.svg)](https://github.com/it-shark-pro/js-assignments/releases/latest)
@@ -41,7 +41,7 @@ And the last idea is to inure trainees to work using unit test and feel uncomfor
   git commit -m "Update the links"
   git push origin master
 ```
-* Open https://github.com/it-shark-pro/js-assignments and test the build icon. Now it will run all tests and update status once you push changes to github. Keep this icon green!
+* Open https://github.com/PavelGalanin2001/js-assignments and test the build icon. Now it will run all tests and update status once you push changes to github. Keep this icon green!
 
 
 ### How to setup work environment
