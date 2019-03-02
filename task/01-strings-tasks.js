@@ -86,6 +86,7 @@ function getFirstChar(value) {
   return value[0];
 }
 
+// task 01-6
 /**
  * Removes a leading and trailing whitespace characters from string.
  *
