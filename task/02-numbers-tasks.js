@@ -135,7 +135,7 @@ function getLastDigit(value) {
   return Number(`${value}`[`${value}`.length - 1]);
 }
 
-
+// task 02-8
 /**
  * Returns a number by given string representation.
  *
