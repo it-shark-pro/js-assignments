@@ -40,6 +40,7 @@ function getCicleCircumference(radius) {
   return 2 * Math.PI * radius;
 }
 
+// task 02-3
 /**
  * Returns an average of two given numbers.
  *
