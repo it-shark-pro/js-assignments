@@ -8,7 +8,7 @@
  *                                                                                          *
  ******************************************************************************************* */
 
-
+// task 02-1
 /**
  * Returns an area of a rectangle given by width and heigth.
  *
@@ -21,7 +21,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  throw new Error('Not implemented');
+  return width * height;
 }
 
 
