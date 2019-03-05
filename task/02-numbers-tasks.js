@@ -118,6 +118,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
   throw new Error('Not implemented');
 }
 
+// task 02-7
 /**
  * Returns a last digit of a integer number.
  *
@@ -131,7 +132,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  throw new Error('Not implemented');
+  return Number(`${value}`[`${value}`.length - 1]);
 }
 
 
