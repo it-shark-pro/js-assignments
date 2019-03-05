@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
+[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
 ![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/PavelGalanin2001/js-assignments.svg)](https://greenkeeper.io/)
 [![GitHub release](https://img.shields.io/github/release/PavelGalanin2001/js-assignments.svg)](https://github.com/PavelGalanin2001/js-assignments/releases/latest)
