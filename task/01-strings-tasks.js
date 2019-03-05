@@ -119,6 +119,7 @@ function repeatString(value, count) {
   return value.repeat(count);
 }
 
+// task 01-8
 /**
  * Remove the first occurrence of string inside another string
  *
