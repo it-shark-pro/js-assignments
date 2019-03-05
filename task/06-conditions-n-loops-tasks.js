@@ -374,26 +374,25 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
+  const date = endDate-startDate;
+  const sec = 1000;
+  const min = 60*sec;
+  const hour = 60*min;
+  const day = 24*hour;
+  const month = 30*day;
+  const year = 12*month;
 
-let date = endDate-startDate;
-  let sec = 1000;
-  let min = 60*sec;
-  let hour = 60*min;
-  let day = 24*hour;
-  let month = 30*day;
-  let year = 12*month;
-
-  if (date<=45*sec) return 'a few seconds ago'
-  if(date>45*sec &&date<=90*sec) return 'a minute ago'
-  if(date>90*sec && date<=45*min) return Math.round((date-0.001)/min)+' minutes ago'
-  if(date>45*min && date<=90*min) return 'an hour ago'
-  if(date>90*min && date<=22*hour) return Math.round((date-0.001)/hour)+' hours ago'
-  if(date>22*hour && date<=36*hour) return 'a day ago'
-  if(date>36*hour && date<=25*day) return Math.round((date-0.001)/day)+' days ago'
-  if(date>25*day && date<=45*day) return 'a month ago'
-  if(date>45*day && date<=345*day)return Math.round((date-0.001)/month)+' months ago'
-  if(date>345*day && date<=545*day) return 'a year ago'
-  if(date>545*day) return Math.round((date-0.001)/year)+' years ago'
+  if (date<=45*sec) return 'a few seconds ago';
+  if(date>45*sec &&date<=90*sec) return 'a minute ago';
+  if(date>90*sec && date<=45*min) return Math.round((date-0.001)/min)+' minutes ago';//eslint-disable-line
+  if(date>45*min && date<=90*min) return 'an hour ago';
+  if(date>90*min && date<=22*hour) return Math.round((date-0.001)/hour)+' hours ago';//eslint-disable-line
+  if(date>22*hour && date<=36*hour) return 'a day ago';
+  if(date>36*hour && date<=25*day) return Math.round((date-0.001)/day)+' days ago';//eslint-disable-line
+  if(date>25*day && date<=45*day) return 'a month ago';
+  if(date>45*day && date<=345*day)return Math.round((date-0.001)/month)+' months ago';//eslint-disable-line
+  if(date>345*day && date<=545*day) return 'a year ago';
+  if(date>545*day) return Math.round((date-0.001)/year)+' years ago';
 }
 
 
