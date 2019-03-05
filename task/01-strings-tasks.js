@@ -119,6 +119,7 @@ function repeatString(value, count) {
   return value.repeat(count);
 }
 
+// task 01-8
 /**
  * Remove the first occurrence of string inside another string
  *
@@ -132,7 +133,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value)  {
-  throw new Error('Not implemented');
+  return str.replace(value, '');
 }
 
 /**
