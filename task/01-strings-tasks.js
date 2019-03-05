@@ -103,6 +103,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
   return value.trim();
 }
 
+// task 01-7
 /**
  * Returns a string that repeated the specified number of times.
  *
@@ -115,7 +116,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-  throw new Error('Not implemented');
+  return value.repeat(count);
 }
 
 /**
