@@ -72,7 +72,7 @@ function  extractNameFromTemplate(value) {
   return value.replace('Hello, ', '').replace('!', '');
 }
 
-
+// task 01-5
 /**
  * Returns a first char of the given string.
  *
