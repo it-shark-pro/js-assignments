@@ -151,6 +151,7 @@ function parseNumberFromString(value) {
   return Number(value);
 }
 
+// task 02-9
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
  *
@@ -165,7 +166,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  throw new Error('Not implemented');
+  return Math.sqrt(a * a + b * b + c * c);
 }
 
 /**
