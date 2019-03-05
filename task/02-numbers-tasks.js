@@ -57,6 +57,7 @@ function getAverage(value1, value2) {
   return value1 / 2 + value2 / 2;
 }
 
+// task 02-4
 /**
  * Returns a distance beetween two points by cartesian coordinates.
  *
