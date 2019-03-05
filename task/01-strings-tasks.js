@@ -87,6 +87,7 @@ function getFirstChar(value) {
   return value[0];
 }
 
+// task 01-6
 /**
  * Removes a leading and trailing whitespace characters from string.
  *
@@ -99,7 +100,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  throw new Error('Not implemented');
+  return value.trim();
 }
 
 /**
