@@ -151,6 +151,7 @@ function parseNumberFromString(value) {
   return Number(value);
 }
 
+// task 02-9
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
  *
