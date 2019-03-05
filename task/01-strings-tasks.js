@@ -6,7 +6,7 @@
  *                                                                                          *
  ********************************************************************************************/
 
-
+// task 01-1
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -20,7 +20,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  throw new Error('Not implemented');
+  return value1 + value2;
 }
 
 /**
