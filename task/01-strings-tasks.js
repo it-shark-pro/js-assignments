@@ -183,6 +183,7 @@ function extractEmails(str) {
   return str.split(';');
 }
 
+// task 01-12
 /**
  * Returns the string representation of rectangle with specified width and height
  * using pseudograhic chars
@@ -207,7 +208,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  throw new Error('Not implemented');
+  return  `┌${'─'.repeat(width - 2)}┐\n` + 
+          `│${' '.repeat(width - 2)}│\n`
+            .repeat(height - 2) + 
+          `└${'─'.repeat(width - 2)}┘\n`;
 }
 
 
