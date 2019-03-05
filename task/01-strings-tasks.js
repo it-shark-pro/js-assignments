@@ -152,7 +152,7 @@ function unbracketTag(str) {
   return str.slice(1, -1);
 }
 
-
+// task 01-10
 /**
  * Converts all characters of the specified string into the upper case
  *
@@ -164,7 +164,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-  throw new Error('Not implemented');
+  return str.toUpperCase();
 }
 
 /**
