@@ -57,6 +57,7 @@ function getStringFromTemplate(firstName, lastName) {
   return `Hello, ${firstName} ${lastName}!`;
 }
 
+// task 01-4
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
