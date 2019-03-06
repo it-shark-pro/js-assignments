@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 
 /** ************************************************************************************************
  *                                                                                                *
@@ -213,7 +214,12 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  throw new Error('Not implemented');
+  const resalt = (a < b) ? a + ', ' + b  : b + ', ' + a;
+  const value = (isStartIncluded && isEndIncluded) ? '[' + resalt + ']' :
+    (isStartIncluded && !isEndIncluded) ? '[' + resalt + ')' :
+      (!isStartIncluded && isEndIncluded) ? '(' + resalt + ']' :
+        '(' + resalt + ')';
+  return value; 
 }
 
 
@@ -382,17 +388,18 @@ function timespanToHumanString(startDate, endDate) {
   const month = 30*day;
   const year = 12*month;
 
-  if (date<=45*sec) return 'a few seconds ago';
-  if(date>45*sec &&date<=90*sec) return 'a minute ago';
-  if(date>90*sec && date<=45*min) return Math.round((date-0.001)/min)+' minutes ago';//eslint-disable-line
-  if(date>45*min && date<=90*min) return 'an hour ago';
-  if(date>90*min && date<=22*hour) return Math.round((date-0.001)/hour)+' hours ago';//eslint-disable-line
-  if(date>22*hour && date<=36*hour) return 'a day ago';
-  if(date>36*hour && date<=25*day) return Math.round((date-0.001)/day)+' days ago';//eslint-disable-line
-  if(date>25*day && date<=45*day) return 'a month ago';
-  if(date>45*day && date<=345*day)return Math.round((date-0.001)/month)+' months ago';//eslint-disable-line
-  if(date>345*day && date<=545*day) return 'a year ago';
-  if(date>545*day) return Math.round((date-0.001)/year)+' years ago';
+  const resalt = (date<=45*sec) ? 'a few seconds ago' :
+    (date>45*sec &&date<=90*sec) ? 'a minute ago' :
+    (date>90*sec && date<=45*min) ? Math.round((date-0.001) / min) + ' minutes ago' ://eslint-disable-line
+        (date>45*min && date<=90*min) ? 'an hour ago' :
+          (date>90*min && date<=22*hour) ? Math.round((date-0.001) / hour) + ' hours ago' ://eslint-disable-line
+            (date>22*hour && date<=36*hour) ? 'a day ago' :
+              (date>36*hour && date<=25*day) ? Math.round((date-0.001) / day) + ' days ago' ://eslint-disable-line
+                (date>25*day && date<=45*day) ? 'a month ago' :
+                  (date>45*day && date<=345*day) ?  Math.round(date / month) + ' months ago' ://eslint-disable-line
+                    (date>345*day && date<=545*day) ? 'a year ago' :
+                      Math.round((date-0.001)/year) + ' years ago';
+  return resalt;
 }
 
 
@@ -433,8 +440,16 @@ function toNaryString(num, n) {
  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
+
 function getCommonDirectoryPath(pathes) {
-  throw new Error('Not implemented');
+  for (let i = 0; i < pathes[0].length; i++) {
+    for (let j = 1; j < pathes.length; j++) {
+      if (pathes[0].charAt(i) !== pathes[j].charAt(i)) {
+        const result = pathes[0].slice(0, i);
+        return result.slice(0, result.lastIndexOf('/') + 1);
+      }
+    }
+  }
 }
 
 
@@ -457,8 +472,20 @@ function getCommonDirectoryPath(pathes) {
  *
  */
 function getMatrixProduct(m1, m2) {
-  throw new Error('Not implemented');
+  const result = [];
+  for (let i = 0; i < m1.length; i++) {
+    result[i] = [];
+    for (let j = 0; j < m2[0].length; j++) {
+      let sum = 0;
+      for (let k = 0; k < m1[0].length; k++) {
+        sum += m1[i][k] * m2[k][j];
+      }
+      result[i][j] = sum;
+    }
+  }
+  return result;
 }
+
 
 
 /**
@@ -492,7 +519,19 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-  throw new Error('Not implemented');
+  function func(left, middle, right){
+    return left===middle && middle===right&& left !== undefined;
+  }
+  for(let i = 0; i<3; i++){
+    if(func(position[i][0], position[i][1], position[i][2])) 
+    {return position[i][0];}
+    if(func(position[0][i], position[1][i], position[2][i])) 
+    {return position[0][i];}
+    if(func(position[0][0], position[1][1], position[2][2]))
+    {return position[0][0];}
+    if(func(position[2][0], position[1][1], position[0][2]))
+    {return position[2][0];}      
+  }
 }
 
 module.exports = {
