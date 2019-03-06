@@ -199,11 +199,12 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const f = String.fromCharCode; const base = '┌'+'┐\n'+'└'+'┘\n';
-  return (width > 2 && height > 2) ? f(9484)+f(9472)
-    .repeat(width-2)+f(9488)+'\n'+ `│${f(32).repeat(width - 2)}|\n`
-    .repeat(height-2)+f(9492)+f(9472).repeat(width-2)+f(9496)+'\n' : base;
+  const f = String.fromCharCode;
+  return f(9484)+f(9472).repeat(width-2)+f(9488)+f(10)+(f(9474)+ f(32)
+    .repeat(width - 2)+f(9474)+f(10)).repeat(height-2)+f(9492)
+    +f(9472).repeat(width-2)+f(9496)+f(10);
 }
+
 
 
 /**
@@ -282,7 +283,6 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  // row limit in task is 3
   // eslint-disable-next-line max-len
   const data = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
   return data.indexOf(value);
