@@ -199,11 +199,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const f = String.fromCharCode; let answer;
-  (width > 2 && height > 2) ? answer =f(9484)+f(9472).repeat(width-2)+f(9488)+'\n'+
-    `│${f(32).repeat(width - 2)}|\n`.repeat(height-2)+f(9492)+f(9472).repeat(width-2)+f(9496)+'\n' :
-    answer = '┌'+'┐\n'+'└'+'┘\n';
-  return answer;
+  const f = String.fromCharCode; const base = '┌'+'┐\n'+'└'+'┘\n';
+  return (width > 2 && height > 2) ? f(9484)+f(9472)
+    .repeat(width-2)+f(9488)+'\n'+ `│${f(32).repeat(width - 2)}|\n`
+    .repeat(height-2)+f(9492)+f(9472).repeat(width-2)+f(9496)+'\n' : base;
 }
 
 
@@ -224,7 +223,6 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-
   const answer = str.replace(/\w/g, 
     match => { 
       const charCode = match.charCodeAt();
@@ -284,6 +282,7 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
+  // row limit in task is 3
   // eslint-disable-next-line max-len
   const data = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
   return data.indexOf(value);
