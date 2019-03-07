@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable require-yield */
 
 /** ******************************************************************************************
  *                                                                                          *
@@ -29,11 +31,22 @@
  *
  *
  * @return {Iterable.<string>}
- *
+ *  
  */
 function* get99BottlesOfBeer() {
-  throw new Error('Not implemented');
+  let bottles = 99;
+  while (bottles > 2) {
+    yield `${bottles} bottles of beer on the wall, ${bottles} bottles of beer.`;
+    yield `Take one down and pass it around, ${--bottles} bottles of beer on the wall.`;//eslint-disable-line
+  }
+  yield `${bottles} bottles of beer on the wall, ${bottles} bottles of beer.`;
+  yield `Take one down and pass it around, ${--bottles} bottle of beer on the wall.`;//eslint-disable-line
+  yield `${bottles} bottle of beer on the wall, ${bottles} bottle of beer.`;
+  yield `Take one down and pass it around, no more bottles of beer on the wall.`;//eslint-disable-line
+  yield `No more bottles of beer on the wall, no more bottles of beer.`;
+  yield `Go to the store and buy some more, 99 bottles of beer on the wall.`;
 }
+
 
 
 /**
@@ -46,7 +59,15 @@ function* get99BottlesOfBeer() {
  *
  */
 function* getFibonacciSequence() {
-  throw new Error('Not implemented');
+  let fb1 = 0, fb2 = 1, tmp;
+  yield fb1;
+  yield fb2;
+  while (true) {        
+    tmp = fb2;
+    fb2 += fb1;
+    fb1 = tmp;
+    yield fb2;
+  }
 }
 
 
@@ -81,7 +102,17 @@ function* getFibonacciSequence() {
  *
  */
 function* depthTraversalTree(root) {
-  throw new Error('Not implemented');
+  const stack = [root];
+  let  curr;
+  while (stack.length > 0) {
+    curr = stack.pop();
+    yield curr;
+    if (curr.children) {
+      for (let i = curr.children.length - 1; i >= 0; i--) {
+        stack.push(curr.children[i]);
+      }
+    }
+  }
 }
 
 
