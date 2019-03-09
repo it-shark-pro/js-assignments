@@ -95,7 +95,7 @@ function getLinearEquationRoot(a, b) {
   return - b / a;
 }
 
-
+// task 02-6
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi, coordinates
  * in Cartesian plane
@@ -115,7 +115,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  return Math.acos(x1*x2+y1*y2-(Math.sqrt(x1*y1)+Math.sqrt(x2*y2)));
 }
 
 // task 02-7
