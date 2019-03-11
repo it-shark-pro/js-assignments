@@ -138,20 +138,20 @@ function* depthTraversalTree(root) {
  *
  */
 function* breadthTraversalTree(root) {
-  let queue = [];
-    let current;
-    let ind = 0;
-    queue.unshift(root);
-    while (queue.length  > ind) {
-        current = queue[ind];
-        yield current;
-        if('children' in current) {
-            current.children.forEach(function(val){
-                queue.push(val);        
-            });    
-        }
-        ind++;
+  const queue = [];
+  let current;
+  let ind = 0;
+  queue.unshift(root);
+  while (queue.length  > ind) {
+    current = queue[ind];
+    yield current;
+    if('children' in current) {
+      current.children.forEach(function(val){
+        queue.push(val);        
+      });    
     }
+    ind++;
+  }
 }
 
 
@@ -173,16 +173,15 @@ function* mergeSortedSequences(source1, source2) {
   source1 = source1();
   source2 = source2();
   while (true) {
-    let one = source1.next();
-    let two = source2.next();
-
+    const one = source1.next();
+    const two = source2.next();
     if (one.done) {
-        yield two.value;
+      yield two.value;
     } else if (two.done) {
-        yield one.value;
+      yield one.value;
     } else {
-        yield Math.min(one.value, two.value);
-        yield Math.max(one.value, two.value);
+      yield Math.min(one.value, two.value);
+      yield Math.max(one.value, two.value);
     }
   }
 }
