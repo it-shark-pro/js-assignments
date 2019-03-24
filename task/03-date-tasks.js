@@ -40,7 +40,7 @@ function parseDataFromIso8601(value) {
   return new Date(value);
 }
 
-
+// task 03-3
 /**
  * Returns true if specified date is leap year and false otherwise
  * Please find algorithm here: https://en.wikipedia.org/wiki/Leap_year#Algorithm
