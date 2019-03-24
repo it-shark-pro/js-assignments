@@ -222,6 +222,7 @@ function isPrime(n) {
   return true;
 }
 
+// task 02-11
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
  * otherwise returns default value passed as a second argument.
