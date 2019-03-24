@@ -235,6 +235,7 @@ function encodeToRot13(str) {
   throw new Error('Not implemented');
 }
 
+// task 01-14
 /**
  * Returns true if the value is string; otherwise false.
  * @param {string} value
@@ -249,7 +250,7 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  throw new Error('Not implemented');
+  return value ? typeof value.valueOf() === 'string' : false;
 }
 
 
