@@ -239,7 +239,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  throw new Error('Not implemented');
+  return !isNaN(+value) && typeof +value === 'number' ? +value : def;
 }
 
 module.exports = {
