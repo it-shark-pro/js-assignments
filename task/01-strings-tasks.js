@@ -279,7 +279,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  throw new Error('Not implemented');
+  const card1 = ['♣', '♦', '♥', '♠'],
+  card2 = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  return card1.indexOf(value.slice(-1))*13 + card2.indexOf(value.slice(0, -1));
 }
 
 module.exports = {
