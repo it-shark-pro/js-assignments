@@ -190,6 +190,7 @@ function roundToPowerOfTen(num, pow) {
   throw new Error('Not implemented');
 }
 
+// task 02-11
 /**
  * Returns true is the number is prime; otherwise false.
  * See: https://en.wikipedia.org/wiki/Primality_test
