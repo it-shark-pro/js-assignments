@@ -24,6 +24,7 @@ function parseDataFromRfc2822(value) {
   return new Date(value);
 }
 
+// task 03-2
 /**
  * Parses an ISO 8601 string date representation into date value
  * For ISO 8601 date specification refer to : https://en.wikipedia.org/wiki/ISO_8601
