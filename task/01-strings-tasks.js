@@ -279,9 +279,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const card1 = ['♣', '♦', '♥', '♠'],
-  card2 = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-  return card1.indexOf(value.slice(-1)) * 13 + card2.indexOf(value.slice(0, -1));
+  const c1 = ['♣', '♦', '♥', '♠'],
+    c2 = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  return c1.indexOf(value.slice(-1)) * 13 + c2.indexOf(value.slice(0, -1));
 }
 
 module.exports = {
