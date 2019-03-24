@@ -169,6 +169,7 @@ function getParallelipidedDiagonal(a, b, c) {
   return Math.sqrt(a * a + b * b + c * c);
 }
 
+// task 02-10
 /**
  * Returns the number rounded to specified power of 10.
  *
