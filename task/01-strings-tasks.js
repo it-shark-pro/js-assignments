@@ -253,7 +253,7 @@ function isString(value) {
   return value ? typeof value.valueOf() === 'string' : false;
 }
 
-
+// task 01-15
 /**
  * Returns playid card id.
  *
