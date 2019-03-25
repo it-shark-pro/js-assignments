@@ -7,7 +7,7 @@
  *                                                                                          *
  ******************************************************************************************* */
 
-
+// task 03-1
 /**
  * Parses a rfc2822 string date representation into date value
  * For rfc2822 date specification refer to : http://tools.ietf.org/html/rfc2822#page-14
@@ -21,7 +21,7 @@
  *    'Sun, 17 May 1998 03:00:00 GMT+01' => Date()
  */
 function parseDataFromRfc2822(value) {
-  throw new Error('Not implemented');
+  return new Date(value);
 }
 
 /**
