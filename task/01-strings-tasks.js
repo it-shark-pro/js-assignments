@@ -254,6 +254,9 @@ function isString(value) {
  * (see https://en.wikipedia.org/wiki/Standard_52-card_deck)
  * Function returns the zero-based index of specified card in the initial deck above.
  *
+ * Try to solve task without using card stack as pattern,
+ * e.g. let pattern = ['A♣',...,'K♠'].
+ * 
  * @param {string} value
  * @return {number}
  *

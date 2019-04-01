@@ -91,6 +91,9 @@ function* depthTraversalTree(root) {
  *
  * Each node have child nodes in node.children array.
  * The leaf nodes do not have 'children' property.
+ * 
+ * Avoid using recursion due to maximum call stack size exceed.
+ * See test for detail.
  *
  * @params {object} root the tree root
  * @return {Iterable.<object>} the sequence of all tree nodes in breadth-first order
@@ -114,6 +117,9 @@ function* breadthTraversalTree(root) {
 /**
  * Merges two yield-style sorted sequences into the one sorted sequence.
  * The result sequence consists of sorted items from source iterators.
+ *
+ * Avoid using recursion due to maximum call stack size exceed.
+ * See test for detail.
  *
  * @params {Iterable.<number>} source1
  * @params {Iterable.<number>} source2

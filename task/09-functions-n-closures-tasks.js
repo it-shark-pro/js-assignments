@@ -21,7 +21,7 @@
  * @return {Function}
  *
  * @example
- *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
+ *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.asin(x))
  *
  */
 function getComposition(f, g) {

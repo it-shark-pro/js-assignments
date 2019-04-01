@@ -45,7 +45,7 @@ function lowerLetters(value) {
  * @return {string}
  *
  * @example
- *    'a clash if KINGS', 'a an the of'  =>  'A Clash of Kings'
+ *    'a clash of KINGS', 'a an the of'  =>  'A Clash of Kings'
  *    'THE WIND IN THE WILLOWS', 'The In'  => 'The Wind in the Willows'
  *    'the quick brown fox'  => 'The Quick Brown Fox'
  */
