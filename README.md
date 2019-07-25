@@ -4,9 +4,9 @@
 
 ### Branches
 
-PavelGalanin2001/master | master 
+master | PavelGalanin2001/master
 --- | --- 
-[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments) | [![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
+[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)|[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
 
 ---
 
