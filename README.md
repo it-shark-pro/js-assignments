@@ -1,14 +1,14 @@
+## Statuses
+
 [![GitHub release](https://img.shields.io/github/release/PavelGalanin2001/js-assignments.svg)](https://github.com/PavelGalanin2001/js-assignments/releases/latest)
 
-Branch PavelGalanin2001/master:
+### Branches
 
-[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
+PavelGalanin2001/master | master 
+--- | --- 
+[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments) | [![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
 
-Branch master:
-
-[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
-
-
+---
 
 # [Brest IT Shark](https://it-shark.pro/)
 [![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
