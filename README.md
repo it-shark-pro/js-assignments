@@ -32,6 +32,28 @@ master | PavelGalanin2001/master
 
 ---
 
+## Как начать
+
+### I. Клонируем репозиторий 
+
+#### Метод HTTPS - нужно вводить имя и пароль при каждой отправке изменений на GitHub
+
+1. $ `git clone https://github.com/it-shark-pro/js-assignments.git`
+
+#### Метод SSH - не нужно вводить имя и пароль при каждой отправке изменений на GitHub
+
+1. $ `ssh-keygen` // генерация секретного ключа
+
+2. $ `cat /home/${USER}/.ssh/id_rsa.pub` // вывести ключ в терминал
+
+${USER} - переменная линукса, т. е. она сама подставит имя пользователя
+
+3. Копируем из терминала зажатием клавиш 'Ctrl' + 'Shift' + 'C'
+
+4. Добавляем ключ в свой аккаунт [тут](https://github.com/settings/keys)
+
+5. $ `git clone git@github.com:it-shark-pro/js-assignments.git` // склонировать репозиторий
+
 ## Например:
 
 ### 1. @param {string} value
