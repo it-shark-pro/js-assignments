@@ -24,6 +24,14 @@ master | PavelGalanin2001/master
 
 ---
 
+## Похожие ресурсы
+
+- https://github.com/rmurphey/js-assessment
+- https://github.com/mrdavidlaing/javascript-koans
+- https://github.com/vasanthk/js-bits
+
+---
+
 ## Например:
 
 ### 1. @param {string} value
@@ -55,9 +63,5 @@ master | PavelGalanin2001/master
 
 Сообщать о своих результатах [в форме](https://goo.gl/forms/AhDP2YQQ7SziByeU2).
 
-## Другие ресурсы
-
-- https://github.com/rmurphey/js-assessment
-- https://github.com/mrdavidlaing/javascript-koans
-- https://github.com/vasanthk/js-bits
+---
 
