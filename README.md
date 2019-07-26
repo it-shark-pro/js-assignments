@@ -1,10 +1,6 @@
-## Statuses
+## Статут жизни репозитория
 
 [![GitHub release](https://img.shields.io/github/release/PavelGalanin2001/js-assignments.svg)](https://github.com/PavelGalanin2001/js-assignments/releases/latest)
-
----
-
-### Branches
 
 master | PavelGalanin2001/master
 --- | --- 
@@ -82,7 +78,7 @@ ${USER} - переменная линукса, т. е. она сама подс�
 
 ---
 
-## Например:
+## Как понять наше задание?
 
 ### 1. @param {string} value
 Расшифровка:
