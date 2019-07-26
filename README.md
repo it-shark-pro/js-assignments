@@ -7,3 +7,7 @@
 master | PavelGalanin2001/master
 --- | --- 
 [![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)|[![Build Status](https://travis-ci.org/PavelGalanin2001/js-assignments.svg?branch=PavelGalanin2001/master)](https://travis-ci.org/PavelGalanin2001/js-assignments)
+
+## Информация
+
+Репозиторий [IT Shark](https://github.com/it-shark-pro/js-assignments). Их сайт [тут](https://it-shark.pro/).
