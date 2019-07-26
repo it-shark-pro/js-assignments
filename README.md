@@ -16,7 +16,7 @@ master | PavelGalanin2001/master
 
 ---
 
-## Информация
+## О создателе
 
 Репозиторий [IT Shark](https://github.com/it-shark-pro/js-assignments). Их сайт [тут](https://it-shark.pro/).
 
