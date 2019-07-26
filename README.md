@@ -12,6 +12,10 @@ master | PavelGalanin2001/master
 
 ---
 
+# О репозитории Java Script assignments
+
+---
+
 ## Информация
 
 Репозиторий [IT Shark](https://github.com/it-shark-pro/js-assignments). Их сайт [тут](https://it-shark.pro/).
