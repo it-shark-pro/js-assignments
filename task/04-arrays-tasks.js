@@ -40,7 +40,7 @@ function generateOdds(len) {
   throw new Error('Not implemented');
 }
 
-
+// task 04-3
 /**
  * Returns the doubled array - elements of the specified array are repeated twice
  * using original order
