@@ -1,4 +1,3 @@
-
 /**
  * Returns the bank account number parsed from specified string.
  *
@@ -39,7 +38,6 @@ function parseBankAccount(bankAccount) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Returns the string, but with line breaks inserted at just the right places to make
  * sure that no line is longer than the specified column number.
@@ -67,10 +65,9 @@ function parseBankAccount(bankAccount) {
  *      'sequence of',
  *      'characters.'
  */
-function* wrapText(text, columns) {
+function wrapText(text, columns) {
   throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the rank of the specified poker hand.
@@ -108,7 +105,6 @@ function getPokerHandRank(hand) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Returns the rectangles sequence of specified figure.
  * The figure is ASCII multiline string comprised of minus signs -, plus signs +,
@@ -140,7 +136,7 @@ function getPokerHandRank(hand) {
  *    '|             |\n'+              '+-----+\n'           '+-------------+\n'
  *    '+-------------+\n'
  */
-function* getFigureRectangles(figure) {
+function getFigureRectangles(figure) {
   throw new Error('Not implemented');
 }
 

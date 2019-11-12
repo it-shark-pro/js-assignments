@@ -1,4 +1,3 @@
-
 /** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -7,7 +6,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math    *
  *                                                                                          *
  ******************************************************************************************* */
-
 
 /**
  * Returns an area of a rectangle given by width and heigth.
@@ -21,9 +19,8 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  throw new Error('Not implemented');
+  return width * height;
 }
-
 
 /**
  * Returns a circumference of circle given by radius.
@@ -37,7 +34,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-  throw new Error('Not implemented');
+  return radius * 2 * Math.PI;
 }
 
 /**
@@ -53,7 +50,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  throw new Error('Not implemented');
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -73,7 +70,7 @@ function getAverage(value1, value2) {
  *   (4, 2) (1, 6) => 5
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 }
 
 /**
@@ -91,7 +88,6 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
 function getLinearEquationRoot(a, b) {
   throw new Error('Not implemented');
 }
-
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi, coordinates
@@ -128,9 +124,8 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  throw new Error('Not implemented');
+  return parseInt(value.toString()[value.toString().length - 1]);
 }
-
 
 /**
  * Returns a number by given string representation.
@@ -144,7 +139,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  throw new Error('Not implemented');
+  return value / 1;
 }
 
 /**
@@ -161,7 +156,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  throw new Error('Not implemented');
+  return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2));
 }
 
 /**

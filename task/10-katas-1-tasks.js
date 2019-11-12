@@ -1,4 +1,3 @@
-
 /**
  * Returns the array of 32 compass points and heading.
  * See details here:
@@ -20,13 +19,12 @@ function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Expand the braces of the specified string.
  * See https://en.wikipedia.org/wiki/Bash_(Unix_shell)#Brace_expansion
  *
  * In the input string, balanced pairs of braces containing comma-separated substrings
- * represent alternations that specify multiple alternatives which are to appear 
+ * represent alternations that specify multiple alternatives which are to appear
  * at that position in the output.
  *
  * @param {string} str
@@ -55,15 +53,14 @@ function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
  *
  *   'nothing to do' => 'nothing to do'
  */
-function* expandBraces(str) {
+function expandBraces(str) {
   throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the ZigZag matrix
  *
- * The fundamental idea in the JPEG compression algorithm is to sort coefficient 
+ * The fundamental idea in the JPEG compression algorithm is to sort coefficient
  * of given image by zigzag path and encode it.
  * In this task you are asked to implement a simple method to create a zigzag square matrix.
  * See details at https://en.wikipedia.org/wiki/JPEG#Entropy_coding
@@ -92,13 +89,12 @@ function getZigZagMatrix(n) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Returns true if specified subset of dominoes can be placed in a row accroding to the game rules.
  * Dominoes details see at: https://en.wikipedia.org/wiki/Dominoes
  *
  * Each domino tile presented as an array [x,y] of tile value.
- * For example, the subset [1, 1], [2, 2], [1, 2] can be arranged in a row 
+ * For example, the subset [1, 1], [2, 2], [1, 2] can be arranged in a row
  *  (as [1, 1] followed by [1, 2] followed by [2, 2]),
  * while the subset [1, 1], [0, 3], [1, 4] can not be arranged in one row.
  * NOTE that as in usual dominoes playing any pair [i, j] can also be treated as [j, i].
@@ -118,16 +114,15 @@ function canDominoesMakeRow(dominoes) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Returns the string expression of the specified ordered list of integers.
  *
  * A format for expressing an ordered list of integers is to use a comma separated list of either:
  *   - individual integers
- *   - or a range of integers denoted by the starting integer separated from the end 
+ *   - or a range of integers denoted by the starting integer separated from the end
  *     integer in the range by a dash, '-'.
  *     (The range includes all integers in the interval including both endpoints)
- *     The range syntax is to be used only for, and for every range that expands to 
+ *     The range syntax is to be used only for, and for every range that expands to
  *     more than two values.
  *
  * @params {array} nums
@@ -145,9 +140,9 @@ function extractRanges(nums) {
 }
 
 module.exports = {
-  createCompassPoints : createCompassPoints,
-  expandBraces : expandBraces,
-  getZigZagMatrix : getZigZagMatrix,
-  canDominoesMakeRow : canDominoesMakeRow,
-  extractRanges : extractRanges
+  createCompassPoints: createCompassPoints,
+  expandBraces: expandBraces,
+  getZigZagMatrix: getZigZagMatrix,
+  canDominoesMakeRow: canDominoesMakeRow,
+  extractRanges: extractRanges
 };

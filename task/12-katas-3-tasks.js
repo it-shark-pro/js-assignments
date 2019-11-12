@@ -1,4 +1,3 @@
-
 /**
  * Returns true if word occurrs in the specified word snaking puzzle.
  * Each words can be constructed using "snake" path inside a grid with top, left,
@@ -31,7 +30,6 @@ function findStringInSnakingPuzzle(puzzle, searchStr) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Returns all permutations of the specified string.
  * Assume all chars in the specified string are different.
@@ -45,10 +43,9 @@ function findStringInSnakingPuzzle(puzzle, searchStr) {
  *    'ab'  => 'ab','ba'
  *    'abc' => 'abc','acb','bac','bca','cab','cba'
  */
-function* getPermutations(chars) {
+function getPermutations(chars) {
   throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the most profit from stock quotes.
@@ -71,7 +68,6 @@ function getMostProfitFromStockQuotes(quotes) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Class representing the url shorting helper.
  * Feel free to implement any algorithm, but do not store link in the key\value stores.
@@ -87,9 +83,10 @@ function getMostProfitFromStockQuotes(quotes) {
  *
  */
 function UrlShortener() {
-  this.urlAllowedChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-                          'abcdefghijklmnopqrstuvwxyz' +
-                          "0123456789-_.~!*'();:@&=+$,/?#[]";
+  this.urlAllowedChars =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+    'abcdefghijklmnopqrstuvwxyz' +
+    '0123456789-_.~!*"();:@&=+$,/?#[]';
 }
 
 UrlShortener.prototype = {
