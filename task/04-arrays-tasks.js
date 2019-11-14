@@ -343,6 +343,7 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
+  // eslint-disable-next-line eqeqeq
   throw new Error('Not implemented');
 }
 
@@ -361,7 +362,7 @@ function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 function findAllOccurences(arr, item) {
-  throw new Error('Not implemented');
+  return arr.filter(x => x === item).length;
 }
 
 /**
@@ -376,7 +377,7 @@ function findAllOccurences(arr, item) {
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
 function toStringList(arr) {
-  throw new Error('Not implemented');
+  return arr.join();
 }
 
 /**
@@ -405,6 +406,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
+  // return arr.sort((a, b) => (a.city.toLowerCase() > b.city.toLowerCase()) ? 1 : (a.city.toLowerCase() < b.city.toLowerCase()) ? -1 : 0);
   throw new Error('Not implemented');
 }
 
@@ -459,7 +461,7 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-  throw new Error('Not implemented');
+  return Array.from(new Set(arr));
 }
 
 /**
