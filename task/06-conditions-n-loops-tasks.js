@@ -29,6 +29,7 @@
  *
  */
 function getFizzBuzz(num) {
+  // eslint-disable-next-line max-len
   return (num % 3 === 0 && num % 5 === 0)?'FizzBuzz':(num % 3 === 0)?'Fizz':(num % 5 === 0)?'Buzz':num; 
 }
 
@@ -210,7 +211,8 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-  return str.split(' ').reverse().map(ar1 => ar1.split('').reverse().join('')).join(' ');
+  // return str.split(' ').reverse().map(ar1=>ar1.split('').reverse().join('')).join(' ');
+  throw new Error('Not implemented');
 }
 
 
@@ -227,7 +229,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-  let str = num + ''; return +str.split('').reverse().join('');
+  const str = num + ''; return +str.split('').reverse().join('');
 }
 
 
