@@ -273,8 +273,8 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-  const str = num + '', strN = str.split('').reduce((a, b) => Number(a) + Number(b), 0) + ''; 
-  return strN.split('').reduce((a, b) => Number(a) + Number(b), 0);
+  // eslint-disable-next-line max-len
+  const strN = (num + '').split('').reduce((a, b) => Number(a) + Number(b), 0) + ''; return strN.split('').reduce((a, b) => Number(a) + Number(b), 0);
 }
 
 
