@@ -273,7 +273,8 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-  throw new Error('Not implemented');
+  const str = num + '', strN = str.split('').reduce((a, b) => Number(a) + Number(b), 0) + ''; 
+  return strN.split('').reduce((a, b) => Number(a) + Number(b), 0);
 }
 
 
@@ -360,7 +361,7 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
-  throw new Error('Not implemented');
+  return num.toString(n);
 }
 
 
