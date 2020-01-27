@@ -200,7 +200,9 @@ function extractEmails(str) {
  */
 function getRectangleString(width, height) {
   const v = '┌┐└┘│─';
-  return v[0] + v[5].repeat(width-2) + v[1] + '\n' + (v[4]+' '.repeat(width-2)+v[4]+'\n').repeat(height-2)+v[2] + v[5].repeat(width-2) + v[3]+'\n';
+  return v[0] + v[5].repeat(width-2) + v[1] + 
+  '\n' + (v[4]+' '.repeat(width-2)+v[4]+'\n').repeat(height-2)+v[2] 
+  + v[5].repeat(width-2) + v[3]+'\n';
 }
 
 
@@ -221,7 +223,9 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/\w/g, function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}); 
+  return str.replace(/\w/g, function(c){
+  return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+  }); 
 }
 
 /**
@@ -268,7 +272,7 @@ function isString(value) {
  */
 function getCardId(value) {
   const buff = (value.length <=2)? value[1] : value[2];
-  return ('♣♦♥♠'.indexOf(buff)+1)*13 - (13 - ('A234567891JQK'.indexOf(value[0])));
+  return ('♣♦♥♠'.indexOf(buff)+1)*13-(13-('A234567891JQK'.indexOf(value[0])));
 }
 
 module.exports = {
