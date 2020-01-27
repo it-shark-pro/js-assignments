@@ -52,7 +52,7 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-  return "Hello, " + firstName + " " + lastName +"!";
+  return 'Hello, ' + firstName + ' ' + lastName +'!';
 }
 
 /**
@@ -66,7 +66,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function  extractNameFromTemplate(value) {
-  return value.slice(7,value.length-1);
+  return value.slice(7, value.length-1);
 }
 
 
@@ -127,7 +127,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value)  {
-  return str.replace(value,"");
+  return str.replace(value, '');
 }
 
 /**
@@ -142,7 +142,7 @@ function removeFirstOccurrences(str, value)  {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.replace(/[<>]/g,"");
+  return str.replace(/[<>]/g, '');
 }
 
 
@@ -172,7 +172,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  return str.split(";");
+  return str.split(';');
 }
 
 /**
@@ -199,8 +199,8 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const v = "┌┐└┘│─";
-  return v[0] + v[5].repeat(width-2) + v[1] + "\n" + (v[4]+" ".repeat(width-2)+v[4]+"\n").repeat(height-2)+v[2] + v[5].repeat(width-2) + v[3]+"\n";
+  const v = '┌┐└┘│─';
+  return v[0] + v[5].repeat(width-2) + v[1] + '\n' + (v[4]+' '.repeat(width-2)+v[4]+'\n').repeat(height-2)+v[2] + v[5].repeat(width-2) + v[3]+'\n';
 }
 
 
@@ -221,7 +221,7 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/\w/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}); 
+  return str.replace(/\w/g, function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}); 
 }
 
 /**
@@ -268,7 +268,7 @@ function isString(value) {
  */
 function getCardId(value) {
   const buff = (value.length <=2)? value[1] : value[2];
-  return ("♣♦♥♠".indexOf(buff)+1)*13 - (13 - ("A234567891JQK".indexOf(value[0])));
+  return ('♣♦♥♠'.indexOf(buff)+1)*13 - (13 - ('A234567891JQK'.indexOf(value[0])));
 }
 
 module.exports = {
