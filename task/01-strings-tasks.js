@@ -20,7 +20,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  return value1 +  value2;
+  return `${value1}${value2}`;
 }
 
 /**
@@ -52,7 +52,7 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-  return 'Hello, ' + firstName + ' ' + lastName +'!';
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -66,7 +66,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function  extractNameFromTemplate(value) {
-  return value.slice(7, value.length-1);
+  return value.slice(7, -1);
 }
 
 
@@ -199,10 +199,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const v = '┌┐└┘│─';
-  return v[0] + v[5].repeat(width-2) + v[1] + 
-  '\n' + (v[4]+' '.repeat(width-2)+v[4]+'\n').repeat(height-2)+v[2] 
-  + v[5].repeat(width-2) + v[3]+'\n';
+  const w1 =  '┌' + '─'.repeat(width-2) + '┐' + '\n';
+  const h = ('│' + ' '.repeat(width-2) + '│' + '\n').repeat(height-2);
+  const w2 = '└' + '─'.repeat(width-2) + '┘' +  '\n';
+  return  `${w1+h+w2}`
 }
 
 
@@ -271,8 +271,10 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const buff = (value.length <=2)? value[1] : value[2];
-  return ('♣♦♥♠'.indexOf(buff)+1)*13-(13-('A234567891JQK'.indexOf(value[0])));
+  const pos = (value.length <=2)? value[1] : value[2];
+  const num = ('♣♦♥♠'.indexOf(pos)+1)*13;
+  return num - (13-('A234567891JQK'.indexOf(value[0])));
+  
 }
 
 module.exports = {
