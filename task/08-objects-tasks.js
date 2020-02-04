@@ -1,4 +1,3 @@
-
 /** ************************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
@@ -113,33 +112,109 @@ function fromJSON(proto, json) {
  */
 
 const cssSelectorBuilder = {
+  str: '',
+  nameArray: [],
+  numberArray: [],
 
   element(value) {
-    throw new Error('Not implemented');
+    this.str += value;
+    this.nameArray.push('element');
+    this.numberArray.push(1);
+    this.checkName('element');
+    this.checkNumber();
+
+    return this.newObj(this);
   },
 
   id(value) {
-    throw new Error('Not implemented');
+    this.str += `#${value}`;
+    this.nameArray.push('id');
+    this.numberArray.push(2);
+    this.checkName('id');
+    this.checkNumber();
+
+    return this.newObj(this);
   },
 
   class(value) {
-    throw new Error('Not implemented');
+    this.str += `.${value}`;
+    this.numberArray.push(3);
+    this.checkNumber();
+
+    return this.newObj(this);
   },
 
   attr(value) {
-    throw new Error('Not implemented');
+    this.str += `[${value}]`;
+    this.numberArray.push(4);
+    this.checkNumber();
+
+    return this.newObj(this);
   },
 
   pseudoClass(value) {
-    throw new Error('Not implemented');
+    this.str += `:${value}`;
+    this.numberArray.push(5);
+    this.checkNumber();
+
+    return this.newObj(this);
   },
 
   pseudoElement(value) {
-    throw new Error('Not implemented');
+    this.str += `::${value}`;
+    this.nameArray.push('pseudo-elem');
+    this.numberArray.push(6);
+    this.checkName('pseudo-elem');
+    this.checkNumber();
+
+    return this.newObj(this);
   },
 
   combine(selector1, combinator, selector2) {
-    throw new Error('Not implemented');
+    this.str = selector1.str + ` ${combinator} ` + selector2.str;
+
+    return this.newObj(this);
+  },
+
+  stringify() {
+    const result = this.str;
+    this.str = '';
+
+    return result;
+  },
+
+  newObj(context) {
+    const obj = Object.assign({}, context);
+    context.str = '';
+    context.nameArray = [];
+    context.numberArray = [];
+
+    return obj;
+  },
+
+  checkName(element) {
+    const arr = this.nameArray;
+
+    if (arr.indexOf(element) !== arr.lastIndexOf(element)) {
+      throw new Error(
+        'Element, id and pseudo-element should not occur ' +
+        'more then one time inside the selector'
+      );
+    }
+  },
+
+  checkNumber(element) {
+    const sortedArray = this.numberArray.slice().sort((a, b) => a - b);
+    sortedArray.forEach((el, i) => {
+      if (el !== this.numberArray[i]) {
+        throw new Error(
+          'Selector parts should be arranged in the following ' +
+          'order: element, id, class, attribute, pseudo-class, pseudo-element'
+        );
+      }
+
+      return el;
+    });
   }
 };
 
