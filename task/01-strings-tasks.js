@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /** *****************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -64,7 +65,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  throw new Error('Not implemented');
+  return (value.split('').splice(7, value.split('').length - 8).join(''));
 }
 
 /**
@@ -194,8 +195,12 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
+
 function getRectangleString(width, height) {
-  throw new Error('Not implemented');
+  const up = '┌' + '─'.repeat(width - 2) + '┐\n',
+    middle = ('│' + ' '.repeat(width - 2) + '│\n').repeat(height - 2),
+    down = '└' + '─'.repeat(width - 2) + '┘\n';
+  return (up + middle + down);
 }
 
 /**
@@ -215,7 +220,9 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  throw new Error('Not implemented');
+  const src = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const dist = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  return (str.replace(/\w/g, x => src.charAt(dist.indexOf(x))));
 }
 
 /**
@@ -232,7 +239,7 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  throw new Error('Not implemented');
+  return ((!!value) && (value.constructor === String) ? true : false);
 }
 
 /**
