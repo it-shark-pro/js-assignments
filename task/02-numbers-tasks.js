@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /** ******************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -108,7 +109,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  return Math.acos((x1 * x2 + y1 * y2) / Math.abs((y1 - x1) * (y2 - x2)));
 }
 
 /**
@@ -176,8 +177,13 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
+/* Instruction:
+action 1 - num / Math.pow(10, pow)
+action 2 - Math.round(num / Math.pow(10, pow))
+action 3 - Math.round(num / Math.pow(10, pow)) * Math.pow(10, pow)
+*/
 function roundToPowerOfTen(num, pow) {
-  throw new Error('Not implemented');
+  return Math.round(num / Math.pow(10, pow)) * Math.pow(10, pow);
 }
 
 /**
@@ -198,7 +204,11 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  throw new Error('Not implemented');
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) return false;
+  }
+
+  return n !== 1;
 }
 
 /**
@@ -217,7 +227,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  throw new Error('Not implemented');
+  return (Number(value) || def);
 }
 
 module.exports = {
