@@ -266,8 +266,17 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
+/* 
+1 action - 'K♦'.charAt(0) // 'K'
+2 action - 'A234567891JQK'.indexOf('K') // 12
+3 action -  'K♦'.slice(-1) // '♦'
+4 action - '♣♦♥♠'.indexOf('♦') // 1 
+5 action - cardCount * '♣♦♥♠'.indexOf('K♦'.slice(-1)) // 13
+6 action - 'A234567891JQK'.indexOf('K♦'.charAt(0)) + cardCount * '♣♦♥♠'.indexOf('K♦'.slice(-1)) // 25
+*/
 function getCardId(value) {
-  throw new Error('Not implemented');
+  const cardCount = 13;
+  return 'A234567891JQK'.indexOf(value.charAt(0)) + cardCount * '♣♦♥♠'.indexOf(value.slice(-1));
 }
 
 module.exports = {
