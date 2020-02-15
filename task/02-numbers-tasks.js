@@ -21,7 +21,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  return width*height;
+  return `${width * height}`;
 }
 
 
@@ -37,7 +37,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-  return 2*Math.PI*radius;
+  return 2 * Math.PI * radius;
 }
 
 /**
@@ -53,7 +53,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return value1/2 + value2/2;
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -89,7 +89,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  return -b/a;
+  return -b / a;
 }
 
 
@@ -112,7 +112,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  return Math.abs(Math.atan2(y1,x1) - Math.atan2(y2,x2));
+  return Math.abs(Math.atan2(y1, x1) - Math.atan2(y2, x2));
 }
 
 /**
@@ -161,7 +161,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  return Math.hypot(a, b,c);
+  return Math.hypot(a, b, c);
 }
 
 /**
@@ -182,8 +182,8 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  const a = Math.round(num/Math.pow(10, pow));
-  return a * Math.pow(10, pow); 
+  const a = Math.pow(10, pow);            
+  return Math.round(num / a) * a; 
 }
 
 /**
@@ -204,13 +204,13 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  if(n<2) return false;
-  else if(n===2||n===3) return true;
-  var flag = true;
-  for(var i=2; i<=Math.sqrt(n);i++){
-    if(n%i===0) flag = false;
+  if(n < 2){ 
+    return false;
+  }
+  for(var i = 2; i <= Math.sqrt(n); i++){
+    if(n % i === 0) return false;
 }
- return flag;
+  return true;
 }
 
 /**
@@ -229,7 +229,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  return Number.parseInt(value)? Number.parseInt(value) : def;
+  return Number.parseInt(value) ? Number.parseInt(value) : def;
 }
 
 module.exports = {

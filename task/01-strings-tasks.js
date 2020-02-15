@@ -224,7 +224,7 @@ function getRectangleString(width, height) {
  */
 function encodeToRot13(str) {
   return str.replace(/\w/g, function(c){
-  return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+  return c.fromCharCode() + (c.toLowerCase() < 'n'? 13 : -13);
   }); 
 }
 
@@ -271,9 +271,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const pos = (value.length <=2)? value[1] : value[2];
-  const num = ('♣♦♥♠'.indexOf(pos)+1)*13;
-  return num - (13-('A234567891JQK'.indexOf(value[0])));
+  const pos = (value.length <= 2) ? value[1] : value[2];
+  const num = ('♣♦♥♠'.indexOf(pos) + 1) *  13;
+  return num - (13- ('A234567891JQK'.indexOf(value[0])));
   
 }
 
