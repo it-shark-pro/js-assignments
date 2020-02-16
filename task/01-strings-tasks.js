@@ -199,10 +199,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const w1 =  '┌' + '─'.repeat(width-2) + '┐' + '\n';
-  const h = ('│' + ' '.repeat(width-2) + '│' + '\n').repeat(height-2);
-  const w2 = '└' + '─'.repeat(width-2) + '┘' +  '\n';
-  return  `${w1+h+w2}`
+  const wTop =  `┌${'─'.repeat(width - 2)}┐\n`;
+  const h = `│${' '.repeat(width - 2)}│\n`;
+  const wBottom = `└${'─'.repeat(width - 2)}┘\n`;
+  return  `${wTop}${h.repeat(height - 2)}${wBottom}`
 }
 
 
@@ -223,8 +223,9 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/\w/g, function(c){
-  return c.fromCharCode() + (c.toLowerCase() < 'n'? 13 : -13);
+  return str.replace(/\w/g, (c) => {
+      const b =  c.charCodeAt() + (c.toLowerCase() < 'n' ? 13 : -13);
+      return String.fromCharCode(b);
   }); 
 }
 
@@ -273,8 +274,7 @@ function isString(value) {
 function getCardId(value) {
   const pos = (value.length <= 2) ? value[1] : value[2];
   const num = ('♣♦♥♠'.indexOf(pos) + 1) *  13;
-  return num - (13- ('A234567891JQK'.indexOf(value[0])));
-  
+  return num - (13 - ('A234567891JQK'.indexOf(value[0])));
 }
 
 module.exports = {
