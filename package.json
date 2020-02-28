@@ -13,7 +13,7 @@
   "devDependencies": {
     "eslint": "^5.4.0",
     "husky": "^1.0.0",
-    "mocha": "^5.2.0"
+    "mocha": "^7.1.0"
   },
   "repository": {
     "type": "git",
