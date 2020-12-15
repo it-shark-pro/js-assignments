@@ -224,7 +224,24 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  throw new Error('Not implemented');
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+  const encodeLetter = letter => {
+    const rotIndex = alphabet.indexOf(letter) + 13 < alphabet.length
+      ? alphabet.indexOf(letter) + 13
+      : alphabet.indexOf(letter) + 13 - alphabet.length;
+    
+    return alphabet[rotIndex];
+  };
+
+  const encodedString = str.split('').map(item => {
+    return (alphabet.includes(item) 
+      ? encodeLetter(item) 
+      : alphabet.includes(item.toLowerCase())
+        ? encodeLetter(item.toLowerCase()).toUpperCase() : item);
+  }).join('');
+
+  return encodedString;
 }
 
 /**
