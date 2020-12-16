@@ -112,7 +112,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  return Math.acos((x1*x2 + y1*y2) / Math.hypot(x1, y1) / Math.hypot(x2, y2)); //TODO: fit ti 80 symbols per line
+  return Math.acos((x1*x2 + y1*y2) / Math.hypot(x1, y1) / Math.hypot(x2, y2));
 }
 
 /**
