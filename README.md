@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/Vight86/js-assignments.svg)](https://github.com/Vight86/js-assignments/releases/latest)
 
 
-# [Brest IT Shark](https://it-shark.pro/)
+# [Vova Pekun](https://github.com/Vight86)
 [![IT Shark](https://avatars2.githubusercontent.com/u/34164782?s=200&v=4)](http://it-shark.pro/)
 ## Javascript Assignments
 
