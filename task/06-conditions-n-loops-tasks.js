@@ -48,7 +48,11 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-  throw new Error('Not implemented');
+  let factorial = n;
+  for (let i = n - 1; i > 1; i--) {
+    factorial *= i;
+  }
+  return factorial;
 }
 
 
