@@ -175,7 +175,10 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-  throw new Error('Not implemented');
+  for (const letter of str) {
+    if (str.match(RegExp(`${letter}`, 'g')).length === 1) return letter;
+  }
+  return null;
 }
 
 
