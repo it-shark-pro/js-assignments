@@ -286,7 +286,8 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-  throw new Error('Not implemented');
+  const sum = num => num / 10 < 1 ? num : num % 10 + sum(Math.floor(num / 10));
+  return sum(num) > 9 ? getDigitalRoot(sum(num)) : sum(num);
 }
 
 
