@@ -242,7 +242,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-  throw new Error('Not implemented');
+  return num / 10 < 1 ? num : (num % 10) * Math.pow(10, Math.floor(Math.log10(num))) + reverseInteger(Math.floor(num / 10));
 }
 
 
