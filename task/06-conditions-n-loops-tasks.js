@@ -242,7 +242,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-  return num / 10 < 1 ? num : (num % 10) * Math.pow(10, Math.floor(Math.log10(num))) + reverseInteger(Math.floor(num / 10));
+  return num < 10 ? `${num}` : num % 10 + reverseInteger(Math.floor(num / 10));
 }
 
 
