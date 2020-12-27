@@ -123,7 +123,13 @@ function isTriangle(a, b, c) {
  *
  */
 function doRectanglesOverlap(rect1, rect2) {
-  throw new Error('Not implemented');
+  const minRight = Math.min(rect1.left + rect1.width, rect2.left + rect2.width);
+  const maxLeft = Math.max(rect1.left, rect2.left);
+
+  const minBot = Math.min(rect1.top + rect1.height, rect2.top + rect2.height);
+  const maxTop = Math.max(rect1.top, rect2.top);
+
+  return (minRight >= maxLeft && minBot >= maxTop);
 }
 
 
