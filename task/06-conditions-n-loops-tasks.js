@@ -502,7 +502,33 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-  throw new Error('Not implemented');
+  const checkCombo = (arr, direction) => {
+    if (direction === 'horizontal' || direction === 'vertical') {
+      for (let i = 0; i < 3; i++) {
+        let combo = '';
+        for (let j = 0; j < 3; j++) {
+          combo += direction === 'vertical' ? arr[j][i] : arr[i][j];
+        }
+        if (combo === combo[0].repeat(3)) return combo[0];
+      }
+    } else if (direction === 'diagonal/' || direction === 'diagonal\\') {
+      let i = 0;
+      let j = direction === 'diagonal\\' ? 0 : 2;
+      let combo = '';
+      while (i < 3 && j < 3) {
+        combo += arr[i][j];
+        i += 1;
+        j = direction === 'diagonal\\' ? j + 1 : j - 1;
+        if (combo === combo[0].repeat(3)) return combo[0];
+      }
+    }
+  };
+
+  const result = checkCombo(position, 'horizontal');
+  const result1 = checkCombo(position, 'vertical');
+  const result2 = checkCombo(position, 'diagonal\\');
+  const result3 = checkCombo(position, 'diagonal/');
+  return result || result1 || result2 || result3;
 }
 
 module.exports = {
