@@ -373,7 +373,56 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
-  throw new Error('Not implemented');
+  const timeSpan = endDate.getTime() - startDate.getTime();
+  const MIN_IN_MS = 60000;
+  const HOUR_IN_MS = 3600000;
+  const DAY_IN_MS = 24 * HOUR_IN_MS;
+  const MONTH_IN_MS = 30 * DAY_IN_MS;
+  const YEAR_IN_MS = 12 * MONTH_IN_MS;
+
+  const convertMs = (time, unit) => {
+    return time / unit;
+  };
+
+  const calcTime = (time, unit) => {
+    return time % unit <= unit / 2 
+      ? Math.floor(time / unit) 
+      : Math.round(time / unit);
+  };
+
+  if (convertMs(timeSpan, 1000) <= 45) {
+    return 'a few seconds ago';
+  } 
+  if (convertMs(timeSpan, 1000) <= 90) {
+    return 'a minute ago';
+  } 
+  if (convertMs(timeSpan, MIN_IN_MS) <= 45) {
+    return `${calcTime(timeSpan, MIN_IN_MS)} minutes ago`;
+  } 
+  if (convertMs(timeSpan, MIN_IN_MS) <= 90) {
+    return 'an hour ago';
+  } 
+  if (convertMs(timeSpan, HOUR_IN_MS) <= 22) {
+    return `${calcTime(timeSpan, HOUR_IN_MS)} hours ago`;
+  } 
+  if (convertMs(timeSpan, HOUR_IN_MS) <= 36) {
+    return 'a day ago';
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 25) {
+    return `${calcTime(timeSpan, DAY_IN_MS)} days ago`;
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 45) {
+    return 'a month ago';
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 345) {
+    return `${calcTime(timeSpan, MONTH_IN_MS)} months ago`;
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 545) {
+    return 'a year ago';
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) > 545) {
+    return `${calcTime(timeSpan, YEAR_IN_MS)} years ago`;
+  }
 }
 
 
