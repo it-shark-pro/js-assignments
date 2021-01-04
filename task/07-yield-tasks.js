@@ -41,8 +41,7 @@ function* get99BottlesOfBeer() {
   while (i > 0) {
     
     yield `${check(i)} of beer on the wall, ${check(i)} of beer.`;
-    i--;
-    yield `Take one down and pass it around, ${check(i)} of beer on the wall.`;
+    yield `Take one down and pass it around, ${check(--i)} of beer on the wall.`;
   }
   yield  'No more bottles of beer on the wall, no more bottles of beer.';
   yield  'Go to the store and buy some more, 99 bottles of beer on the wall.';
