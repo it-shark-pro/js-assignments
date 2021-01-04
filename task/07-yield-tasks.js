@@ -32,7 +32,20 @@
  *
  */
 function* get99BottlesOfBeer() {
-  throw new Error('Not implemented');
+  const check = bottleCount => {
+    return bottleCount > 1 ? bottleCount + ' bottles' 
+      : bottleCount === 1 ? bottleCount + ' bottle' : 'no more bottles';
+  };
+
+  let i = 99;
+  while (i > 0) {
+    
+    yield `${check(i)} of beer on the wall, ${check(i)} of beer.`;
+    i--;
+    yield `Take one down and pass it around, ${check(i)} of beer on the wall.`;
+  }
+  yield  'No more bottles of beer on the wall, no more bottles of beer.';
+  yield  'Go to the store and buy some more, 99 bottles of beer on the wall.';
 }
 
 
