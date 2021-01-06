@@ -105,7 +105,7 @@ function* depthTraversalTree(root) {
   while (stack.length > 0) {
     const lastStackItem = stack.pop();
     yield lastStackItem;
-    if ('children' in lastStackItem) {
+    if (lastStackItem.hasOwnProperty('children')) {
       stack.push(...lastStackItem.children.reverse());
     }
   }
