@@ -134,7 +134,16 @@ function* depthTraversalTree(root) {
  *
  */
 function* breadthTraversalTree(root) {
-  throw new Error('Not implemented');
+  const queue = [root];
+
+  while (queue.length > 0) {
+    const firstQueueItem = queue.pop();
+    yield firstQueueItem;
+
+    if (firstQueueItem.hasOwnProperty('children')) {
+      queue.unshift(...firstQueueItem.children.reverse());
+    }
+  }
 }
 
 
