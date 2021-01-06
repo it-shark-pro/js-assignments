@@ -99,7 +99,16 @@ function* getFibonacciSequence() {
  *
  */
 function* depthTraversalTree(root) {
-  throw new Error('Not implemented');
+
+  const stack = [root];
+
+  while (stack.length > 0) {
+    const lastStackItem = stack.pop();
+    yield lastStackItem;
+    if ('children' in lastStackItem) {
+      stack.push(...lastStackItem.children.reverse());
+    }
+  }
 }
 
 
