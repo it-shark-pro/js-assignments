@@ -24,11 +24,10 @@
 function Rectangle(width, height) {
   this.width = width;
   this.height = height;
-  this.getArea = function() {
-    return this.width * this.height;
-  };
 }
-
+Rectangle.prototype.getArea = function() {
+  return this.width * this.height;
+};
 
 /**
  * Returns the JSON representation of specified object
@@ -57,7 +56,7 @@ function getJSON(obj) {
  *
  */
 function fromJSON(proto, json) {
-  throw new Error('Not implemented');
+  return new proto.constructor(...Object.values(JSON.parse(json)));
 }
 
 
@@ -144,7 +143,8 @@ const cssSelectorBuilder = {
 
   combine(selector1, combinator, selector2) {
     throw new Error('Not implemented');
-  }
+  },
+
 };
 
 module.exports = {
