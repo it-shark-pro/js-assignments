@@ -117,33 +117,82 @@ function fromJSON(proto, json) {
 
 const cssSelectorBuilder = {
 
+  checkOneTimeSelector(prop) {
+    if ((this.selector || {})[prop] !== undefined) {
+      throw new Error('Element, id and pseudo-element should not occur' +
+      ' more then one time inside the selector');
+    }
+  },
+
+  checkSelectorOrder(selectorOrder) {
+    if((this.selector || {}).order > selectorOrder) {
+      throw new Error('Selector parts should be arranged in the following' +
+      ' order: element, id, class, attribute, pseudo-class, pseudo-element');
+    }
+  },
+
+  createSelectorObj(key, value, selectorObj, selectorOrder) {
+    function Selector(key, value, selectorObj, selectorOrder) {
+      this.selector = selectorObj || {};
+      this.selector[key] = (this.selector[key] || '') + value;
+      this.selector.order = selectorOrder;
+
+      Object.defineProperty(this.selector, 'order', {
+        enumerable: false
+      });
+    }
+    Selector.prototype = cssSelectorBuilder;
+    return new Selector(key, value, selectorObj, selectorOrder);
+  },
+
   element(value) {
-    throw new Error('Not implemented');
+    this.checkOneTimeSelector('element');
+    this.checkSelectorOrder(0);
+    return this.createSelectorObj('element', `${value}`, this.selector, 0);
   },
 
   id(value) {
-    throw new Error('Not implemented');
+    this.checkOneTimeSelector('id');
+    this.checkSelectorOrder(1);
+    return this.createSelectorObj('id', `#${value}`, this.selector, 1);
   },
 
   class(value) {
-    throw new Error('Not implemented');
+    this.checkSelectorOrder(2);
+    return this.createSelectorObj('class', `.${value}`, this.selector, 2);
   },
 
   attr(value) {
-    throw new Error('Not implemented');
+    this.checkSelectorOrder(3);
+    return this.createSelectorObj('attr', `[${value}]`, this.selector, 3);
   },
 
   pseudoClass(value) {
-    throw new Error('Not implemented');
+    this.checkSelectorOrder(4);
+    return this.createSelectorObj('pseudoClass', `:${value}`, this.selector, 4);
   },
 
   pseudoElement(value) {
-    throw new Error('Not implemented');
+    this.checkOneTimeSelector('pseudoElem');
+    this.checkSelectorOrder(5);
+    return this.createSelectorObj('pseudoElem', `::${value}`, this.selector, 5);
+  },
+
+  stringify() {
+    const result = Object.values(this.selector).join('');
+    return result;
   },
 
   combine(selector1, combinator, selector2) {
-    throw new Error('Not implemented');
-  },
+    function CombinedSelector(selector1, combinator, selector2) {
+      this.selector = {};
+      this.selector.selector1 = selector1.stringify();
+      this.selector.combinator = ` ${combinator} `;
+      this.selector.selector2 = selector2.stringify();
+    }
+    CombinedSelector.prototype = cssSelectorBuilder;
+    return new CombinedSelector(selector1, combinator, selector2);
+  }
 
 };
 
