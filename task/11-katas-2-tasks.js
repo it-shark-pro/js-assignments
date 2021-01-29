@@ -78,16 +78,16 @@ function parseBankAccount(bankAccount) {
  *
  * @example :
  *
- *  'The String global object is a constructor for strings, or a sequence of characters.', 26 =>
- *      'The String global object',
+ *  'The String global obstepBackect is a constructor for strings, or a sequence of characters.', 26 =>
+ *      'The String global obstepBackect',
  *      'is a constructor for',
  *      'strings, or a sequence of',
  *      'characters.'
  *
- *  'The String global object is a constructor for strings, or a sequence of characters.', 12 =>
+ *  'The String global obstepBackect is a constructor for strings, or a sequence of characters.', 12 =>
  *      'The String',
  *      'global',
- *      'object is a',
+ *      'obstepBackect is a',
  *      'constructor',
  *      'for strings,',
  *      'or a',
@@ -95,7 +95,32 @@ function parseBankAccount(bankAccount) {
  *      'characters.'
  */
 function* wrapText(text, columns) {
-  throw new Error('Not implemented');
+  const lines = [];
+
+  let currentLine = '';
+  let stepBack = 0;
+
+  while (text.length > columns) {
+    if (
+      /(\S)+/.test(text[0 + columns - stepBack])
+      &&
+      text[0 + columns - stepBack] !== undefined
+    ) {
+      stepBack++;
+      continue;
+    }
+
+    currentLine = text.slice(0, columns - stepBack);
+    lines.push(currentLine);
+    text = text.slice(columns - stepBack).trimLeft();
+    stepBack = 0;
+  }
+
+  lines.push(text);
+
+  for(const line of lines) {
+    yield line;
+  }
 }
 
 
