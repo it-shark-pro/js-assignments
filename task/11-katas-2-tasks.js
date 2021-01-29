@@ -36,7 +36,34 @@
  *
  */
 function parseBankAccount(bankAccount) {
-  throw new Error('Not implemented');
+  const decodeMap = new Map([
+    [' _ | ||_|', 0],
+    ['     |  |', 1],
+    [' _  _||_ ', 2],
+    [' _  _| _|', 3],
+    ['   |_|  |', 4],
+    [' _ |_  _|', 5],
+    [' _ |_ |_|', 6],
+    [' _   |  |', 7],
+    [' _ |_||_|', 8],
+    [' _ |_| _|', 9]
+  ]);
+
+  const encodedSymbols = bankAccount.split('\n').splice(0, 3);
+
+  let digits = [];
+  for (let i = 0; i < encodedSymbols[0].length; i += 3) {
+    let currentEncodedDigit = '';
+
+    for (let j = 0; j < encodedSymbols.length; j++) {
+
+      currentEncodedDigit += encodedSymbols[j].slice(i, i + 3);
+    }
+    digits.push(currentEncodedDigit);
+  }
+
+  digits = digits.map(encodedDigit => decodeMap.get(encodedDigit));
+  return parseInt(digits.join(''));
 }
 
 
