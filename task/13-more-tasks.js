@@ -12,7 +12,12 @@
  *   'abcdefghijklmnop',  'lmnopqrstuvwxyz'  => 'abcdefghijklmnopqrstuvwxyz'
  */
 function distinctLettersString(value1, value2) {
-  throw new Error('Not implemented');
+  let result = value1 + value2;
+  result = result.split('').sort();
+
+  result = [...new Set(result)];
+
+  return result.join('');
 }
 
 
@@ -29,7 +34,15 @@ function distinctLettersString(value1, value2) {
  */
 
 function lowerLetters(value) {
-  throw new Error('Not implemented');
+  const result = value
+    .split('')
+    .filter(letter => letter.charCodeAt(0) >= 97 && letter.charCodeAt(0) <= 122)
+    .reduce((res, cur) => {
+      res[cur] = res[cur] || value.match(RegExp(`${cur}`, 'g')).length;
+      return res;
+    }, {});
+
+  return result;
 }
 
 /**
@@ -51,7 +64,21 @@ function lowerLetters(value) {
  */
 
 function titleCaseConvert(title, minorWords) {
-  throw new Error('Not implemented');
+  minorWords = minorWords !== undefined
+    ? minorWords.toLowerCase()
+    : '';
+  title = title
+    .split(' ')
+    .map(word => word.toLowerCase())
+    .map((word, index) => {
+      if (index === 0 || !minorWords.includes(word)) {
+        return word.split('')[0].toUpperCase() + word.slice(1);
+      } else {
+        return word;
+      }
+    });
+
+  return title.join(' ');
 }
 
 /**
@@ -72,7 +99,31 @@ function titleCaseConvert(title, minorWords) {
  */
 
 function calcRPN(expr) {
-  throw new Error('Not implemented');
+  if (expr === '') return 0;
+
+  const operatorCheck = expr.split(' ').filter(num => !Number(num));
+  if (operatorCheck.length === 0) return Number(expr.slice(-1));
+
+  const calc = (operand1, operand2, operator) => {
+    switch(operator) {
+    case '+':
+      return operand2 + operand1;
+    case '-':
+      return operand2 - operand1;
+    case '*':
+      return operand2 * operand1;
+    case '/':
+      return operand2 / operand1;
+    }
+  };
+
+  const result = expr.split(' ')
+    .reduce((res, cur) => {
+      res.push(Number(cur) ? Number(cur) : calc(res.pop(), res.pop(), cur));
+      return res;
+    }, []);
+
+  return result[0];
 }
 
 module.exports = {
