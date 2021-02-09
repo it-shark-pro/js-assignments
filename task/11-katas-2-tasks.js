@@ -56,9 +56,9 @@ function parseBankAccount(bankAccount) {
     let currentEncodedDigit = '';
 
     for (let j = 0; j < encodedSymbols.length; j++) {
-
       currentEncodedDigit += encodedSymbols[j].slice(i, i + 3);
     }
+
     digits.push(currentEncodedDigit);
   }
 
@@ -157,7 +157,83 @@ const PokerRank = {
 };
 
 function getPokerHandRank(hand) {
-  throw new Error('Not implemented');
+  const convertFacesToNumber = rank => {
+    switch (rank) {
+    case 'J': return 11;
+    case 'Q': return 12;
+    case 'K': return 13;
+    case 'A': return 14;
+    }
+  };
+
+  const rank = hand
+    .map(card => parseInt(card.slice(0, -1))
+      ? parseInt(card.slice(0, -1))
+      : convertFacesToNumber(card.slice(0, -1))
+    );
+  const suit = hand.map(card => card.slice(-1));
+
+  const isStraight = rank => {
+    rank = rank.slice();
+    if (rank.includes(2)) {
+      while(rank.includes(14)) {
+        rank[rank.indexOf(14)] = 1;
+      }
+    }
+
+    const consecutiveRank = rank
+      .sort((a, b) => a - b)
+      .filter((item, index) => {
+        return index === 0 ? true : item - 1 === rank[index - 1];
+      });
+
+    return consecutiveRank.length === 5;
+  };
+
+  const isFlush = suit => [...new Set(suit)].length === 1;
+
+  const checkCardsRank = rank => {
+    rank = rank
+      .slice()
+      .sort((a, b) => a - b);
+
+    return rankSetName => {
+      if (rankSetName === 'fourOfKind') {
+        const rankSet = rank
+          .filter(item => rank.lastIndexOf(item) - rank.indexOf(item) === 3);
+        return rankSet.length === 4;
+      } else if (rankSetName === 'fullHouse') {
+        const rankSet = rank
+          .filter(item => rank.indexOf(item) !== rank.lastIndexOf(item));
+        return rankSet.length === 5;
+      } else if (rankSetName === 'threeOfKind') {
+        const rankSet = rank
+          .filter(item => rank.lastIndexOf(item) - rank.indexOf(item) === 2);
+        return rankSet.length === 3;
+      } else if (rankSetName === 'twoPairs') {
+        const rankSet = rank
+          .filter(item => rank.lastIndexOf(item) - rank.indexOf(item) === 1);
+        return rankSet.length === 4;
+      } else if (rankSetName === 'onePair') {
+        const rankSet = rank
+          .filter(item => rank.lastIndexOf(item) - rank.indexOf(item) === 1);
+        return rankSet.length === 2;
+      }
+    };
+  };
+
+  const checkRankSet = checkCardsRank(rank);
+
+  if (isStraight(rank) && isFlush(suit)) return PokerRank.StraightFlush;
+  else if (checkRankSet('fourOfKind')) return PokerRank.FourOfKind;
+  else if (checkRankSet('fullHouse')) return PokerRank.FullHouse;
+  else if (isFlush(suit)) return PokerRank.Flush;
+  else if (isStraight(rank)) return PokerRank.Straight;
+  else if (checkRankSet('threeOfKind')) return PokerRank.ThreeOfKind;
+  else if (checkRankSet('twoPairs')) return PokerRank.TwoPairs;
+  else if (checkRankSet('onePair')) return PokerRank.OnePair;
+
+  return PokerRank.HighCard;
 }
 
 
@@ -193,7 +269,62 @@ function getPokerHandRank(hand) {
  *    '+-------------+\n'
  */
 function* getFigureRectangles(figure) {
-  throw new Error('Not implemented');
+  const createRect = (width, height = 0) => {
+    return `+${'-'.repeat(width)}+\n` +
+    `${`|${' '.repeat(width)}|\n`.repeat(height)}` +
+    `+${'-'.repeat(width)}+\n`;
+  };
+
+  const result = [];
+
+  if (figure.includes(' ')) {
+    let width = 0;
+    let height = 0;
+    const substrings = figure
+      .split('\n')
+      .slice(0, -1)
+      .map(item => item.trim());
+
+    for (let i = 0; i < substrings.length; i++) {
+      const string = substrings[i].slice(1, -1);
+
+      if (string.includes('-') && height !== 0) {
+        const previousString = substrings[i - 1].slice(1, -1);
+        if(!previousString.includes('|')) {
+          width = previousString.length;
+          result.push(createRect(width, height));
+          width = 0;
+          height = 0;
+        } else {
+          previousString
+            .split('|')
+            .map(string => result.push(createRect(string.length, height)));
+        }
+
+      } else if (string.includes(' ') ) {
+        if (height === 0) {
+          for (let j = i; j < substrings.length; j++) {
+            if(substrings[j].includes('-')) break;
+            height += 1;
+          }
+        }
+      }
+    }
+  } else {
+    figure
+      .split('\n')
+      .slice(0, -1)
+      .map(item => item.trim().split('+').slice(1, -1))
+      .map((item, index) => {
+        if(index % 2 === 0) {
+          item.map(item => result.push(createRect(item.length)));
+        }
+      });
+  }
+  for (const item of result) {
+    yield item;
+  }
+
 }
 
 module.exports = {
