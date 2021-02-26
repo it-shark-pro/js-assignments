@@ -84,7 +84,50 @@ function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
  *   'nothing to do' => 'nothing to do'
  */
 function* expandBraces(str) {
-  throw new Error('Not implemented');
+
+  function parse(str) {
+    if (!str.includes('{')) return [str];
+    const result = [];
+
+    const countBraces = symbol => {
+      return symbol === '{'
+        ? 1
+        : symbol === '}'
+          ? -1
+          : 0;
+    };
+
+    const start = str.indexOf('{');
+    let currentIndex = start + 1;
+    let braceNumber = 1;
+
+    while (braceNumber > 0) {
+      braceNumber += countBraces(str[currentIndex]);
+      currentIndex++;
+    }
+
+    const processingSubstr = str
+      .slice(start + 1, currentIndex - 1)
+      .split('')
+      .map(item => {
+        if (item === '{') braceNumber += 1;
+        if (item === '}') braceNumber -= 1;
+        return braceNumber === 0 && item === ',' ? ':::' : item;
+      })
+      .join('')
+      .split(':::')
+      .map(item => str.slice(0, start) + item + str.slice(currentIndex));
+
+    for (const str of processingSubstr) {
+      result.push(parse(str));
+    }
+    return result.flat();
+  }
+
+
+  for (const string of parse(str)) {
+    yield string;
+  }
 }
 
 
@@ -117,7 +160,34 @@ function* expandBraces(str) {
  *
  */
 function getZigZagMatrix(n) {
-  throw new Error('Not implemented');
+  const matrix = [...new Array(n)].map(item => Array(n).fill(0));
+
+  let value = 0;
+
+  const numberOfDiagonals = n * 2 - 1;
+
+  for (let currentDiag = 0; currentDiag < numberOfDiagonals; currentDiag++) {
+
+    const diagDimensionDiff = currentDiag >= n ? currentDiag - n + 1 : 0;
+    const i = currentDiag >= n ? n - 1 : currentDiag;
+
+    if (currentDiag % 2 === 0) {
+      for (let j = i; j >= 0; j--) {
+        matrix[j][i - j + diagDimensionDiff] = value;
+        value += 1;
+        if (j === diagDimensionDiff) break;
+      }
+    } else {
+      for (let j = i; j >= 0; j--) {
+        matrix[i - j + diagDimensionDiff][j] = value;
+        value += 1;
+        if (j === diagDimensionDiff) break;
+      }
+    }
+
+  }
+
+  return matrix;
 }
 
 
@@ -143,7 +213,29 @@ function getZigZagMatrix(n) {
  *
  */
 function canDominoesMakeRow(dominoes) {
-  throw new Error('Not implemented');
+  dominoes = dominoes.slice();
+
+  const stack = [...dominoes.pop()];
+
+  while (dominoes.length > 0) {
+    const currentDominoNumber = stack.pop();
+    const currentDominoIndex = dominoes
+      .findIndex(item => item.includes(currentDominoNumber));
+
+    if(currentDominoIndex === -1 && stack.length > 0) continue;
+    if(currentDominoIndex === -1 && stack.length === 0) return false;
+
+    const currentDomino = dominoes.splice(currentDominoIndex, 1).flat();
+    const newDominoNumber = currentDomino
+      .find(item => item !== currentDominoNumber);
+    stack.push(
+      newDominoNumber !== undefined
+        ? newDominoNumber
+        : currentDominoNumber
+    );
+  }
+
+  return true;
 }
 
 
