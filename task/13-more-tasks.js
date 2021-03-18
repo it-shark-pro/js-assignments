@@ -105,7 +105,7 @@ function calcRPN(expr) {
   if (operatorCheck.length === 0) return Number(expr.slice(-1));
 
   const calc = (operand1, operand2, operator) => {
-    switch(operator) {
+    switch (operator) {
     case '+':
       return operand2 + operand1;
     case '-':

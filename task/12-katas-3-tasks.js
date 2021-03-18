@@ -28,7 +28,48 @@
  *   'NULL'      => false
  */
 function findStringInSnakingPuzzle(puzzle, searchStr) {
-  throw new Error('Not implemented');
+  const visited = [...Array(puzzle.length)]
+    .map(() => Array(puzzle[0].length).fill(false));
+
+  const dfs = (row, column, index, puzzle, searchStr) => {
+    if (index === searchStr.length) return true;
+
+    if (
+      row < 0 ||
+      column < 0 ||
+      row >= puzzle.length ||
+      column >= puzzle[0].length ||
+      puzzle[row][column] !== searchStr[index] ||
+      visited[row][column]) {
+      return false;
+    }
+
+    visited[row][column] = true;
+
+    if (
+      dfs(row, column + 1, index + 1, puzzle, searchStr) ||
+      dfs(row, column - 1, index + 1, puzzle, searchStr) ||
+      dfs(row + 1, column, index + 1, puzzle, searchStr) ||
+      dfs(row - 1, column, index + 1, puzzle, searchStr)
+    ) {
+      return true;
+    }
+
+    visited[row][column] = false;
+  };
+
+  for (let row = 0; row < puzzle.length; row++) {
+    for (let column = 0; column < puzzle[0].length; column++) {
+      if (
+        puzzle[row][column] === searchStr[0] &&
+        dfs(row, column, 0, puzzle, searchStr)
+      ) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }
 
 
@@ -46,7 +87,30 @@ function findStringInSnakingPuzzle(puzzle, searchStr) {
  *    'abc' => 'abc','acb','bac','bca','cab','cba'
  */
 function* getPermutations(chars) {
-  throw new Error('Not implemented');
+  const permutations = [];
+
+  const permutate = (arrLength, arr) => {
+    if (arrLength === 1) permutations.push(arr.join(''));
+    else {
+      permutate(arrLength - 1, arr);
+
+      for (let i = 0; i < arrLength - 1; i++) {
+        if (arrLength % 2 === 0) {
+          [arr[i], arr[arrLength - 1]] = [arr[arrLength - 1], arr[i]];
+        } else {
+          [arr[0], arr[arrLength - 1]] = [arr[arrLength - 1], arr[0]];
+        }
+
+        permutate(arrLength - 1, arr);
+      }
+    }
+  };
+
+  permutate(chars.length, [...chars]);
+
+  for (const permutation of permutations) {
+    yield permutation;
+  }
 }
 
 
@@ -68,7 +132,20 @@ function* getPermutations(chars) {
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (buy at 1,6,5 and sell all at 10)
  */
 function getMostProfitFromStockQuotes(quotes) {
-  throw new Error('Not implemented');
+  let totalProfit = 0;
+
+  for (let i = 0; i < quotes.length - 1; i++) {
+    let maxProfit = 0;
+
+    for (let j = i + 1; j < quotes.length; j++) {
+      const currentProfit = quotes[j] - quotes[i];
+      maxProfit = maxProfit > currentProfit ? maxProfit : currentProfit;
+    }
+
+    totalProfit += maxProfit;
+  }
+
+  return totalProfit;
 }
 
 
@@ -88,17 +165,42 @@ function getMostProfitFromStockQuotes(quotes) {
  */
 function UrlShortener() {
   this.urlAllowedChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-                          'abcdefghijklmnopqrstuvwxyz' +
-                          "0123456789-_.~!*'();:@&=+$,/?#[]";
+    'abcdefghijklmnopqrstuvwxyz' +
+    "0123456789-_.~!*'();:@&=+$,/?#[]";
 }
 
 UrlShortener.prototype = {
   encode(url) {
-    throw new Error('Not implemented');
+    let encodedString = '';
+    const length = url.length / 2;
+    const base = this.urlAllowedChars.length;
+    for (let i = 0; i < length; i++) {
+      const currentLetter = url[i * 2];
+      const nextLetter = url[i * 2 + 1];
+      const currentLetterCode = this.urlAllowedChars.indexOf(currentLetter);
+      const nextLetterCode = this.urlAllowedChars.indexOf(nextLetter);
+      encodedString += String.fromCodePoint(
+        currentLetterCode * base + (nextLetterCode < 0 ? 0 : nextLetterCode)
+      );
+    }
+    return encodedString;
   },
 
   decode(code) {
-    throw new Error('Not implemented');
+    let decodedString = '';
+    const length = code.length;
+    const base = this.urlAllowedChars.length;
+    for (let i = 0; i < length; i++) {
+      const currentSymbolCode = code.codePointAt(i);
+      const firstDecodedLetterCode = Math.floor(currentSymbolCode / base);
+      const secondDecodedLetterCode = currentSymbolCode % base;
+      const firstDecodedLetter = this.urlAllowedChars[firstDecodedLetterCode];
+      const secondDecodedLetter = currentSymbolCode % base
+        ? this.urlAllowedChars[secondDecodedLetterCode]
+        : '';
+      decodedString += firstDecodedLetter + secondDecodedLetter;
+    }
+    return decodedString;
   }
 };
 
