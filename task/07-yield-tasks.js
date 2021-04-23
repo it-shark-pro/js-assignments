@@ -32,7 +32,20 @@
  *
  */
 function* get99BottlesOfBeer() {
-  throw new Error('Not implemented');
+  const check = bottleCount => {
+    return bottleCount > 1 ? bottleCount + ' bottles' 
+      : bottleCount === 1 ? bottleCount + ' bottle' : 'no more bottles';
+  };
+
+  let i = 99;
+  while (i > 0) {
+    
+    yield `${check(i)} of beer on the wall, ${check(i)} of beer.`;
+    i--;
+    yield `Take one down and pass it around, ${check(i)} of beer on the wall.`;
+  }
+  yield  'No more bottles of beer on the wall, no more bottles of beer.';
+  yield  'Go to the store and buy some more, 99 bottles of beer on the wall.';
 }
 
 
@@ -46,7 +59,12 @@ function* get99BottlesOfBeer() {
  *
  */
 function* getFibonacciSequence() {
-  throw new Error('Not implemented');
+  let fn1 = 0;
+  let fn2 = 1;
+  while (true){
+    yield fn1;
+    [fn1, fn2] = [fn2, fn1 + fn2];
+  }
 }
 
 
@@ -81,7 +99,16 @@ function* getFibonacciSequence() {
  *
  */
 function* depthTraversalTree(root) {
-  throw new Error('Not implemented');
+
+  const stack = [root];
+
+  while (stack.length > 0) {
+    const lastStackItem = stack.pop();
+    yield lastStackItem;
+    if (lastStackItem.hasOwnProperty('children')) {
+      stack.push(...lastStackItem.children.reverse());
+    }
+  }
 }
 
 
@@ -107,7 +134,16 @@ function* depthTraversalTree(root) {
  *
  */
 function* breadthTraversalTree(root) {
-  throw new Error('Not implemented');
+  const queue = [root];
+
+  while (queue.length > 0) {
+    const firstQueueItem = queue.pop();
+    yield firstQueueItem;
+
+    if (firstQueueItem.hasOwnProperty('children')) {
+      queue.unshift(...firstQueueItem.children.reverse());
+    }
+  }
 }
 
 
@@ -125,7 +161,31 @@ function* breadthTraversalTree(root) {
  *   [ 1, 3, 5, ... ], [ -1 ] => [ -1, 1, 3, 5, ...]
  */
 function* mergeSortedSequences(source1, source2) {
-  throw new Error('Not implemented');
+  const gen1 = source1();
+  const gen2 = source2();
+
+  let num1 = gen1.next();
+  let num2 = gen2.next();
+
+  let stack = [num1.value, num2.value];
+
+  while (stack.length > 0) {
+    stack = stack.sort((a, b) => a - b);
+
+    for (const item of stack) {
+      yield item;
+    }
+
+    stack.pop();
+    stack.pop();
+    
+    num1 = gen1.next();
+    num2 = gen2.next();
+
+    if (!num1.done) stack.push(num1.value);
+    if (!num2.done) stack.push(num2.value);
+
+  } 
 }
 
 module.exports = {

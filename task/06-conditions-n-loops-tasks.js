@@ -29,7 +29,10 @@
  *
  */
 function getFizzBuzz(num) {
-  throw new Error('Not implemented');
+  if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
+  else if (num % 5 === 0) return 'Buzz';
+  else if (num % 3 === 0) return 'Fizz';
+  else return num;
 }
 
 
@@ -45,7 +48,7 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-  throw new Error('Not implemented');
+  return n === 1 ? n : n * getFactorial(n - 1);
 }
 
 
@@ -62,7 +65,7 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-  throw new Error('Not implemented');
+  return n1 === n2 ? n2 : n1 + getSumBetweenNumbers(n1 + 1, n2);
 }
 
 
@@ -82,7 +85,8 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a, b, c) {
-  throw new Error('Not implemented');
+  if (a + b > c && a + c > b && b + c > a) return true;
+  else return false;
 }
 
 
@@ -119,7 +123,13 @@ function isTriangle(a, b, c) {
  *
  */
 function doRectanglesOverlap(rect1, rect2) {
-  throw new Error('Not implemented');
+  const minRight = Math.min(rect1.left + rect1.width, rect2.left + rect2.width);
+  const maxLeft = Math.max(rect1.left, rect2.left);
+
+  const minBot = Math.min(rect1.top + rect1.height, rect2.top + rect2.height);
+  const maxTop = Math.max(rect1.top, rect2.top);
+
+  return (minRight >= maxLeft && minBot >= maxTop);
 }
 
 
@@ -150,7 +160,8 @@ function doRectanglesOverlap(rect1, rect2) {
  *
  */
 function isInsideCircle(circle, point) {
-  throw new Error('Not implemented');
+  const dist = Math.hypot(point.x - circle.center.x, point.y - circle.center.y);
+  return dist < circle.radius;
 }
 
 
@@ -166,7 +177,10 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-  throw new Error('Not implemented');
+  for (const letter of str) {
+    if (str.match(RegExp(`${letter}`, 'g')).length === 1) return letter;
+  }
+  return null;
 }
 
 
@@ -193,7 +207,10 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  throw new Error('Not implemented');
+  if (a > b) {
+    [a, b] = [b, a];
+  }
+  return `${isStartIncluded ? '[' : '('}${a}, ${b}${isEndIncluded ? ']' : ')'}`;
 }
 
 
@@ -210,7 +227,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-  throw new Error('Not implemented');
+  return str.length === 1 ? str[0] : reverseString(str.slice(1)) + str[0];
 }
 
 
@@ -227,7 +244,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-  throw new Error('Not implemented');
+  return num < 10 ? `${num}` : num % 10 + reverseInteger(Math.floor(num / 10));
 }
 
 
@@ -252,7 +269,18 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
-  throw new Error('Not implemented');
+  const ccnReversed = String(ccn).split('').reverse();
+  let sum = 0;
+
+  for (let i = 1; i < ccnReversed.length; i++) {
+    let digit = Number(ccnReversed[i]);
+    if (i % 2 !== 0) {
+      digit = digit * 2 > 9 ? digit * 2 - 9 : digit * 2;
+    } 
+    sum += digit;
+  }
+
+  return (sum * 9) % 10 === Number(ccnReversed[0]);
 }
 
 
@@ -271,7 +299,8 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-  throw new Error('Not implemented');
+  const sum = num => num / 10 < 1 ? num : num % 10 + sum(Math.floor(num / 10));
+  return sum(num) > 9 ? getDigitalRoot(sum(num)) : sum(num);
 }
 
 
@@ -297,7 +326,18 @@ function getDigitalRoot(num) {
  *   '{[(<{[]}>)]}' = true
  */
 function isBracketsBalanced(str) {
-  throw new Error('Not implemented');
+  const brackets = '[]{}()<>';
+  const order = [];
+
+  for (const bracket of str) {
+    const bracketIndex = brackets.indexOf(bracket);
+    if (bracketIndex % 2 === 0) {
+      order.push(brackets[bracketIndex + 1]);
+    } else if (bracket !== order.pop()) {
+      return false;
+    }
+  }
+  return order.length === 0;
 }
 
 
@@ -333,7 +373,56 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
-  throw new Error('Not implemented');
+  const timeSpan = endDate.getTime() - startDate.getTime();
+  const MIN_IN_MS = 60000;
+  const HOUR_IN_MS = 3600000;
+  const DAY_IN_MS = 24 * HOUR_IN_MS;
+  const MONTH_IN_MS = 30 * DAY_IN_MS;
+  const YEAR_IN_MS = 12 * MONTH_IN_MS;
+
+  const convertMs = (time, unit) => {
+    return time / unit;
+  };
+
+  const calcTime = (time, unit) => {
+    return time % unit <= unit / 2 
+      ? Math.floor(time / unit) 
+      : Math.round(time / unit);
+  };
+
+  if (convertMs(timeSpan, 1000) <= 45) {
+    return 'a few seconds ago';
+  } 
+  if (convertMs(timeSpan, 1000) <= 90) {
+    return 'a minute ago';
+  } 
+  if (convertMs(timeSpan, MIN_IN_MS) <= 45) {
+    return `${calcTime(timeSpan, MIN_IN_MS)} minutes ago`;
+  } 
+  if (convertMs(timeSpan, MIN_IN_MS) <= 90) {
+    return 'an hour ago';
+  } 
+  if (convertMs(timeSpan, HOUR_IN_MS) <= 22) {
+    return `${calcTime(timeSpan, HOUR_IN_MS)} hours ago`;
+  } 
+  if (convertMs(timeSpan, HOUR_IN_MS) <= 36) {
+    return 'a day ago';
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 25) {
+    return `${calcTime(timeSpan, DAY_IN_MS)} days ago`;
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 45) {
+    return 'a month ago';
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 345) {
+    return `${calcTime(timeSpan, MONTH_IN_MS)} months ago`;
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) <= 545) {
+    return 'a year ago';
+  } 
+  if (convertMs(timeSpan, DAY_IN_MS) > 545) {
+    return `${calcTime(timeSpan, YEAR_IN_MS)} years ago`;
+  }
 }
 
 
@@ -358,7 +447,15 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
-  throw new Error('Not implemented');
+  const digits = [];
+
+  while (num / n >= n) {
+    digits.push(num % n);
+    num = Math.floor(num / n);
+  }
+  digits.push(num % n, Math.floor(num / n));
+
+  return `${digits.reverse().join('')}`;
 }
 
 
@@ -375,7 +472,17 @@ function toNaryString(num, n) {
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
 function getCommonDirectoryPath(pathes) {
-  throw new Error('Not implemented');
+  let result = pathes[0];
+
+  for (let i = 1; i < pathes.length; i++) {
+    for (let j = 0; j < result.length; j++) {
+      if (result[j] !== pathes[i][j]) {
+        result = result.slice(0, j);
+      }
+    }
+  }
+
+  return result.slice(0, result.lastIndexOf('/') + 1);
 }
 
 
@@ -398,7 +505,18 @@ function getCommonDirectoryPath(pathes) {
  *
  */
 function getMatrixProduct(m1, m2) {
-  throw new Error('Not implemented');
+  const product = [...Array(m1.length)].map(i => Array(m2[0].length));
+  const length = product.length;
+  for (let i = 0; i < length; i++) {
+    for (let j = 0; j < length; j++) {
+      product[i][j] = 0;
+      for (let x = 0; x < m2.length; x++) {
+        product[i][j] += m1[i][x]*m2[x][j];
+      }
+    }
+  }
+  
+  return product;
 }
 
 
@@ -433,7 +551,33 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-  throw new Error('Not implemented');
+  const checkCombo = (arr, direction) => {
+    if (direction === 'horizontal' || direction === 'vertical') {
+      for (let i = 0; i < 3; i++) {
+        let combo = '';
+        for (let j = 0; j < 3; j++) {
+          combo += direction === 'vertical' ? arr[j][i] : arr[i][j];
+        }
+        if (combo === combo[0].repeat(3)) return combo[0];
+      }
+    } else if (direction === 'diagonal/' || direction === 'diagonal\\') {
+      let i = 0;
+      let j = direction === 'diagonal\\' ? 0 : 2;
+      let combo = '';
+      while (i < 3 && j < 3) {
+        combo += arr[i][j];
+        i += 1;
+        j = direction === 'diagonal\\' ? j + 1 : j - 1;
+        if (combo === combo[0].repeat(3)) return combo[0];
+      }
+    }
+  };
+
+  const result = checkCombo(position, 'horizontal');
+  const result1 = checkCombo(position, 'vertical');
+  const result2 = checkCombo(position, 'diagonal\\');
+  const result3 = checkCombo(position, 'diagonal/');
+  return result || result1 || result2 || result3;
 }
 
 module.exports = {
