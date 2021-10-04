@@ -32,7 +32,7 @@ And the last idea is to inure trainees to work using unit test and feel uncomfor
 * Run `git clone https://github.com/<your-account>/js-assignments.git` from command line to download the repo.
 
 ### How to setup travis-ci
-* Open [https://travis-ci.org/](https://travis-ci.org/) and sign in with your github account.
+* Open [https://travis-ci/](https://travis-ci.com/) and sign in with your github account.
 * Activate your forked repo **js-assignments**.
 * Edit local README.md file and update all links (just replace all occurrences of `'it-shark-pro'` with your account name).
 * Commit and push updated README.md to github:
