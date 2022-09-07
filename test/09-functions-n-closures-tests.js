@@ -59,7 +59,20 @@ describe('09-functions-n-closures-tasks', () => {
       }, {
         polynom: getPolynom(8),
         results: [{ x: 0, y: 8 }, { x: 2, y: 8 }, { x: 5, y: 8 }]
+      }, {
+        polynom: getPolynom(),
+        results: [{ x: 0, y: null }, { x: 2, y: null }, { x: 5, y: null }]
+      }, {
+        polynom: getPolynom(0, 0, 0),
+        results: [{ x: 10, y: 0 }, { x: 27.2, y: 0 }, { x: -5, y: 0 }]
+      }, {
+        polynom: getPolynom(0, 0, 1),
+        results: [{ x: 0, y: 1 }, { x: 1.2, y: 1 }, { x: -1, y: 1 }]
+      }, {
+        polynom: getPolynom( 1, 0),
+        results: [{ x: 1, y: 1 }, { x: 27.2, y: 27.2 }, { x: -5, y: -5 }]
       }
+      
     ].forEach(data => {
       data.results.forEach(test => {
         assert(test.y === data.polynom(test.x));
