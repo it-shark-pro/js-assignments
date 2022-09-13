@@ -3,21 +3,52 @@
     "es6": true,
     "node": true
   },
-  "extends": ["eslint:recommended"],
+  "extends": [
+    "eslint:recommended"
+  ],
   "rules": {
     "array-bracket-spacing": 0,
-    "arrow-parens": [2, "as-needed"],
-    "comma-dangle": [2, "never"],
-    "comma-spacing": [2, {"after": true}],
-    "curly": [2, "multi-line"],
+    "arrow-parens": [
+      2,
+      "as-needed"
+    ],
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "comma-spacing": [
+      2,
+      {
+        "after": true
+      }
+    ],
+    "curly": [
+      2,
+      "multi-line"
+    ],
     "eqeqeq": 2,
     "func-names": 0,
-    "indent": [2, 2],
-    "max-len": ["error", { 
-      "code": 80,
-      "ignoreComments": true
-    }],
-    "no-console": [ 1, {"allow": ["info", "error", "warn"]}],
+    "indent": [
+      2,
+      2
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 90,
+        "ignoreComments": true
+      }
+    ],
+    "no-console": [
+      1,
+      {
+        "allow": [
+          "info",
+          "error",
+          "warn"
+        ]
+      }
+    ],
     "no-new-wrappers": 0,
     "no-proto": 0,
     "no-prototype-builtins": 0,
@@ -25,7 +56,12 @@
     "no-sparse-arrays": 0,
     "no-unreachable": 2,
     "no-unused-expressions": 2,
-    "no-unused-vars": [2, {"args": "none"}],
+    "no-unused-vars": [
+      2,
+      {
+        "args": "none"
+      }
+    ],
     "semi": 2,
     "quotes": [
       2,
