@@ -67,7 +67,7 @@ function parseBankAccount(bankAccount) {
  *      'sequence of',
  *      'characters.'
  */
-function* wrapText(text, columns) {
+function wrapText(text, columns) {
   throw new Error('Not implemented');
 }
 
@@ -140,7 +140,7 @@ function getPokerHandRank(hand) {
  *    '|             |\n'+              '+-----+\n'           '+-------------+\n'
  *    '+-------------+\n'
  */
-function* getFigureRectangles(figure) {
+function getFigureRectangles(figure) {
   throw new Error('Not implemented');
 }
 

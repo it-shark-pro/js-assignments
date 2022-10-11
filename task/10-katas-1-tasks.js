@@ -55,7 +55,7 @@ function createCompassPoints(sides = ['N', 'E', 'S', 'W']) {
  *
  *   'nothing to do' => 'nothing to do'
  */
-function* expandBraces(str) {
+function expandBraces(str) {
   throw new Error('Not implemented');
 }
 
