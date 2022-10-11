@@ -35,7 +35,7 @@
     "max-len": [
       "error",
       {
-        "code": 90,
+        "code": 110,
         "ignoreComments": true
       }
     ],
